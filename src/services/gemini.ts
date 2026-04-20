@@ -31,7 +31,7 @@ ${top3.join("\n")}
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.5-flash",
       contents: prompt,
     });
     return response.text;

@@ -1,0 +1,2922 @@
+[
+  {
+    "case_id": "ROUSAI-001",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical",
+      "retail",
+      "service"
+    ],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "過労・メンタル",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル・旅館",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "過重労働による精神疾患・自殺",
+    "summary": "ホテル業従業員が慢性的な長時間労働と接客業務による精神的負荷により、うつ病を発症し自殺に至った。会社は労働時間を客観的に把握しておらず、産業医面談や業務軽減措置を講じていなかったとして、安全配慮義務違反を問われた。",
+    "damage_amount_range": "5,000万〜1億円",
+    "damage_amount_reference": "類似の過労自殺事案（大阪地判平成30年3月1日）で約7,000万円、飲食チェーン過労死事件（京都地裁平成22年）で約7,800万円",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：大阪地判平成30年3月1日、京都地判平成22年5月25日",
+    "legal_basis": "労働契約法第5条（安全配慮義務）、民法第715条（使用者責任）",
+    "sales_angle": "ホテル・旅館業の慢性的人手不足と長時間労働は、過労死認定・高額賠償の典型パターン。オフシーズンでも予約対応・清掃・フロント24時間体制で時間外労働が積み上がる構造的リスク。"
+  },
+  {
+    "case_id": "ROUSAI-002",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "fire"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "転倒・身体災害",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "厨房での転倒による骨折・後遺障害",
+    "summary": "ホテル厨房で食器洗い作業中の従業員が、床の水濡れにより足を滑らせて転倒し、頭部と腰部を強打。後遺障害が残り復職困難となった。床面の防滑対策やマット敷設が不十分であった点で事業者の安全配慮義務違反が問われた。",
+    "damage_amount_range": "500万〜2,000万円",
+    "damage_amount_reference": "後遺障害等級に応じて変動。中等度後遺障害で1,000万円前後、重度の場合2,000万円超の判決例あり",
+    "source_type": "public_agency",
+    "source_citation": "出典：厚生労働省『職場のあんぜんサイト』第三次産業災害事例（URL：https://anzeninfo.mhlw.go.jp/）を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生法第22条、労働契約法第5条",
+    "sales_angle": "転倒災害は第三次産業で最多の災害類型。ホテル厨房・客室清掃・バックヤードは床水濡れリスクが常在し、安全配慮義務違反を問われやすい。"
+  },
+  {
+    "case_id": "ROUSAI-003",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "fire"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "食中毒・感染症",
+    "industry_major": "宿泊業",
+    "industry_minor": "旅館",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "一酸化炭素中毒事故",
+    "summary": "旅館の客室清掃作業員が、換気不十分な環境でガス給湯設備のある浴室清掃を行い、一酸化炭素中毒で意識不明となった。換気設備の保守・点検を怠っていた点で事業者の安全配慮義務違反が認定された類似事例あり。",
+    "damage_amount_range": "1,000万〜5,000万円",
+    "damage_amount_reference": "中毒による後遺障害案件では一般的に1,000万〜5,000万円規模。死亡・重度後遺障害では1億円超の判決例も",
+    "source_type": "public_agency",
+    "source_citation": "出典：厚生労働省『職場のあんぜんサイト』第三次産業災害事例（URL：https://anzeninfo.mhlw.go.jp/）を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生法第23条（作業場の環境）",
+    "sales_angle": "旅館業のガス機器・温泉設備は一酸化炭素中毒リスクが高い。訪日観光客増加で稼働率が上がる中、点検漏れによる大規模事故リスクも並行して増大。"
+  },
+  {
+    "case_id": "ROUSAI-004",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [
+      "transport",
+      "manufacturing"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "腰痛・身体障害",
+    "industry_major": "医療・福祉",
+    "industry_minor": "介護事業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "介護作業中の腰椎損傷",
+    "summary": "介護施設職員が利用者の移乗介助中に腰部を損傷し、椎間板ヘルニアにより長期休業。リフト等の補助器具を導入せず、人力介助を継続させていた事業者の安全配慮義務違反が問題となる。",
+    "damage_amount_range": "2,000万〜4,000万円",
+    "damage_amount_reference": "運送業の腰痛事案（長野地判平成19年12月4日）で約3,971万円。介護業界でも類似規模の判決例",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：長野地判平成19年12月4日（運送業腰痛事件）",
+    "legal_basis": "労働契約法第5条、厚生労働省『職場における腰痛予防対策指針』",
+    "sales_angle": "介護事業者は人手不足で補助器具投資が後回しになりがち。1件の高額賠償で事業継続が困難になるリスクは極めて大きい。"
+  },
+  {
+    "case_id": "ROUSAI-005",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "暴力・ハラスメント",
+    "industry_major": "医療・福祉",
+    "industry_minor": "社会福祉",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "利用者からの暴力による傷害・PTSD",
+    "summary": "社会福祉施設で認知症利用者対応中の職員が暴力を受け、身体的外傷に加えPTSDを発症。職員配置や暴力対応マニュアル整備の不備が安全配慮義務違反として問われる類型。",
+    "damage_amount_range": "500万〜2,000万円",
+    "damage_amount_reference": "PTSD・精神疾患発症事案では一般的に500万〜2,000万円の判決例。重度後遺障害では拡大",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：マツヤデンキ事件（大阪高判令和2年11月13日）等のPTSD発症事案",
+    "legal_basis": "労働契約法第5条、労働安全衛生法第71条の2",
+    "sales_angle": "社会福祉法人は利用者対応に伴う職員安全配慮の責任が重い。暴力対応マニュアル未整備は典型的な敗訴リスク要因。"
+  },
+  {
+    "case_id": "ROUSAI-006",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "感染症・化学物質",
+    "industry_major": "医療・福祉",
+    "industry_minor": "医療機関",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "針刺し事故によるB型・C型肝炎感染",
+    "summary": "医療機関の看護職員が採血・注射作業中に針刺し事故を起こし、患者から感染した肝炎ウイルスに曝露。感染予防器材（安全装置付針等）の未導入や事後対応の遅延により安全配慮義務違反が問われる類型。",
+    "damage_amount_range": "1,000万〜3,000万円",
+    "damage_amount_reference": "有機溶剤中毒事案（東京地判平成30年7月2日）で約2,000万円。針刺し感染事案も同規模レベルの判決例",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：東京地判平成30年7月2日（有機溶剤中毒）",
+    "legal_basis": "労働安全衛生法、医療法",
+    "sales_angle": "医療機関は針刺し事故対策の費用対効果が明確。安全装置付針への切替コストは賠償額の1/100以下。"
+  },
+  {
+    "case_id": "ROUSAI-007",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "機械事故",
+    "industry_major": "製造業",
+    "industry_minor": "食品製造",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "製麺機への手指巻き込み",
+    "summary": "製麺会社で従業員が製麺機の刃部分に手指を巻き込まれ、骨折・切断等の重傷を負った。機械の刃を覆う安全カバー未設置、および従業員への安全教育不備により、事業者の安全配慮義務違反が認定された。",
+    "damage_amount_range": "500万〜1,500万円",
+    "damage_amount_reference": "製麺会社A事件（旭川地判令和2年8月31日）等の機械事故判決",
+    "source_type": "court_precedent",
+    "source_citation": "判例：旭川地判令和2年8月31日（製麺会社A事件）",
+    "legal_basis": "労働安全衛生規則第101条（刃の覆い）、労働契約法第5条",
+    "sales_angle": "食品製造業は機械事故が常在。安全カバーやセンサー等の簡易対策を怠ると、1件の事故で中小企業の経営を揺るがす金額になる。"
+  },
+  {
+    "case_id": "ROUSAI-008",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [
+      "transport"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "クレーン・重機事故",
+    "industry_major": "製造業",
+    "industry_minor": "金属加工",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "クレーン玉掛け不備による落下事故",
+    "summary": "製造業工場内でクレーンを用いて重量850kgの原材料を吊り上げ中、玉掛けワイヤーロープの環状部分が解け、原材料が作業員の上に落下。頸椎損傷により後遺障害1級（日常生活全般で介護を要する状態）となった。",
+    "damage_amount_range": "1億円〜2億円",
+    "damage_amount_reference": "約1億6,500万円の判決例（クレーン玉掛け事故）",
+    "source_type": "news_report",
+    "source_citation": "類似事例：あおば総合保険『労災事故の高額賠償事例』（URL：https://www.aoba-hoken.jp/rousai/jirei）を基に株式会社サイバーコネクト作成",
+    "legal_basis": "クレーン等安全規則、労働契約法第5条",
+    "sales_angle": "製造業の重機事故は後遺障害1級・2級で1億円超の賠償が典型。労災保険給付では足りず、企業が直接負担する額が事業継続を左右する。"
+  },
+  {
+    "case_id": "ROUSAI-009",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "化学物質・粉じん",
+    "industry_major": "製造業",
+    "industry_minor": "化学工業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "有機溶剤中毒による健康被害",
+    "summary": "製造工程で有機溶剤を使用する作業員が、換気設備の不備・防毒マスク支給不徹底により慢性中毒症状を発症。事業者の対策不備が安全配慮義務違反として認定された。",
+    "damage_amount_range": "1,500万〜3,000万円",
+    "damage_amount_reference": "約2,000万円の賠償命令（東京地判平成30年7月2日）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判平成30年7月2日",
+    "legal_basis": "有機溶剤中毒予防規則、労働契約法第5条",
+    "sales_angle": "化学物質を扱う製造業は慢性中毒・じん肺リスクが潜在化。発症まで数年〜数十年のタイムラグがあるため、退職者からの提訴リスクが長期間続く。"
+  },
+  {
+    "case_id": "ROUSAI-010",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "it",
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "過労・脳心血管疾患",
+    "industry_major": "製造業",
+    "industry_minor": "精密機器",
+    "company_size": "中堅企業",
+    "region": "関西",
+    "incident_type": "過重労働による脳出血・寝たきり状態",
+    "summary": "精密機器メーカーで製造管理を担当する従業員が、異動後の引継ぎ負担と長時間労働により勤務中に脳出血を発症。手足がまひし意識不明の状態が継続。発症前の時間外労働が12日間で約61時間と質量とも過重であった点が認定された。",
+    "damage_amount_range": "1.5億〜2億円",
+    "damage_amount_reference": "約1億9,000万円の賠償命令（大阪地判平成20年4月28日）",
+    "source_type": "news_report",
+    "source_citation": "判例：大阪地判平成20年4月28日（精密機器メーカー過労事件）",
+    "legal_basis": "労働契約法第5条、民法第709条",
+    "sales_angle": "先天的疾患があっても「予見できなかった」では免責されない。勤務状況から負担軽減義務が生じるという判例は、中小製造業にも直接適用される。"
+  },
+  {
+    "case_id": "ROUSAI-011",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [
+      "manufacturing"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "墜落・転落",
+    "industry_major": "建設業",
+    "industry_minor": "鉄骨工事",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "高所からの墜落死",
+    "summary": "建設業従業員が鉄骨組立作業中、約10メートル（4階相当）の高所から次の作業場所に移動する際、命綱を外してタラップへ渡ろうとして手足が滑り地上に転落。肺挫傷・脳挫傷により死亡した。",
+    "damage_amount_range": "2,000万〜5,000万円",
+    "damage_amount_reference": "約2,000万円の賠償事例（建設業鉄骨墜落事故）",
+    "source_type": "news_report",
+    "source_citation": "類似事例：あおば総合保険『労災事故の高額賠償事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生規則第518条・第519条（墜落防止措置）",
+    "sales_angle": "建設業の墜落死亡事故は安全帯着用の瞬間的省略が命取り。現場管理者の教育・監督が不十分と判断されれば、会社・役員の直接責任が問われる。"
+  },
+  {
+    "case_id": "ROUSAI-012",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [
+      "manufacturing",
+      "transport"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "重量物・運搬",
+    "industry_major": "建設業",
+    "industry_minor": "解体・設備工事",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "重量物の運搬中転倒による負傷",
+    "summary": "建設現場で2名の作業員が鋼管（径150mm、長さ150mm、重さ約50kg）を両手で持ち上げて移動中、つまずいた反動で両手が滑り鋼管が落下。左足脛骨打撲と運動機能障害の後遺障害を負った。不安定な場所での作業と足元への注意喚起不足が原因とされた。",
+    "damage_amount_range": "3,000万〜5,000万円",
+    "damage_amount_reference": "約4,000万円の賠償事例（建設業重量物運搬事故）",
+    "source_type": "news_report",
+    "source_citation": "類似事例：あおば総合保険『労災事故の高額賠償事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生規則、労働契約法第5条",
+    "sales_angle": "重量物運搬は台車・リフト等の機械化で多くが防止可能。対策コスト数万円を惜しんだ結果、数千万円の賠償というコスト構造の逆転が典型。"
+  },
+  {
+    "case_id": "ROUSAI-013",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail",
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "過労・心臓疾患",
+    "industry_major": "飲食業",
+    "industry_minor": "飲食チェーン",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "長時間労働による急性心不全・過労死",
+    "summary": "飲食店チェーンに入社した若手従業員が、月平均約112時間の残業が常態化する中、入社数ヶ月で自宅就寝中に急性心不全により死亡。会社側は個別労働時間把握は不可能と主張したが、取締役の善管注意義務違反として会社および役員4名の賠償責任が認定された。",
+    "damage_amount_range": "7,000万〜1億円",
+    "damage_amount_reference": "約7,800万円の賠償命令（京都地判平成22年5月25日）",
+    "source_type": "news_report",
+    "source_citation": "判例：京都地判平成22年5月25日（飲食チェーン過労死事件）",
+    "legal_basis": "会社法第429条（役員の第三者責任）、労働契約法第5条",
+    "sales_angle": "飲食チェーンでは店舗数の多さが免責理由にならない。役員個人への賠償命令は企業ブランドに壊滅的影響を与える。"
+  },
+  {
+    "case_id": "ROUSAI-014",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "food_restaurant"
+    ],
+    "diagnostic_impact_score": 2,
+    "sub_category": "熱傷・やけど",
+    "industry_major": "飲食業",
+    "industry_minor": "飲食店",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "厨房での熱傷事故",
+    "summary": "飲食店厨房で従業員が揚げ油の交換作業中、指導不足により熱油を浴びて両腕に重度熱傷を負った。未経験従業員への作業手順教育および保護具着用義務化を怠っていた事業者の安全配慮義務違反が問われる類型。",
+    "damage_amount_range": "500万〜1,500万円",
+    "damage_amount_reference": "熱傷後遺障害の判決例は等級により500万〜数千万円の範囲",
+    "source_type": "public_agency",
+    "source_citation": "出典：厚生労働省『職場のあんぜんサイト』飲食業災害事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生法第59条（安全衛生教育）",
+    "sales_angle": "飲食業は高温油・湯・刃物が常在する危険職場。アルバイト・外国人従業員の多言語教育不備が事故の温床。"
+  },
+  {
+    "case_id": "ROUSAI-015",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "retail",
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical",
+      "transport",
+      "finance",
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "カスタマーハラスメント",
+    "industry_major": "小売業",
+    "industry_minor": "総合スーパー",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "顧客からの執拗なクレーム対応によるメンタル不調",
+    "summary": "小売店舗従業員が顧客からの長時間・執拗なクレーム・暴言対応を強いられ、適応障害・うつ病を発症。会社がカスタマーハラスメント対策マニュアルや相談窓口を整備しておらず、安全配慮義務違反として問題化。2026年10月からカスタマーハラスメント対策が法的義務化されたことで、未整備企業のリスクが急増。",
+    "damage_amount_range": "500万〜2,000万円",
+    "damage_amount_reference": "パワハラ・メンタル事案（東京地判平成27年7月31日）で約2,200万円、長崎地判平成30年12月7日で約1,100万円",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：東京地判平成27年7月31日、長崎地判平成30年12月7日",
+    "legal_basis": "労働施策総合推進法（2026年10月改正）、労働契約法第5条",
+    "sales_angle": "2026年10月カスハラ対策義務化により、小売・飲食・サービス業のリスクが法的に明文化された。マニュアル・相談窓口未整備は今後確実に敗訴要因となる。"
+  },
+  {
+    "case_id": "ROUSAI-016",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "transport"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "transport_freight"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "腰痛・身体障害",
+    "industry_major": "運輸業",
+    "industry_minor": "トラック運送",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "長期間の過重積卸作業による腰椎ヘルニア",
+    "summary": "トラック運転手として運送・積卸業務に従事していた労働者が、腰椎椎間板ヘルニア・腰部脊柱管狭窄症を発症。会社が台車を用意せず、労働省告示の改善基準を大幅に超える労働時間を継続させていたことが安全配慮義務違反と認定された。",
+    "damage_amount_range": "3,000万〜5,000万円",
+    "damage_amount_reference": "約3,971万円の賠償命令（長野地判平成19年12月4日）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：長野地判平成19年12月4日",
+    "legal_basis": "労働契約法第5条、改善基準告示（平成6年労働省告示）",
+    "sales_angle": "運送業の腰痛は「職業病」ではなく「会社責任」。2024年問題で労働時間管理の厳格化が進む中、過重労働を放置する中小運送会社のリスクは飛躍的に拡大。"
+  },
+  {
+    "case_id": "ROUSAI-017",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "vehicle"
+    ],
+    "diagnostic_industry_primary": [
+      "transport"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "過労・脳血管疾患",
+    "industry_major": "運輸業",
+    "industry_minor": "運送業",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "過重労働による脳内出血・全身まひ",
+    "summary": "運送会社の傭車運転手が過重労働により高血圧性脳内出血および脳梗塞を発症し、両上下肢機能障害（身体障害者等級1級）の後遺障害を負った。傭車運転手は形式的には雇用契約ではなかったが、指揮監督下の使用従属関係が認定され、事業者の安全配慮義務違反が認められた。",
+    "damage_amount_range": "6,000万〜8,000万円",
+    "damage_amount_reference": "約6,886万円の賠償命令（和歌山地判平成16年2月）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：和歌山地判平成16年2月（運送会社過重労働事件）",
+    "legal_basis": "労働契約法第5条",
+    "sales_angle": "傭車・委託・フリーランスでも「使用従属関係」があれば雇用と同様の責任。形式的契約だけでリスク回避できないという重要判例。"
+  },
+  {
+    "case_id": "ROUSAI-018",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "service",
+      "real_estate"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "墜落・高所作業",
+    "industry_major": "サービス業",
+    "industry_minor": "ビル清掃",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "高所清掃作業中の墜落事故",
+    "summary": "ビル清掃業務で作業員が窓ガラス清掃のため脚立・足場を使用中にバランスを崩して墜落し、重傷または死亡に至った類型。安全帯の未支給、脚立の不安定な使用、作業指揮者の不在が安全配慮義務違反として認定される。",
+    "damage_amount_range": "2,000万〜5,000万円",
+    "damage_amount_reference": "墜落事故の後遺障害・死亡事案で2,000万〜5,000万円規模の判決例多数",
+    "source_type": "public_agency",
+    "source_citation": "出典：厚生労働省『職場のあんぜんサイト』墜落・転落災害事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "労働安全衛生規則第518条・第528条（脚立作業）",
+    "sales_angle": "ビル清掃・ビルメンテナンスは多数の小規模事業者が担う業界。一件の墜落事故で廃業に追い込まれる事業者多数。"
+  },
+  {
+    "case_id": "ROUSAI-019",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "transport",
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "ハラスメント・パワハラ",
+    "industry_major": "製造業",
+    "industry_minor": "金属加工",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "パワハラによる自殺",
+    "summary": "金属加工業の従業員が、社長からの日常的な暴言・暴行（「ばかやろう」等の罵倒、身体への蹴り等）により激しい不安に陥り、「仕事に行っても同じ失敗を繰り返す」との遺書を残して自殺。社長の暴言・退職強要がパワハラと認定され、社長と会社に連帯して賠償命令が下された。",
+    "damage_amount_range": "5,000万〜7,000万円",
+    "damage_amount_reference": "約5,400万円の賠償命令（名古屋地判平成26年1月15日）",
+    "source_type": "news_report",
+    "source_citation": "判例：名古屋地判平成26年1月15日（日進市ほうろう加工会社事件）",
+    "legal_basis": "民法第709条（不法行為）、民法第715条（使用者責任）、労働契約法第5条",
+    "sales_angle": "中小企業のワンマン経営は社長個人への賠償責任発生リスクが極めて高い。役員個人の賠償は個人資産の差押えにも及ぶ。"
+  },
+  {
+    "case_id": "ROUSAI-020",
+    "diagnostic_risk_id": "accident",
+    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_ids_secondary": [
+      "vehicle"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "通勤災害・マイカー通勤",
+    "industry_major": "全業種",
+    "industry_minor": "マイカー通勤を認める事業者",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "マイカー通勤中の事故で企業管理責任",
+    "summary": "マイカー通勤を認めている事業所で、従業員が通勤中に対人事故を起こし、第三者が重傷を負った。裁判所は「通勤のための自動車運転は業務と密接な関係がある」として、勤務先の管理責任を認定。使用者はマイカー通勤者に対して安全運転指導・保険契約の点検指導など特別な留意義務を負うとされた。",
+    "damage_amount_range": "3,000万〜1億円",
+    "damage_amount_reference": "マイカー通勤事故で企業管理責任を認めた判決（神戸地判2004年7月、神戸地判2010年5月）",
+    "source_type": "news_report",
+    "source_citation": "判例：神戸地判2004年7月7日、神戸地判2010年5月11日",
+    "legal_basis": "民法第715条（使用者責任）、運行供用者責任（自賠法第3条）",
+    "sales_angle": "地方の中小企業はマイカー通勤率が高い。通勤届・任意保険の加入確認・安全運転指導の形骸化は、企業側が億単位の使用者責任を負うリスクに直結。"
+  },
+  {
+    "case_id": "PL-001",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "food",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "食中毒・細菌汚染",
+    "industry_major": "食品製造業",
+    "industry_minor": "瓶詰食品製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "ボツリヌス菌汚染による食中毒",
+    "summary": "製造業者が製造・販売した瓶詰オリーブ製品にボツリヌス菌が存在し、これを喫食した消費者が食中毒を発症。製造工程での殺菌処理の不備が通常有すべき安全性を欠く「欠陥」と認定され、製造物責任が問われた。",
+    "damage_amount_range": "500万〜2,000万円／1件あたり（被害者数により総額拡大）",
+    "damage_amount_reference": "約2,000万円の賠償認容（東京地判平成13年2月28日）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判平成13年2月28日（判タ1068号181頁）",
+    "legal_basis": "製造物責任法第3条、食品衛生法",
+    "sales_angle": "食品製造業は1件の食中毒でも被害者が数十〜数百名に拡大するリスク。中小企業が事業継続できなくなる典型パターン。ホテル・旅館の提供食事や土産物でも同じリスクが発生。"
+  },
+  {
+    "case_id": "PL-002",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "food_restaurant"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "食中毒・自然毒",
+    "industry_major": "飲食業",
+    "industry_minor": "料理店",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "シガテラ毒素による食中毒",
+    "summary": "飲食店が提供したイシガキダイ料理にシガテラ毒素が含まれており、喫食した客が神経症状・消化器症状を発症。魚の毒性に関する知見・仕入れ時の確認義務の欠如が製造物責任の「欠陥」として認定された。",
+    "damage_amount_range": "500万〜1,500万円",
+    "damage_amount_reference": "判決での賠償認容（東京地判平成14年12月13日、判タ1109号285頁）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判平成14年12月13日（イシガキダイシガテラ事件）",
+    "legal_basis": "製造物責任法第3条、食品衛生法",
+    "sales_angle": "料理店・旅館・ホテルでの提供料理も「加工された動産」としてPL法対象。仕入れた食材の安全確認を怠れば、店主個人の知識不足が免責理由にならない。"
+  },
+  {
+    "case_id": "PL-003",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "異物混入",
+    "industry_major": "食品製造業",
+    "industry_minor": "飲料製造",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "飲料への異物混入による負傷",
+    "summary": "製造されたジュース製品に異物（ガラス片・金属片等）が混入しており、これを飲用した消費者が口腔内・消化器に怪我を負った。製造ラインの異物検査体制の不備が欠陥として認定された。",
+    "damage_amount_range": "300万〜1,500万円",
+    "damage_amount_reference": "賠償認容（名古屋地判平成11年6月30日、判時1682号106頁）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：名古屋地判平成11年6月30日（異物混入ジュース事件）",
+    "legal_basis": "製造物責任法第3条",
+    "sales_angle": "食品製造業の異物混入は、SNS炎上・マスコミ報道で信用毀損が賠償額を遥かに上回ることも。リコール費用を含めれば1件で数億円規模になるケースも多数。"
+  },
+  {
+    "case_id": "PL-004",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail",
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "食品アレルギー",
+    "industry_major": "食品製造業",
+    "industry_minor": "加工食品製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "アレルゲン表示漏れによるアナフィラキシー",
+    "summary": "加工食品のアレルゲン表示に漏れ・誤記があり、該当アレルギーを持つ消費者がアナフィラキシーショックを発症、重症化するケース。食品表示法違反と製造物責任が並行して問われる類型。",
+    "damage_amount_range": "500万〜3,000万円",
+    "damage_amount_reference": "後遺障害・死亡に至った場合は数千万円規模の判決例。アナフィラキシー死亡事案では1億円超の例も",
+    "source_type": "public_agency",
+    "source_citation": "出典：消費者庁『アレルギー関連事故事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、食品表示法第5条",
+    "sales_angle": "中小食品製造業は製造ライン切替時のコンタミ（交差汚染）管理が手薄になりがち。OEM製造で原材料変更が把握できないケースが最多リスク。"
+  },
+  {
+    "case_id": "PL-005",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail",
+      "food"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_chemical"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "化粧品・皮膚障害",
+    "industry_major": "化粧品業",
+    "industry_minor": "石鹸・化粧品製造",
+    "company_size": "中堅企業",
+    "region": "関西",
+    "incident_type": "石鹸使用による小麦アレルギー発症",
+    "summary": "加水分解小麦を含む石鹸の継続使用により、複数の使用者が経皮感作を通じて小麦アレルギーを発症。製造会社は当該成分の感作リスクを予見できた立場にあったとして、製造物責任が認定された。",
+    "damage_amount_range": "1,000万〜5,000万円／1訴訟あたり（被害者多数のため総額は巨額）",
+    "damage_amount_reference": "約4,200万円の賠償命令（大阪地判平成31年3月29日）",
+    "source_type": "news_report",
+    "source_citation": "判例：大阪地判平成31年3月29日（茶のしずく石鹸訴訟）",
+    "legal_basis": "製造物責任法第3条",
+    "sales_angle": "化粧品・日用品は経皮吸収による長期被害が問題化。ホテル・旅館のアメニティとして提供した商品でも、施設側が販売業者として製造物責任を負う場合あり。"
+  },
+  {
+    "case_id": "PL-006",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "fire"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail",
+      "food",
+      "medical",
+      "real_estate"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_electric"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "家電発火・火災",
+    "industry_major": "電機メーカー",
+    "industry_minor": "生活家電",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "電気毛布・電気シェーバー等の発火による火災",
+    "summary": "家庭用電化製品（電気毛布、電気シェーバー等）の内部配線・電池の欠陥により発火、使用者の火傷および住宅火災による財産損害が発生。リコール実施の遅れが責任を加重する類型。",
+    "damage_amount_range": "500万〜5,000万円（住宅全焼の場合は1億円超）",
+    "damage_amount_reference": "火災による住宅・建物損害は物損だけで数千万円、人身損害を含めると拡大",
+    "source_type": "public_agency",
+    "source_citation": "出典：消費者庁リコール情報サイト（https://www.recall.caa.go.jp/）、東京消防庁『リコール・社告品火災事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、消費生活用製品安全法",
+    "sales_angle": "ホテル・旅館の客室、オフィス、介護施設は多数の家電を使用。1台の発火が施設全体の火災→休業→賠償の連鎖リスクを生む。"
+  },
+  {
+    "case_id": "PL-007",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "fire"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "transport",
+      "it"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_electric"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "リチウム電池発火",
+    "industry_major": "電機メーカー",
+    "industry_minor": "モバイル機器・バッテリー",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "モバイルバッテリー・リチウムイオン電池の発火",
+    "summary": "モバイルバッテリーや充電機器のリチウムイオン電池が過充電・製造不良により発火、使用者の火傷および衣服・家財の焼失を招いた。大量リコール実施時の費用負担も製造物責任の射程に含まれる。",
+    "damage_amount_range": "100万〜1,000万円／1件（リコール費用を含めれば製造業者負担は数億円超）",
+    "damage_amount_reference": "リコール保険の想定損害額は1事案あたり数千万〜数億円",
+    "source_type": "public_agency",
+    "source_citation": "出典：NITE『最新事故情報』（事実情報の抽出）、消費者庁『重大製品事故情報』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、消費生活用製品安全法",
+    "sales_angle": "リチウム電池は発火すると爆発的に燃焼。ホテル客室・旅客車両・航空機内での発火事例が急増中。施設管理者にも情報提供義務が及ぶ。"
+  },
+  {
+    "case_id": "PL-008",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_chemical"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "医薬品副作用",
+    "industry_major": "医薬品業",
+    "industry_minor": "医薬品製造・輸入",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "抗がん剤の副作用による死亡",
+    "summary": "肺がん治療薬の投与後、重篤な副作用（間質性肺炎等）により患者が死亡。副作用情報の記載・警告が「通常有すべき安全性」を確保するために十分であったかが争点となった類型。",
+    "damage_amount_range": "2,000万〜5,000万円／1件（集団訴訟では総額数十億円規模）",
+    "damage_amount_reference": "イレッサ事件（最判平成25年4月12日）は請求棄却だが、同種訴訟で和解等により多額の支払事例あり",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：最判平成25年4月12日（肺がん治療薬死亡事件）",
+    "legal_basis": "製造物責任法第3条、薬機法",
+    "sales_angle": "医薬品は「本来異物」という性質上、副作用即欠陥ではないが、添付文書の警告表示・医師への情報提供の適切性が問われる。中小製薬でも輸入販売業者として責任主体。"
+  },
+  {
+    "case_id": "PL-009",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_chemical"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "医療機器欠陥",
+    "industry_major": "医療機器業",
+    "industry_minor": "医療機器製造",
+    "company_size": "中堅・大手",
+    "region": "全国",
+    "incident_type": "手術用医療機器の欠陥による死亡",
+    "summary": "病院で手術に使用された医療機器に構造上の欠陥があり、または他社製補助器具との組み合わせ時の危険性に関する指示・警告が不十分であったため、患者が死亡に至った。医療機器製造業者の製造物責任が認定された類型。",
+    "damage_amount_range": "3,000万〜1億円",
+    "damage_amount_reference": "医療事故の損害賠償は逸失利益・慰謝料を含めて数千万円〜1億円規模が典型",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：医療機器製造業者に対する製造物責任認定事例",
+    "legal_basis": "製造物責任法第3条、医療法",
+    "sales_angle": "医療機器・福祉用具は「指示警告上の欠陥」が最大リスク。他製品との組み合わせ利用の危険性を警告していなかっただけで責任発生。介護施設での福祉用具トラブルも同類型。"
+  },
+  {
+    "case_id": "PL-010",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [
+      "accident"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "transport"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_machinery"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "業務用機械事故",
+    "industry_major": "製造業",
+    "industry_minor": "産業機械製造",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "業務用機械による身体切断事故",
+    "summary": "業務用の飲料缶選別機のローラーに付着した異物を作業員が手で除去しようとした際、ローラーに巻き込まれて右上腕部を切断する重傷を負った。機械に通常合理的に予見される使用形態に対する安全装置が不十分であったとして製造業者の責任が認定された。",
+    "damage_amount_range": "3,000万〜1億円（後遺障害1級〜3級相当）",
+    "damage_amount_reference": "身体切断・後遺障害事案の判決例より",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京高判平成14年10月31日（資源ゴミ分別機械上腕部切断事件）",
+    "legal_basis": "製造物責任法第3条",
+    "sales_angle": "業務用機械は「予見される誤使用」にも対応した安全設計義務が課される。『使用者のミス』では免責されない重要判例。B2B製造業者に特に重要。"
+  },
+  {
+    "case_id": "PL-011",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [
+      "vehicle"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "transport"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_auto"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "自動車・車両欠陥",
+    "industry_major": "自動車業",
+    "industry_minor": "自動車部品製造",
+    "company_size": "大手・中堅",
+    "region": "全国",
+    "incident_type": "車両部品の欠陥による重大事故",
+    "summary": "自動車のブレーキ・エアバッグ・ハンドル等の部品に欠陥があり、走行中の事故・重大事故に至った。自動車損害賠償保障法に基づく運行供用者責任と、部品製造業者の製造物責任が重層的に問われる類型。",
+    "damage_amount_range": "1億〜数百億円（集団訴訟の場合）",
+    "damage_amount_reference": "タカタエアバッグ事案等の集団訴訟では企業全体で数兆円規模のリコール費用。1件あたりの人身損害は死亡事案で5,000万〜1億円",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『リコール届出情報』、消費者庁『重大製品事故情報』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、自動車損害賠償保障法",
+    "sales_angle": "自動車部品は大手の下請中小企業が多数関与。1次取引先からの求償請求で中小企業が連鎖倒産するケースも。"
+  },
+  {
+    "case_id": "PL-012",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "retail_other"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "玩具・子供用品",
+    "industry_major": "小売業",
+    "industry_minor": "玩具・乳幼児用品製造販売",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "玩具の誤飲・窒息事故",
+    "summary": "乳幼児向け玩具の部品が容易に外れる構造であったため、子どもが部品を誤飲・窒息し死亡または重度後遺障害を負った。設計段階での安全基準適合性および警告表示の適切性が問われる類型。",
+    "damage_amount_range": "3,000万〜1億円（死亡・重度後遺障害事案）",
+    "damage_amount_reference": "子どもの死亡事案は逸失利益算定が長期化するため、1億円超の判決例も多数",
+    "source_type": "public_agency",
+    "source_citation": "出典：消費者庁『子ども安全情報』『重大製品事故情報』、NITE『製品事故データベース』（事実情報の抽出）を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、消費生活用製品安全法",
+    "sales_angle": "玩具・ベビー用品は輸入販売業者も製造業者と同等の責任。海外OEM・輸入中小企業にとって最大のPLリスク分野。"
+  },
+  {
+    "case_id": "PL-013",
+    "diagnostic_risk_id": "food_poisoning",
+    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "健康食品・機能性食品",
+    "industry_major": "食品製造業",
+    "industry_minor": "健康食品製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "健康食品の有害成分による健康被害",
+    "summary": "健康食品として販売された加工食品に、シアン化合物等の有害成分が含まれており、長期摂取した消費者が肝機能障害・腎機能障害を発症した。通常の使用形態における安全性の欠如が欠陥と認定される類型。",
+    "damage_amount_range": "500万〜3,000万円",
+    "damage_amount_reference": "加工あまめしば事案（名古屋高判平成21年2月26日）等の判例",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：名古屋高判平成21年2月26日（加工あまめしば事件）",
+    "legal_basis": "製造物責任法第3条、食品衛生法、機能性表示食品制度",
+    "sales_angle": "健康食品・サプリメント市場は中小企業の参入が多い一方、2024年紅麹事件以降、機能性食品への責任追及が厳格化。表示内容と製造管理の二重リスク。"
+  },
+  {
+    "case_id": "PL-014",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [
+      "real_estate"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_wood"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "建材・住宅設備",
+    "industry_major": "建材業",
+    "industry_minor": "建材・住宅設備製造",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "建材の欠陥による健康被害・倒壊事故",
+    "summary": "住宅建材（石綿含有建材、シックハウス原因物質含有建材、強度不足の構造材等）の欠陥により、居住者の健康被害または住宅の倒壊・損傷が発生した類型。長期間経過後の提訴も多く時効の問題が絡む。",
+    "damage_amount_range": "1,000万〜1億円（健康被害・建物損害合計）",
+    "damage_amount_reference": "アスベスト関連訴訟では集団訴訟で総額数十億円規模の判決例",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省・厚生労働省『建材関連事故事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第3条、建築基準法、住宅品質確保法",
+    "sales_angle": "建材・住宅設備はホテル・旅館・介護施設の改修工事で多用。施工業者経由で仕入れた建材の欠陥でも施主・運営者に間接的な責任が及ぶ可能性。"
+  },
+  {
+    "case_id": "PL-015",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [
+      "cyber"
+    ],
+    "diagnostic_industry_primary": [
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "manufacturing"
+    ],
+    "diagnostic_sub_industries": [
+      "retail_ec"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "販売業者責任（EC・通販）",
+    "industry_major": "小売業",
+    "industry_minor": "EC・通販事業者",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "輸入販売した製品の欠陥による事故",
+    "summary": "EC・通販事業者が海外から輸入・販売した家電・日用品に欠陥があり、消費者に人身・財産損害が発生。製造者表示を自社名で行った場合や、製造者不明の場合、輸入販売業者が「製造業者等」として製造物責任を負う類型。",
+    "damage_amount_range": "100万〜5,000万円",
+    "damage_amount_reference": "販売業者の責任範囲は製品により大きく変動",
+    "source_type": "public_agency",
+    "source_citation": "出典：消費者庁『製造物責任法に基づく訴訟情報』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "製造物責任法第2条第3項（製造業者等の定義）、第3条",
+    "sales_angle": "越境EC・個人輸入販売の増加により、中小ECサイト事業者がPL訴訟の被告になるケースが急増。「自社で作っていないから関係ない」は通用しない。"
+  },
+  {
+    "case_id": "CYBER-001",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "transport",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_metal"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "ランサムウェア",
+    "industry_major": "製造業",
+    "industry_minor": "金属加工・機械製造",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "VPN機器経由のランサムウェア感染・生産停止",
+    "summary": "製造業者がVPN機器の脆弱性を突かれてランサムウェアに感染。基幹システム・設計データ・生産管理システムが暗号化され、工場の生産ラインが数週間〜1ヶ月停止。取引先への納品遅延による違約金請求、復旧費用、セキュリティ強化費用が発生した。",
+    "damage_amount_range": "5,000万〜3億円",
+    "damage_amount_reference": "トレンドマイクロ2024年調査で国内企業の平均被害額は約2.2億円。JNSA調査では平均約2,386万円。1,000万円以上の復旧費用が被害組織の50%",
+    "source_type": "public_agency",
+    "source_citation": "出典：警察庁『令和6年におけるサイバー空間をめぐる脅威の情勢等について』、IPA『情報セキュリティ10大脅威2025』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、民法第415条（債務不履行）、取引基本契約上の機密保持義務",
+    "sales_angle": "製造業はランサムウェア被害の43%を占めて業種別トップ。1時間の生産停止で1億円規模の損害という試算も。VPN機器の脆弱性放置が最大の侵入経路。"
+  },
+  {
+    "case_id": "CYBER-002",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [
+      "service"
+    ],
+    "diagnostic_sub_industries": [
+      "medical_hospital"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "ランサムウェア",
+    "industry_major": "医療・福祉",
+    "industry_minor": "病院",
+    "company_size": "中小規模",
+    "region": "地方",
+    "incident_type": "電子カルテ暗号化による診療停止",
+    "summary": "地方病院のVPN機器の脆弱性を突かれ、電子カルテ・会計システムがランサムウェアに感染。診療報酬請求が不能となり、患者情報が閲覧できない状態が2ヶ月継続。システム復旧に2億円以上を要し、通常診療再開までの収入損失が加算された。",
+    "damage_amount_range": "1億〜5億円（復旧＋逸失利益）",
+    "damage_amount_reference": "徳島県つるぎ町立半田病院事例で復旧費用2億円超。岡山県精神科医療センター事例で最大約4万人の患者情報流出",
+    "source_type": "news_report",
+    "source_citation": "類似事例：徳島県つるぎ町立半田病院ランサムウェア事件（2021年）、岡山県精神科医療センター事件（2024年5月）",
+    "legal_basis": "個人情報保護法、医療法、医療情報システム安全管理ガイドライン",
+    "sales_angle": "医療機関は身代金を支払わなくても復旧費用だけで2億円超。社会福祉法人が運営する医療・介護施設にとって事業継続を根本から揺るがす最重要リスク。"
+  },
+  {
+    "case_id": "CYBER-003",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "it"
+    ],
+    "diagnostic_industry_secondary": [
+      "finance",
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "it_other"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "サプライチェーン攻撃",
+    "industry_major": "情報通信業",
+    "industry_minor": "BPO・情報処理委託",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "委託先ランサムウェア感染による大規模情報漏洩",
+    "summary": "自治体・金融機関・民間企業から情報処理を受託する事業者がランサムウェアに感染し、委託元から預かっていた個人情報約150万件が流出。委託元である自治体から数千万円の損害賠償を請求される方針が発表された。契約上削除すべきデータが残存していた点も委託先の信頼失墜要因となった。",
+    "damage_amount_range": "数千万〜数億円（委託元からの求償）",
+    "damage_amount_reference": "イセトー事件（2024年5月）で約150万件の個人情報流出。愛知県豊田市（14万8,620件）、徳島県（約20万件）、和歌山市（約15.1万件）、クボタ（約6.1万件）等が影響",
+    "source_type": "news_report",
+    "source_citation": "類似事例：株式会社イセトー ランサムウェア事件（2024年5月26日発覚）",
+    "legal_basis": "個人情報保護法第25条（委託先監督義務）、民法第415条",
+    "sales_angle": "BPO・システム委託先の事故は委託元に直接波及。中小企業でも取引先からの信頼失墜と契約解除の連鎖で廃業級の打撃。"
+  },
+  {
+    "case_id": "CYBER-004",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption",
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "it"
+    ],
+    "diagnostic_industry_secondary": [
+      "service"
+    ],
+    "diagnostic_sub_industries": [
+      "it_other"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "ランサムウェア",
+    "industry_major": "情報通信業",
+    "industry_minor": "出版・コンテンツ",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "フィッシング経由のランサムウェア感染・大規模サービス停止",
+    "summary": "フィッシング攻撃により従業員アカウントが盗まれ、社内ネットワークに侵入されてランサムウェア感染。動画配信サービス・書籍関連サイト・出版・映像事業が広範囲に停止。約25万人の個人情報が流出し、営業利益47億円のマイナスとなった。",
+    "damage_amount_range": "数十億円〜百億円超",
+    "damage_amount_reference": "KADOKAWA事件（2024年6月）で売上83億円、営業利益47億円のマイナス。約25万人の個人情報流出",
+    "source_type": "news_report",
+    "source_citation": "類似事例：株式会社KADOKAWA ランサムウェア事件（2024年6月8日）",
+    "legal_basis": "個人情報保護法、金融商品取引法（上場企業の情報開示）",
+    "sales_angle": "フィッシング対策・多要素認証の未整備は大手企業でも致命的。従業員1名のアカウント乗っ取りから全社システム停止まで直結する。"
+  },
+  {
+    "case_id": "CYBER-005",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "transport"
+    ],
+    "diagnostic_industry_secondary": [
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "transport_sea"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "ランサムウェア・サプライチェーン影響",
+    "industry_major": "運輸業",
+    "industry_minor": "港湾・物流",
+    "company_size": "社会インフラ",
+    "region": "全国",
+    "incident_type": "物流ターミナルシステムへの攻撃で輸出入停止",
+    "summary": "港湾統一ターミナルシステムがランサムウェアに感染し、コンテナの搬出入作業が数日間全面停止。ネットワーク管理の不備（不特定多数がアクセス可能な状態）が侵入経路となり、日本全国の輸出入貨物・サプライチェーンに連鎖的な経済損失を発生させた。",
+    "damage_amount_range": "数十億円規模（業界全体への波及損害含む）",
+    "damage_amount_reference": "名古屋港統一ターミナルシステム（NUTS）事件（2023年7月）で2日以上の全面停止",
+    "source_type": "news_report",
+    "source_citation": "類似事例：名古屋港統一ターミナルシステム ランサムウェア事件（2023年7月4日）",
+    "legal_basis": "個人情報保護法、重要インフラ事業者として各業法",
+    "sales_angle": "社会インフラ事業者への攻撃は『身代金を支払いやすい』と攻撃者に認識されている。輸送・エネルギー・通信に関わる事業者は特にリスク大。"
+  },
+  {
+    "case_id": "CYBER-006",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "food",
+      "it"
+    ],
+    "diagnostic_sub_industries": [
+      "retail_ec"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "不正アクセス・クレカ情報漏洩",
+    "industry_major": "小売業",
+    "industry_minor": "ECサイト運営",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "ECサイトへの不正アクセスによるクレジットカード情報漏洩",
+    "summary": "ECサイトの決済システムの脆弱性を突かれて不正アクセスされ、顧客のクレジットカード情報（カード番号・有効期限・セキュリティコード）が数万件流出。クレジットカード会社からの契約停止、カード再発行費用の負担、被害者への慰謝料請求が発生した。",
+    "damage_amount_range": "3,000万〜1億円（復旧＋慰謝料＋取引停止損害）",
+    "damage_amount_reference": "センシティブ情報・二次被害ありの場合は1人あたり10,000〜35,000円の慰謝料相場。フォレンジック調査費1,300万円規模（PC10台＋サーバー1台想定）",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ10大脅威2025』『インターネット決済のクレジットカード情報漏洩』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、割賦販売法（クレジットカード情報の安全管理）",
+    "sales_angle": "中小EC事業者の約9割がクレカ情報を取扱う。PCI DSS準拠違反は賠償額を遥かに超える信用失墜を招く。"
+  },
+  {
+    "case_id": "CYBER-007",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "it",
+      "service"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail",
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "it_web"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "Web脆弱性・SQLインジェクション",
+    "industry_major": "サービス業",
+    "industry_minor": "Webサービス運営",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "Webサイトの脆弱性を突かれた個人情報流出",
+    "summary": "会員登録制のWebサービスがSQLインジェクション攻撃を受け、会員の氏名・住所・電話番号・メールアドレス・ID/パスワードのハッシュ値等が数十万件流出。運営事業者のWebアプリケーション診断の未実施が責任を加重した。",
+    "damage_amount_range": "500万〜5,000万円",
+    "damage_amount_reference": "軽微情報漏洩の慰謝料相場は1人あたり3,000〜5,000円。10万件規模で総額3,000万〜5,000万円",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『安全なウェブサイトの作り方』『情報セキュリティ10大脅威』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、民法第415条・第709条",
+    "sales_angle": "Webサイト脆弱性診断は1回数十万円から可能。これを怠って数千万円の賠償を負うケースが後を絶たない。"
+  },
+  {
+    "case_id": "CYBER-008",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "フィッシング・アカウント乗っ取り",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "従業員のフィッシング被害によるアカウント乗っ取り・情報漏洩",
+    "summary": "従業員宛てに送られた巧妙なフィッシングメール（取引先を装ったもの）により、業務用メールアカウント・クラウドサービスの認証情報が窃取された。不正ログインにより社内の機密情報・顧客情報が流出。多要素認証の未導入が被害拡大の主因となった。",
+    "damage_amount_range": "500万〜5,000万円",
+    "damage_amount_reference": "フィッシングはランサムウェア侵入経路の約45%（2025年調査）",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ10大脅威2025』フィッシング脅威を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、不正アクセス禁止法",
+    "sales_angle": "多要素認証（MFA）の導入は月額数百円／アカウント。これを怠って数千万円の賠償を負うのは経営判断の誤り。"
+  },
+  {
+    "case_id": "CYBER-009",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "ビジネスメール詐欺（BEC）",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "ビジネスメール詐欺による不正送金",
+    "summary": "経営者や取引先を装った詐欺メールにより、経理担当者が攻撃者指定の口座に数千万〜数億円を送金する被害が発生。海外送金は回収困難で、実質的に全額損失となるケースが多い。",
+    "damage_amount_range": "1,000万〜数億円",
+    "damage_amount_reference": "BEC被害額は平均1,030万円（JNSA調査）、一部では2,000万円超え。海外事例では数十億円規模も",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ10大脅威』ビジネスメール詐欺、警察庁BEC統計を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第709条、銀行取引における注意義務",
+    "sales_angle": "BECは『社長メール』『取引先の振込口座変更』等、社内決裁フローの盲点を突く。経理の確認プロセスの形骸化が最大のリスク要因。"
+  },
+  {
+    "case_id": "CYBER-010",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "it",
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "retail",
+      "finance"
+    ],
+    "diagnostic_sub_industries": [
+      "it_saas"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "標的型攻撃",
+    "industry_major": "情報通信業",
+    "industry_minor": "IT・SaaS事業者",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "標的型攻撃による機密情報・営業秘密流出",
+    "summary": "業務関連を装ったメール（標的型攻撃メール）の添付ファイル開封から社内ネットワークに侵入され、長期間潜伏した攻撃者により、製品設計図・顧客リスト・営業秘密が継続的に窃取された。攻撃発覚時にはすでに数ヶ月間の情報流出が発生していた。",
+    "damage_amount_range": "5,000万〜数億円",
+    "damage_amount_reference": "標的型攻撃による機密情報流出は金額評価が困難だが、営業秘密流出は不正競争防止法違反で3,000万円以上の罰金刑もあり",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ10大脅威2025』標的型攻撃、NISC『標的型攻撃対策』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、不正競争防止法（営業秘密）",
+    "sales_angle": "標的型攻撃は発覚まで平均数ヶ月。検知が遅れるほど被害が拡大する。EDRの導入やログ監視体制の欠如が致命傷。"
+  },
+  {
+    "case_id": "CYBER-011",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "it",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "finance",
+      "service"
+    ],
+    "diagnostic_sub_industries": [
+      "it_web"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "DDoS攻撃・サービス停止",
+    "industry_major": "情報通信業",
+    "industry_minor": "Webサービス運営",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "DDoS攻撃によるWebサービス長時間停止",
+    "summary": "ECサイトや業務系Webサービスが大規模DDoS攻撃を受け、数日〜1週間のサービス停止が発生。停止期間中の売上機会損失、復旧費用、DDoS対策サービス導入費用、顧客への補償費用が発生した。",
+    "damage_amount_range": "500万〜5,000万円",
+    "damage_amount_reference": "ECサイトの機会損失は1日あたり数百万〜数千万円規模",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ10大脅威2025』DDoS攻撃関連情報を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第415条（サービス提供契約の債務不履行）",
+    "sales_angle": "DDoS攻撃はニュースにならない日常的リスク。特にキャンペーン期間中・セール時を狙われると機会損失は数千万円級。"
+  },
+  {
+    "case_id": "CYBER-012",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "it_saas"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "クラウド設定ミス",
+    "industry_major": "全業種",
+    "industry_minor": "クラウドサービス利用企業",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "SaaS・IaaSの設定不備による情報漏洩",
+    "summary": "SaaSのアクセス権限設定の誤り、またはIaaS（AWS等）のストレージ公開設定誤りにより、機密ファイル・顧客情報がインターネット上で閲覧可能な状態となった。クラウドサービスの仕様変更時の事前通知を受け取っていても対応しなかったケースが多い。",
+    "damage_amount_range": "300万〜3,000万円",
+    "damage_amount_reference": "設定ミス事案は発覚後の対応費用・慰謝料で数百万〜数千万円規模",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『情報セキュリティ白書2024』クラウドサービスの設定ミス事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、クラウドサービス提供事業者との責任共有モデル",
+    "sales_angle": "クラウド利用時の『責任共有モデル』の誤解が典型的リスク。シャドーITの9割が大手企業で問題化。"
+  },
+  {
+    "case_id": "CYBER-013",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 2,
+    "sub_category": "外部記憶媒体紛失・盗難",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "USBメモリ・外付けHDDの紛失・盗難による情報漏洩",
+    "summary": "社外作業のために持ち出した暗号化されていないUSBメモリ・外付けHDDを紛失または盗難され、顧客情報・機密資料が漏洩した。自動車内からの盗難、飲食店での置忘れが典型パターン。",
+    "damage_amount_range": "100万〜3,000万円",
+    "damage_amount_reference": "紛失情報の件数と内容により変動。数千件規模で数百万円、数万件規模で数千万円",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』紛失事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法第23条（安全管理措置義務）、第26条（漏えい等報告義務）",
+    "sales_angle": "媒体暗号化は無料または数千円／台。これを怠り数百万円の賠償に発展するのは事業者の典型的な怠慢リスク。"
+  },
+  {
+    "case_id": "CYBER-014",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 2,
+    "sub_category": "PC・スマホ紛失",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "業務用PC・スマートフォンの紛失による情報漏洩",
+    "summary": "従業員が業務用のノートPC・スマートフォンを社外で紛失（電車内置忘れ、飲食店、タクシー等）し、端末内の業務データ・顧客情報が漏洩の疑いとなった。リモートワイプ機能を未導入・未設定のため、漏洩範囲が特定できないケースが問題化。",
+    "damage_amount_range": "100万〜2,000万円",
+    "damage_amount_reference": "個人情報保護委員会への漏えい報告の典型事例",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『個人情報の漏えい等報告年次報告』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法第23条、第26条",
+    "sales_angle": "MDM（モバイルデバイス管理）導入で防げる典型的事故。導入コストは月額数百円／台。"
+  },
+  {
+    "case_id": "CYBER-015",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "directors",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "service",
+      "it"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "内部不正・持ち出し",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "中堅・大手",
+    "region": "全国",
+    "incident_type": "従業員・派遣社員による内部不正・個人情報売却",
+    "summary": "委託先従業員・派遣社員・在籍従業員が顧客情報を不正にコピー（スマートフォン経由、私用USBメモリ経由等）して名簿業者等に売却した。使用者責任により、委託元企業が数千万円〜数億円の慰謝料賠償を命じられた。約2,895万件が流出した大規模事案も発生。",
+    "damage_amount_range": "数百万〜数億円（被害者1人あたり3,300円×件数）",
+    "damage_amount_reference": "ベネッセ事件（東京地判令和5年2月27日）で4,027人に1人あたり3,300円、総額約1,300万円。全体3,500万件で最大200億円規模の想定",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判令和5年2月27日（ベネッセ個人情報流出事件）、大阪高判令和元年11月20日（個別訴訟）",
+    "legal_basis": "個人情報保護法第25条（委託先監督義務）、民法第715条（使用者責任）、不正競争防止法",
+    "sales_angle": "委託先や派遣社員の管理不備で数十億円級の特別損失に。『委託しているから安心』という思い込みが最大リスク。"
+  },
+  {
+    "case_id": "CYBER-016",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "退職者による情報持ち出し",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "退職従業員による顧客リスト・営業秘密の持ち出し",
+    "summary": "退職予定の従業員が、顧客リスト・仕入価格・売上データ等の営業秘密を転職先に持ち出し、競合他社で不正利用した。不正競争防止法違反で元社員に執行猶予付き有罪判決、転職先企業にも罰金刑・民事賠償命令が下された。",
+    "damage_amount_range": "数千万〜数億円",
+    "damage_amount_reference": "カッパ・クリエイト事件（2022年）で罰金3,000万円判決。民事でも営業損害賠償が別途",
+    "source_type": "news_report",
+    "source_citation": "類似事例：はま寿司vsカッパ・クリエイト事件（2022年）、東京地判で罰金3,000万円",
+    "legal_basis": "不正競争防止法第2条1項4号・7号（営業秘密侵害）、就業規則・秘密保持契約",
+    "sales_angle": "退職時の情報持ち出し対策（端末ログ監視、秘密保持誓約書、競業避止義務）の整備は事業継続の生命線。"
+  },
+  {
+    "case_id": "CYBER-017",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 2,
+    "sub_category": "メール誤送信",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "メール誤送信（BCC漏れ・宛先誤り）による個人情報漏洩",
+    "summary": "一斉配信メールでBCC欄に入れるべきメールアドレスをTO/CC欄に入力したり、類似氏名の取引先に機密情報を誤送信するなどのヒューマンエラーにより、顧客のメールアドレス・氏名等が第三者に漏洩した。",
+    "damage_amount_range": "100万〜1,500万円",
+    "damage_amount_reference": "個人情報保護委員会への漏えい報告で最多の類型。1事案あたり100万〜数百万円規模が典型",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』メール誤送信事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法第23条、第26条",
+    "sales_angle": "誤送信防止ツールは月額数百円／アカウント。未導入でBCC漏れ→漏えい報告→信用失墜の黄金パターン。"
+  },
+  {
+    "case_id": "CYBER-018",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "medical_nursing_home"
+    ],
+    "diagnostic_impact_score": 2,
+    "sub_category": "FAX誤送信",
+    "industry_major": "医療・福祉",
+    "industry_minor": "医療機関・介護事業",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "FAX誤送信による医療情報・利用者情報漏洩",
+    "summary": "医療機関・介護施設・社会福祉法人等がFAXで送信した患者情報・利用者情報・医療処方箋が、短縮ダイヤル誤操作等により無関係な第三者に送信された。医療・介護業界では依然としてFAXが多用されており、誤送信による要配慮個人情報漏洩事案が続発。",
+    "damage_amount_range": "50万〜1,000万円",
+    "damage_amount_reference": "要配慮個人情報（病歴等）は1人あたり10,000〜35,000円の慰謝料相場",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』医療機関FAX誤送信事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法第2条第3項（要配慮個人情報）、第23条、第26条",
+    "sales_angle": "医療・介護業界はFAX・紙運用が多く要配慮個人情報を扱う。1件あたりの賠償単価が一般情報の3〜10倍。"
+  },
+  {
+    "case_id": "CYBER-019",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "finance"
+    ],
+    "diagnostic_industry_secondary": [
+      "it"
+    ],
+    "diagnostic_sub_industries": [
+      "finance_insurance_agency"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "宛名ラベル誤貼付・郵送ミス",
+    "industry_major": "金融業",
+    "industry_minor": "保険・金融",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "郵送物の宛名ラベル誤貼付・同封書類誤挿入",
+    "summary": "一括印刷・封入封緘の工程ミスにより、他の顧客の書類が誤って同封されたり、宛名ラベルが誤貼付されて別人に郵送された。契約内容・金融取引明細・保険情報等のセンシティブ情報が漏洩するケースが発生。",
+    "damage_amount_range": "100万〜2,000万円",
+    "damage_amount_reference": "発生件数と情報の機微性により変動。金融情報は高額賠償の対象",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』金融機関事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、金融商品取引法・銀行法等の業法",
+    "sales_angle": "大量郵送業務の委託先管理と封入チェック体制の欠如は、1件のミスが数千件の漏洩に直結する。"
+  },
+  {
+    "case_id": "CYBER-020",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "宿泊業・予約システム",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル・旅館",
+    "company_size": "中小〜大手",
+    "region": "全国",
+    "incident_type": "宿泊予約システムへの不正アクセスによる顧客情報漏洩",
+    "summary": "ホテル・旅館の予約管理システム、またはPMS（Property Management System）の脆弱性を突かれて不正アクセスされ、宿泊者の氏名・住所・電話番号・パスポート情報・クレジットカード情報が流出。訪日外国人観光客のデータ流出は国際的な信用問題に発展。",
+    "damage_amount_range": "1,000万〜1億円",
+    "damage_amount_reference": "クレカ情報・パスポート情報はセンシティブ情報として1人あたり10,000〜35,000円の慰謝料相場",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』宿泊業事案、観光庁『ホテル・旅館の情報セキュリティ対策』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、旅館業法、割賦販売法",
+    "sales_angle": "ホテル・旅館は小規模でもクレカ情報・パスポート情報を扱う。四国の老舗旅館でも同等のセキュリティ水準が法的に求められる。"
+  },
+  {
+    "case_id": "CYBER-021",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "宿泊業・Wi-Fi経由攻撃",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル・旅館",
+    "company_size": "中小〜大手",
+    "region": "全国",
+    "incident_type": "館内Wi-Fiを経由した宿泊客へのサイバー攻撃",
+    "summary": "ホテル・旅館の館内Wi-Fi（宿泊客向け無料Wi-Fi）のセキュリティ不備を悪用され、宿泊中のビジネス客のPC・スマートフォンに不正アクセスがあり、その顧客から『施設側のWi-Fi管理責任』として損害賠償請求を受けた。",
+    "damage_amount_range": "数百万〜数千万円",
+    "damage_amount_reference": "宿泊客への慰謝料および業務被害の賠償で数百万〜数千万円",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『公衆無線LAN利用に係る脅威と対策』、総務省『無料Wi-Fi利用ガイドライン』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第415条（提供サービスの安全性）、電気通信事業法",
+    "sales_angle": "館内Wi-Fiは『無料のサービス』ではなく『契約上のアメニティ』。宿泊客のビジネス被害に対し施設管理責任が問われる判例が増加中。"
+  },
+  {
+    "case_id": "CYBER-022",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "medical_hospital"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "医療情報漏洩",
+    "industry_major": "医療・福祉",
+    "industry_minor": "病院・クリニック",
+    "company_size": "中小〜大手",
+    "region": "全国",
+    "incident_type": "医療情報システムの不正アクセス・要配慮個人情報流出",
+    "summary": "電子カルテ・健診データ・レセプト情報等の要配慮個人情報を保有する医療機関が、不正アクセス・内部不正・紛失等により数千〜数万件の患者情報を流出させた。病歴・診療内容は特に秘匿性が高く、1人あたりの慰謝料単価が大きい。",
+    "damage_amount_range": "1,000万〜1億円",
+    "damage_amount_reference": "要配慮個人情報の慰謝料は1人あたり10,000円以上。岡山県精神科医療センター事件では最大約4万人の患者情報流出",
+    "source_type": "news_report",
+    "source_citation": "類似事例：岡山県精神科医療センター情報流出事件（2024年5月）、各種医療機関情報漏洩事案",
+    "legal_basis": "個人情報保護法第2条第3項（要配慮個人情報）、医療法、医療情報システム安全管理ガイドライン",
+    "sales_angle": "医療情報は『要配慮個人情報』として厳格な管理義務。社会福祉法人・介護施設も同等の扱い。"
+  },
+  {
+    "case_id": "CYBER-023",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "medical_nursing_home"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "介護・社会福祉情報漏洩",
+    "industry_major": "医療・福祉",
+    "industry_minor": "社会福祉法人・介護施設",
+    "company_size": "中小〜大手",
+    "region": "全国",
+    "incident_type": "介護施設の利用者情報・家族情報漏洩",
+    "summary": "介護施設・社会福祉法人が保有する利用者の氏名・要介護度・病歴・家族連絡先・生活歴等の要配慮個人情報が、職員のUSB紛失・メール誤送信・内部不正・不正アクセスにより流出。家族への連絡対応、信用失墜による新規利用者減少が発生。",
+    "damage_amount_range": "300万〜3,000万円",
+    "damage_amount_reference": "要配慮個人情報の慰謝料相場および利用者数により変動",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』社会福祉法人事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法第2条第3項、社会福祉法、介護保険法",
+    "sales_angle": "社会福祉法人は公益性と信頼性が事業の生命線。1件の情報漏洩で地域の信用を失い、新規利用者獲得が数年間困難に。"
+  },
+  {
+    "case_id": "CYBER-024",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "service"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "service_education"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "教育機関・生徒情報",
+    "industry_major": "教育・学習支援業",
+    "industry_minor": "学校・学習塾",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "学校・塾の生徒情報流出",
+    "summary": "学校・学習塾の生徒情報（氏名、学年、住所、保護者連絡先、成績、家族構成等）が、職員のPC紛失・内部不正・不正アクセスにより流出。未成年の情報を含むため、社会的影響が大きく、保護者からの賠償請求が集団化する傾向。",
+    "damage_amount_range": "500万〜5,000万円",
+    "damage_amount_reference": "未成年情報・成績情報を含む漏洩で1人あたり3,000〜10,000円の慰謝料相場",
+    "source_type": "public_agency",
+    "source_citation": "出典：個人情報保護委員会『漏えい等事案の公表』教育機関事案を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、学校教育法、児童福祉法",
+    "sales_angle": "2024年のランサムウェア被害で教育・学習支援業は8%を占めて業種別第4位。学習塾の中小事業者にも同等のリスク。"
+  },
+  {
+    "case_id": "CYBER-025",
+    "diagnostic_risk_id": "cyber",
+    "diagnostic_risk_label": "サイバー保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability",
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "transport"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_machinery"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "中小製造業・設計図流出",
+    "industry_major": "製造業",
+    "industry_minor": "部品加工・設備製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "中小製造業への標的型攻撃・設計図面流出",
+    "summary": "大手企業の下請・孫請を担う中小製造業が、サプライチェーン攻撃の踏み台として狙われ、標的型攻撃により設計図面・生産データ・取引先情報が流出。発注元の大手企業からの取引停止・損害賠償請求、技術情報流出による競合への転売リスクが発生。",
+    "damage_amount_range": "1,000万〜数億円",
+    "damage_amount_reference": "取引先からの求償・逸失利益で中小企業の経営基盤を揺るがす規模",
+    "source_type": "public_agency",
+    "source_citation": "出典：IPA『サプライチェーンの弱点を悪用した攻撃』『情報セキュリティ10大脅威2025』、経済産業省『サイバーセキュリティ対策支援体制』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "個人情報保護法、不正競争防止法（営業秘密）、取引基本契約上の機密保持義務",
+    "sales_angle": "中小製造業は『うちには盗まれるものはない』が典型的な誤認識。大手のサプライチェーン攻撃の踏み台として狙われ、取引先から切り捨てられるリスクが最大。"
+  },
+  {
+    "case_id": "DO-001",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "finance"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [
+      "finance_bank"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "内部統制不備・管理責任",
+    "industry_major": "金融業",
+    "industry_minor": "銀行",
+    "company_size": "大手",
+    "region": "全国（海外支店含む）",
+    "incident_type": "従業員の巨額不正取引と内部統制システム構築義務違反",
+    "summary": "銀行の海外支店で行員が長期間にわたり簿外取引を行い、約11億ドルの巨額損失を発生させた。株主代表訴訟において、取締役は従業員の不正行為を防止するための内部統制システムを構築・運用する善管注意義務を負うとされ、元支店長取締役に約5.3億ドル、他の役員11名に総額約2.45億ドルの賠償が命じられた。",
+    "damage_amount_range": "数億ドル〜1,500億円規模",
+    "damage_amount_reference": "約7.7億ドル（元支店長のみ、利息含む）＋取締役11名連帯約2.45億ドル（大阪地判平成12年9月20日）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：大阪地判平成12年9月20日（大和銀行ニューヨーク支店事件）",
+    "legal_basis": "会社法第423条（役員の任務懈怠責任）、善管注意義務、内部統制システム構築義務",
+    "sales_angle": "中小企業の役員も内部統制構築義務を負う。従業員1人の不正でも、防止体制の不備が役員個人の億単位の賠償責任に直結する画期的判例。"
+  },
+  {
+    "case_id": "DO-002",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "other"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "経営判断・安全配慮",
+    "industry_major": "電力・インフラ",
+    "industry_minor": "電力会社",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "原発事故における取締役の善管注意義務違反",
+    "summary": "原子力発電所事故について、当時の取締役4名に対し株主が22兆円の損害賠償を請求した株主代表訴訟で、東京地裁は取締役らに13兆3,210億円の賠償を命じた。津波の規模に関する知見から事故の発生可能性を認識し得たにもかかわらず、津波対策を怠った点が善管注意義務違反とされた。",
+    "damage_amount_range": "数兆円規模",
+    "damage_amount_reference": "13兆3,210億円の賠償命令（東京地判令和4年7月13日、東京電力原発事故事件）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判令和4年7月13日（東京電力株主代表訴訟）",
+    "legal_basis": "会社法第423条、善管注意義務、経営判断原則",
+    "sales_angle": "自然災害・長期リスクの評価を怠った経営判断も『善管注意義務違反』と認定される。役員個人では到底賠償不能な金額が命じられる時代。"
+  },
+  {
+    "case_id": "DO-003",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [
+      "food_poisoning"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "food",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "食品衛生・品質管理責任",
+    "industry_major": "食品業",
+    "industry_minor": "乳製品・加工食品",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "食中毒発生における経営陣の品質管理責任",
+    "summary": "大規模な食中毒事故（1万人超の被害）発生において、経営陣の品質管理体制の不備が善管注意義務違反とされた事案。被害者への賠償に加え、ブランド毀損・売上激減・取締役個人への株主代表訴訟が並行して提起された。",
+    "damage_amount_range": "数十億〜数百億円（会社の損害）",
+    "damage_amount_reference": "雪印乳業食中毒事件（2000年）等の事例で会社損害は数百億円規模、役員個人責任も追及",
+    "source_type": "news_report",
+    "source_citation": "類似事例：雪印乳業食中毒事件（2000年）、関連株主代表訴訟",
+    "legal_basis": "会社法第423条、食品衛生法、民法第715条",
+    "sales_angle": "食品製造業・飲食業の経営者は、現場の品質管理不備が経営者個人の役員賠償責任に直結。ホテル・旅館の食事提供事業も同リスク。"
+  },
+  {
+    "case_id": "DO-004",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [
+      "food_poisoning"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "food_restaurant"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "不祥事隠蔽",
+    "industry_major": "食品業",
+    "industry_minor": "外食チェーン",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "食品問題の発覚後の隠蔽対応",
+    "summary": "外食チェーンで販売した商品に法令違反成分が含まれていた問題について、役員らが自ら積極的に公表しないという方針を採り、消費者やマスコミの反応を視野に入れた損害回避策の検討を怠った。積極的に関与しなかった役員にも善管注意義務違反が認定され、損害賠償責任が認められた。",
+    "damage_amount_range": "数億〜数十億円",
+    "damage_amount_reference": "ダスキン株主代表訴訟（大阪高判平成18年6月9日）で取締役らに約53億円超の賠償命令",
+    "source_type": "court_precedent",
+    "source_citation": "判例：大阪高判平成18年6月9日（ダスキン株主代表訴訟）",
+    "legal_basis": "会社法第423条、善管注意義務（適切な情報開示・損害回避措置）",
+    "sales_angle": "『隠蔽への不関与』では役員は免責されない。『積極的公表しない』という経営判断自体が善管注意義務違反とされる重要判例。"
+  },
+  {
+    "case_id": "DO-005",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "real_estate"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [
+      "real_estate_brokerage"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "M&A・経営判断ミス",
+    "industry_major": "不動産業",
+    "industry_minor": "不動産仲介",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "子会社買収時の株式買取価格の不当性",
+    "summary": "親会社取締役が子会社を完全子会社とする決定で、株式買取・株式交換の対価を不当に高額に設定したとして、株主が善管注意義務違反による損害賠償を請求した事案。経営判断原則の適用範囲が争われた重要判例。",
+    "damage_amount_range": "数千万〜数十億円",
+    "damage_amount_reference": "アパマンショップHD株主代表訴訟（最判平成22年7月15日）で経営判断原則を明確化",
+    "source_type": "court_precedent",
+    "source_citation": "判例：最判平成22年7月15日（アパマンショップHD事件）",
+    "legal_basis": "会社法第423条、経営判断原則",
+    "sales_angle": "中小企業のM&A・事業承継時の株価評価ミスは、後の株主代表訴訟で善管注意義務違反とされうる。中小企業の経営者も他人事ではない。"
+  },
+  {
+    "case_id": "DO-006",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [
+      "food_poisoning"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "品質管理・健康被害",
+    "industry_major": "医薬品・健康食品",
+    "industry_minor": "機能性表示食品",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "健康食品による健康被害と対応遅延",
+    "summary": "機能性表示食品に起因する健康被害（入院者240名超等）発生後の対応の遅れや品質管理体制の不備が問題化。株主・アクティビストから創業家経営陣・社外取締役を被告として約135億円の損害賠償を求める株主代表訴訟が提起された。",
+    "damage_amount_range": "数十億〜数百億円",
+    "damage_amount_reference": "小林製薬紅麹問題株主代表訴訟（2024年提起）で約135億円請求",
+    "source_type": "news_report",
+    "source_citation": "類似事例：小林製薬紅麹事件株主代表訴訟（2024年）、香港アクティビスト提訴",
+    "legal_basis": "会社法第423条、機能性表示食品制度、薬機法",
+    "sales_angle": "健康被害発覚時の初動の遅れは役員個人に数十億円単位の責任追及。機能性表示食品・サプリメント事業者は最重要リスク。"
+  },
+  {
+    "case_id": "DO-007",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "it"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "it_other"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "不祥事隠蔽・ハラスメント",
+    "industry_major": "情報通信業",
+    "industry_minor": "メディア・放送",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "出演者の性加害問題と経営陣の対応不備",
+    "summary": "メディア企業の出演者による性的加害問題について、経営陣が事実を把握しながら限られた役員にしか報告せず、番組も継続された。外部指摘で事態が公になった後、株主が現旧取締役15名を被告として約233億円の損害賠償を求める株主代表訴訟を提起。『重大な不祥事の取締役会への未共有』『内部統制機能不全』が争点。",
+    "damage_amount_range": "数十億〜数百億円",
+    "damage_amount_reference": "フジ・メディアHD株主代表訴訟（2025年提起）で約233億円請求",
+    "source_type": "news_report",
+    "source_citation": "類似事例：フジ・メディアHD株主代表訴訟（2025年提起）",
+    "legal_basis": "会社法第423条、善管注意義務（情報共有・内部統制）",
+    "sales_angle": "社内ハラスメント・不祥事の『限定共有』は役員個人への数百億円訴訟に直結。取締役会への適切な報告義務の重要性を示す最新事例。"
+  },
+  {
+    "case_id": "DO-008",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "粉飾決算・虚偽記載",
+    "industry_major": "全業種",
+    "industry_minor": "上場企業",
+    "company_size": "中堅・大手",
+    "region": "全国",
+    "incident_type": "有価証券報告書の虚偽記載・粉飾決算",
+    "summary": "取締役が関与・黙認した粉飾決算が発覚し、株価下落による株主損失、課徴金、上場廃止リスクが発生。取締役の第三者（株主）に対する責任（会社法第429条）として、投資家からの集団訴訟で損害賠償が命じられる類型。",
+    "damage_amount_range": "数億〜数百億円",
+    "damage_amount_reference": "ライブドア事件、オリンパス事件、東芝会計不祥事等で役員個人に巨額賠償",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：オリンパス株主代表訴訟、東芝会計不祥事関連訴訟",
+    "legal_basis": "会社法第423条・第429条、金融商品取引法第21条の2（虚偽記載による損害賠償責任）",
+    "sales_angle": "非上場の中小企業でも、金融機関からの融資審査資料への虚偽記載等は取締役個人の対第三者責任に発展。事業承継時にも重要。"
+  },
+  {
+    "case_id": "DO-009",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "finance"
+    ],
+    "diagnostic_industry_secondary": [
+      "real_estate",
+      "construction",
+      "service"
+    ],
+    "diagnostic_sub_industries": [
+      "finance_bank"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "反社会的勢力との取引",
+    "industry_major": "金融業",
+    "industry_minor": "銀行・信販",
+    "company_size": "大手",
+    "region": "全国",
+    "incident_type": "反社会的勢力への融資・取引",
+    "summary": "子会社信販会社を通じた提携ローンで反社会的勢力に対する融資が行われていた問題について、親会社役員の善管注意義務違反を問う株主代表訴訟が提起された。反社チェック体制の整備が役員の重要義務として確認された類型。",
+    "damage_amount_range": "数億〜数十億円",
+    "damage_amount_reference": "みずほフィナンシャルグループ反社融資問題株主代表訴訟等",
+    "source_type": "news_report",
+    "source_citation": "類似事例：みずほFG反社融資問題（2013年）、関連株主代表訴訟",
+    "legal_basis": "会社法第423条、暴力団排除条例、各業法",
+    "sales_angle": "反社排除は取引先管理の基本。中小企業でも与信管理・契約時の反社チェック体制の不備は役員責任に直結。"
+  },
+  {
+    "case_id": "DO-010",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "construction",
+      "transport"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "コンプライアンス違反",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "独占禁止法違反・カルテル・談合",
+    "summary": "企業が独占禁止法違反（価格カルテル、談合、再販売価格拘束等）に関与し、公正取引委員会から課徴金納付命令・刑事告発を受けた。取締役にコンプライアンス体制構築・運用義務違反が認定され、株主代表訴訟で賠償命令が下された類型。",
+    "damage_amount_range": "数億〜数十億円（課徴金＋役員賠償）",
+    "damage_amount_reference": "独禁法違反の課徴金は売上の10-20%。役員個人への賠償は別途",
+    "source_type": "public_agency",
+    "source_citation": "出典：公正取引委員会『独占禁止法違反事件処理状況』、日弁連『コンプライアンス関連判例集』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "会社法第423条、独占禁止法、不正競争防止法",
+    "sales_angle": "業界慣行としての価格調整・入札調整は独禁法違反。中小製造業・建設業・運輸業で特に発生しやすく、役員個人責任に発展。"
+  },
+  {
+    "case_id": "LIAB-001",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "real_estate"
+    ],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "宿泊施設・土地工作物責任",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "ホテルバルコニーからの墜落死亡事故",
+    "summary": "ホテル宿泊客が客室バルコニーから墜落して死亡した事故で、バルコニーに設置された柵の高さが72cmで建築基準法施行令所定の1.1mを確保していなかった点、代替の墜落防止設備も欠如していた点が『通常有すべき安全性を欠く』と認定され、ホテル経営者の工作物責任が認められた。",
+    "damage_amount_range": "3,000万〜1億円",
+    "damage_amount_reference": "死亡事案の賠償認容例（東京地判令和5年2月27日）",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判令和5年2月27日（ホテルバルコニー墜落死亡事件）",
+    "legal_basis": "民法第717条（土地工作物責任）、建築基準法施行令第126条第1項",
+    "sales_angle": "ホテル・旅館のバルコニーや共用部の建築基準法不適合は無過失責任で問われる。古い宿泊施設ほどリスクが高い。"
+  },
+  {
+    "case_id": "LIAB-002",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [
+      "accident"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "宿泊施設・安全配慮義務",
+    "industry_major": "宿泊業",
+    "industry_minor": "旅館・温泉",
+    "company_size": "中小企業",
+    "region": "地方",
+    "incident_type": "旅館のガスストーブ一酸化炭素中毒による宿泊客死亡",
+    "summary": "旅館の客室でガスストーブを使用していた宿泊客が、煙突の不備・換気不十分により一酸化炭素中毒で死亡した事故。ストーブの不完全燃焼および換気対策の欠如が事故原因とされ、旅館側の安全配慮義務違反および工作物責任が認定された。",
+    "damage_amount_range": "3,000万〜8,000万円",
+    "damage_amount_reference": "死亡事案で逸失利益・慰謝料等を含めて数千万〜1億円規模",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：旅館一酸化炭素中毒事件（判例845号94頁）",
+    "legal_basis": "民法第717条、宿泊契約上の安全配慮義務",
+    "sales_angle": "四国・地方の老舗旅館は古いガス機器・温泉設備の保守不備が命取り。設備更新の先送りが数千万円の賠償に発展。"
+  },
+  {
+    "case_id": "LIAB-003",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "宿泊施設・大浴場事故",
+    "industry_major": "宿泊業",
+    "industry_minor": "観光ホテル",
+    "company_size": "中堅・大手",
+    "region": "全国",
+    "incident_type": "ホテル大浴場のベランダからの転落死",
+    "summary": "8階に大浴場がある観光ホテルで、飲酒した入浴客が窓からベランダに出て転落死した事故。ベランダの柵の高さが不十分（60cm弱）であり転落防止設備が欠如していた点、高所の危険性が認識しづらい構造であった点が施設の設置・保存の瑕疵として認定された（過失相殺5割）。",
+    "damage_amount_range": "1,500万〜4,000万円",
+    "damage_amount_reference": "過失相殺後の死亡事案賠償額",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：ホテルベランダ転落死亡事件（判例934号99頁）",
+    "legal_basis": "民法第717条（土地工作物責任）",
+    "sales_angle": "宿泊客の飲酒・不用意な行動があっても施設側の安全確保義務は免責されない。温泉旅館の大浴場の設計は定期的な法令適合性確認が必須。"
+  },
+  {
+    "case_id": "LIAB-004",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "retail_grocery"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "小売店・転倒事故",
+    "industry_major": "小売業",
+    "industry_minor": "スーパーマーケット",
+    "company_size": "中堅企業",
+    "region": "地方",
+    "incident_type": "スーパーの野菜売場における高齢者転倒事故",
+    "summary": "60代男性がスーパーの野菜売場で、サニーレタスから滴った水で濡れた床により転倒し腕を骨折。販売方法と事故防止対策の欠如が店側の過失として認定され、約2,100万円の賠償命令が下された。",
+    "damage_amount_range": "1,000万〜3,000万円",
+    "damage_amount_reference": "約2,100万円の賠償命令（スーパー野菜売場転倒事件）",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：スーパーマーケット転倒事故判例（神奈川県事例）",
+    "legal_basis": "民法第717条、民法第709条（不法行為）",
+    "sales_angle": "生鮮食品コーナーの水濡れ・通路の段差は典型的な転倒事故要因。高齢者客が多い店舗ほど賠償額が高額化（60代女性の転倒事故は全体の7割以上）。"
+  },
+  {
+    "case_id": "LIAB-005",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_izakaya"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "飲食店・居酒屋事故",
+    "industry_major": "飲食業",
+    "industry_minor": "居酒屋",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "居酒屋店内での従業員・客の転倒事故",
+    "summary": "居酒屋店内で客または従業員が足を滑らせて転倒し怪我を負った事故で、前任者・他の利用者も同様に転倒していた事実から、経営者が事故発生を予見し得たにもかかわらず床面の防滑措置を怠ったとして、工作物責任・安全配慮義務違反が認定された類型。",
+    "damage_amount_range": "300万〜1,500万円",
+    "damage_amount_reference": "骨折・後遺障害の有無により変動",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：居酒屋転倒事故判例（建物事故予防ナレッジベース収録）",
+    "legal_basis": "民法第717条、民法第415条（債務不履行）",
+    "sales_angle": "『同じ場所で前にも転倒があった』という事実は決定的な敗訴要因。日常的なヒヤリハット情報の記録・対策が重要。"
+  },
+  {
+    "case_id": "LIAB-006",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "medical_nursing_home"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "介護施設・入居者事故",
+    "industry_major": "医療・福祉",
+    "industry_minor": "グループホーム",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "認知症対応型共同生活介護の入居者窓墜落事故",
+    "summary": "認知症対応型共同生活介護サービスを提供するグループホームの2階居室で、認知症入居者が窓から墜落した事故。窓のストッパーが中間止め方式のみで開放制限措置が不十分であった点、過去に介護施設で同種事故が多数報告されていた点から、施設運営者の工作物責任が認定された。",
+    "damage_amount_range": "1,000万〜5,000万円",
+    "damage_amount_reference": "認知症入居者の死亡・重傷事案",
+    "source_type": "court_precedent",
+    "source_citation": "判例：東京地判平成29年2月15日（グループホーム窓墜落事件）",
+    "legal_basis": "民法第717条、介護保険法",
+    "sales_angle": "社会福祉法人・介護施設は『認知症利用者の特性に応じた安全配慮』が求められる。窓開放制限の不備は典型的敗訴要因。"
+  },
+  {
+    "case_id": "LIAB-007",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "medical_nursing_home"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "デイサービス・見守り義務",
+    "industry_major": "医療・福祉",
+    "industry_minor": "デイサービス",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "デイサービス静養室での転倒事故",
+    "summary": "デイサービスの静養室で昼寝から目覚めた利用者が起き上がる際、段差から転落した事故。複数人体制で見守りを行っていたが一瞬目を離した隙に発生。施設側の高度な配慮義務が求められ、後遺障害慰謝料350万円および障害慰謝料120万円等の賠償命令が下された。",
+    "damage_amount_range": "500万〜1,500万円",
+    "damage_amount_reference": "後遺障害慰謝料350万円＋障害慰謝料120万円等",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：デイサービス静養室転倒事件",
+    "legal_basis": "民法第415条（介護サービス契約）、民法第717条",
+    "sales_angle": "介護事業者には『通常の注意義務』を超える高度な見守り義務が課される。1人のヒューマンエラーが事業継続を揺るがす。"
+  },
+  {
+    "case_id": "LIAB-008",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "real_estate"
+    ],
+    "diagnostic_industry_secondary": [
+      "food",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "real_estate_leasing"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "外装・看板落下",
+    "industry_major": "不動産業",
+    "industry_minor": "ビル所有者・テナント",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "建物外壁・看板・広告物の落下による第三者傷害",
+    "summary": "ビル外壁タイルの剥落、看板・広告物の落下、ベランダ物品の飛来等により、通行人が傷害を負ったり、車両・建物に損害を与えた事故。建物所有者・占有者の土地工作物責任として、無過失責任で賠償が認められる類型。",
+    "damage_amount_range": "500万〜1億円",
+    "damage_amount_reference": "死亡事故では1億円超の判決例。物損のみの場合は数百万〜数千万円",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『建物事故予防ナレッジベース』看板・外装事故事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第717条（土地工作物責任）、建築基準法第12条（定期報告）",
+    "sales_angle": "ホテル・商業ビルの老朽化した外装・看板は典型的リスク。定期報告・点検を怠ると占有者責任が無過失で問われる。"
+  },
+  {
+    "case_id": "LIAB-009",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [
+      "real_estate"
+    ],
+    "diagnostic_sub_industries": [
+      "construction_civil"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "工事・請負業者責任",
+    "industry_major": "建設業",
+    "industry_minor": "建築・土木工事",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "工事中の第三者（通行人・近隣住民）への損害",
+    "summary": "建設工事中に資材・工具の落下、騒音・振動、掘削による地盤沈下等により、通行人の傷害、近隣住宅の損傷、営業停止等の損害を発生させた類型。請負業者・元請業者・発注者の重層的責任が問題となる。",
+    "damage_amount_range": "数百万〜数億円",
+    "damage_amount_reference": "隣地建物倒壊・死亡事故では数億円規模の判決例",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『建設工事の事故事例』、建設業法関連判例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第709条、民法第715条（使用者責任）、建設業法",
+    "sales_angle": "中小建設業は1件の重大事故で廃業に追い込まれる。請負業者賠償責任保険の未加入は事業継続の致命的盲点。"
+  },
+  {
+    "case_id": "LIAB-010",
+    "diagnostic_risk_id": "liability",
+    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "real_estate",
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical"
+    ],
+    "diagnostic_sub_industries": [
+      "real_estate_leasing"
+    ],
+    "diagnostic_impact_score": 2,
+    "sub_category": "漏水・水損事故",
+    "industry_major": "不動産業",
+    "industry_minor": "マンション・賃貸物件",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "上階からの水漏れによる階下住戸損害",
+    "summary": "マンション・アパート・オフィスビル等で配管の破損、給排水設備の不良、ベランダからの雨水流入等により階下住戸・テナント・保管物に水損を発生させた事故。所有者・管理会社・居住者の責任の所在と分担が問題となる。",
+    "damage_amount_range": "100万〜3,000万円",
+    "damage_amount_reference": "家財・店舗内商品・電子機器等の損害により変動",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『建物事故予防ナレッジベース』水漏れ事故事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第717条、民法第709条、管理規約",
+    "sales_angle": "ホテル・旅館の客室水漏れは『営業停止＋客室補償＋隣接客損害』の三重リスク。定期的な給水設備点検が必須。"
+  },
+  {
+    "case_id": "FIRE-001",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_metal"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "火災・工場全焼",
+    "industry_major": "製造業",
+    "industry_minor": "金属加工・化学品製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "工場の全焼による操業停止",
+    "summary": "中小製造業の工場で電気設備の老朽化、溶接・切断作業中の火花、危険物の保管不備等により火災が発生し、工場全焼または大規模損害を受けた。生産設備・原材料・完成品在庫の焼失、数ヶ月〜1年以上の操業停止、取引先への違約金、従業員の雇用維持費用が発生した。",
+    "damage_amount_range": "5,000万〜数十億円",
+    "damage_amount_reference": "中小規模工場の全焼で建物・設備・在庫合計5,000万〜5億円、休業損害を加えると10億円超",
+    "source_type": "public_agency",
+    "source_citation": "出典：消防庁『火災年報』、中小企業庁『BCP事例集』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "失火責任法、債務不履行（納期遅延等）、製造物責任法（在庫品の損害）",
+    "sales_angle": "工場火災は『自社の建物・設備・在庫損害』だけでなく『取引先からの違約金』『類焼による隣接事業者への賠償（重過失の場合）』の三重リスク。"
+  },
+  {
+    "case_id": "FIRE-002",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "火災・宿泊施設",
+    "industry_major": "宿泊業",
+    "industry_minor": "ホテル・旅館",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "ホテル・旅館の火災による人身・財産損害",
+    "summary": "ホテル・旅館で厨房出火、電気設備発火、宿泊客のタバコ不始末、ボイラー故障等により火災が発生。宿泊客の死傷、建物焼失、長期間の営業停止が発生した。消防法違反（スプリンクラー・自動火災報知設備の不備）がある場合は経営者の刑事責任も問われる。",
+    "damage_amount_range": "5,000万〜10億円",
+    "damage_amount_reference": "死亡事故を伴う場合、建物損害＋人身賠償＋休業損害で10億円超の事例あり",
+    "source_type": "public_agency",
+    "source_citation": "出典：消防庁『火災年報』宿泊施設火災統計、観光庁『宿泊施設の安全基準』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "失火責任法（重過失）、宿泊契約上の安全配慮義務、消防法、建築基準法",
+    "sales_angle": "老舗旅館・小規模ホテルは消防設備の更新が不十分なケース多数。1件の火災で廃業＋宿泊客遺族からの民事賠償で経営者個人資産まで及ぶリスク。"
+  },
+  {
+    "case_id": "FIRE-003",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "food"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_restaurant"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "火災・飲食店",
+    "industry_major": "飲食業",
+    "industry_minor": "飲食店",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "飲食店厨房火災・類焼",
+    "summary": "飲食店の厨房で天ぷら油の加熱過多、ダクト清掃不足による油堆積、ガスコンロの取り扱いミス等により火災が発生。自店舗の焼失に加え、隣接店舗・上階住戸への類焼が発生し、同ビル内の他テナントからも損害賠償を請求された。",
+    "damage_amount_range": "1,000万〜1億円",
+    "damage_amount_reference": "ダクト清掃不足による火災で重過失認定の場合、類焼先への賠償責任が発生",
+    "source_type": "public_agency",
+    "source_citation": "出典：消防庁『飲食店の火災事例』、各地方自治体『飲食店防火安全基準』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "失火責任法、消防法、民法第709条（重過失の場合）",
+    "sales_angle": "飲食店の『重過失認定』は類焼先への賠償義務発生の分水嶺。ダクト清掃記録の欠如は重過失認定の典型要因。"
+  },
+  {
+    "case_id": "FIRE-004",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "cargo",
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "transport",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "transport_warehouse"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "火災・倉庫",
+    "industry_major": "運輸業・物流業",
+    "industry_minor": "倉庫業",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "物流倉庫の火災による寄託物全焼",
+    "summary": "物流倉庫・冷蔵倉庫で電気設備発火、フォークリフトのバッテリー発火、危険物の保管違反等により火災が発生。自社倉庫の焼失に加え、複数の委託元から預かっていた商品・原材料が全焼し、受託物賠償責任として多額の損害賠償を請求された。",
+    "damage_amount_range": "1億〜数十億円",
+    "damage_amount_reference": "倉庫内商品の価額により変動。大規模物流センターでは数十億円規模の事例あり",
+    "source_type": "public_agency",
+    "source_citation": "出典：消防庁『倉庫火災事例』、国土交通省『倉庫業法』関連資料を基に株式会社サイバーコネクト作成",
+    "legal_basis": "倉庫業法、民法第415条（寄託契約上の債務不履行）、失火責任法",
+    "sales_angle": "倉庫業は『受託物賠償責任』が最大リスク。火災保険＋受託物賠償責任保険の二重カバーが必須。"
+  },
+  {
+    "case_id": "FIRE-005",
+    "diagnostic_risk_id": "fire",
+    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_ids_secondary": [
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 2,
+    "sub_category": "火災・オフィス",
+    "industry_major": "全業種",
+    "industry_minor": "事務所・オフィス",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "オフィス火災による事業資料焼失・業務停止",
+    "summary": "オフィスビル内で電気配線ショート、喫煙不始末、OA機器発火等により火災が発生。事業用機器・書類・サーバーが焼失し、業務データの復旧、代替オフィスの手配、業務停止期間の売上損失、従業員給与の継続支払いが発生した。",
+    "damage_amount_range": "500万〜5,000万円",
+    "damage_amount_reference": "オフィス機器・サーバー損害・休業損害の合計",
+    "source_type": "public_agency",
+    "source_citation": "出典：消防庁『事務所火災統計』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "失火責任法、賃貸借契約上の原状回復義務",
+    "sales_angle": "オフィス火災は『紙資料焼失による業務停止』が盲点。クラウド化未対応の中小企業は特にリスク大。"
+  },
+  {
+    "case_id": "AUTO-001",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "自動車・業務中対人事故",
+    "industry_major": "全業種",
+    "industry_minor": "営業車両を使用する事業者",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "業務用車両での死亡事故",
+    "summary": "営業社員・配送担当者が業務中に運転していた社有車で対人事故を起こし、歩行者・他車両運転手を死亡させた。自動車損害賠償保障法に基づく運行供用者責任、民法第715条の使用者責任により、事業者に数千万〜1億円超の賠償責任が発生。",
+    "damage_amount_range": "3,000万〜2億円",
+    "damage_amount_reference": "死亡事故の賠償は被害者の年齢・収入・過失割合により変動。高収入者では2億円超",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『事業用自動車事故調査報告書』、日本損害保険協会『自動車保険統計』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "自動車損害賠償保障法第3条、民法第715条",
+    "sales_angle": "任意自動車保険の対人無制限は必須。対人補償を億単位で用意していない企業は事業継続リスク。"
+  },
+  {
+    "case_id": "AUTO-002",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "food",
+      "medical",
+      "service"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet"
+    ],
+    "diagnostic_impact_score": 5,
+    "sub_category": "自動車・送迎バス事故",
+    "industry_major": "宿泊業・福祉業",
+    "industry_minor": "ホテル・旅館・福祉施設",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "送迎バス・マイクロバスの事故",
+    "summary": "ホテル・旅館・介護施設・学習塾等が運行する送迎バス・マイクロバスが、居眠り運転・整備不良・天候不良等により事故を起こし、乗客（顧客）に死傷事故が発生した。運行供用者責任・送迎契約上の安全配慮義務違反が問われ、乗客1名あたり数千万〜1億円の賠償が発生する。",
+    "damage_amount_range": "数千万〜十数億円（乗客多数の場合）",
+    "damage_amount_reference": "1名死亡事故で5,000万〜1億円、多数乗車の事故では総額10億円超の事例",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『送迎バス事故事例』、スキーツアーバス事故等の報道事例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "自動車損害賠償保障法第3条、民法第715条、運送契約上の安全配慮義務",
+    "sales_angle": "ホテル・旅館の駅送迎、介護施設の送迎は1事故で十億円級の可能性。運転手の健康管理・車両整備記録は生命線。"
+  },
+  {
+    "case_id": "AUTO-003",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [
+      "cargo"
+    ],
+    "diagnostic_industry_primary": [
+      "transport"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "transport_freight"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "自動車・配送中事故",
+    "industry_major": "運輸業",
+    "industry_minor": "トラック運送・宅配",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "配送中の対人・対物事故",
+    "summary": "トラック運転手が長時間運転による疲労、積荷の片寄りによる転倒、道路環境への不慣れ等により事故を発生させ、第三者への対人・対物損害を発生させた。運送会社の運行管理義務違反、運転手への長時間労働強制が重なると損害賠償が加重される。",
+    "damage_amount_range": "1,000万〜1億円",
+    "damage_amount_reference": "対人・対物の複合事故で変動",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『事業用自動車事故調査報告書』トラック運送事故を基に株式会社サイバーコネクト作成",
+    "legal_basis": "自動車損害賠償保障法、貨物自動車運送事業法、労働基準法（改善基準告示）",
+    "sales_angle": "2024年問題で運送業の労働時間規制が厳格化。これを守らずに事故発生時は運行管理義務違反として賠償加重。"
+  },
+  {
+    "case_id": "AUTO-004",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "自動車・通勤災害",
+    "industry_major": "全業種",
+    "industry_minor": "マイカー通勤を認める事業者",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "マイカー通勤中の第三者事故",
+    "summary": "従業員がマイカー通勤中に起こした対人事故について、『通勤のための自動車運転は業務と密接な関係がある』として勤務先の管理責任・使用者責任が認定された事案。企業はマイカー通勤者に対して安全運転指導・保険加入状況の点検指導を行う義務を負う。",
+    "damage_amount_range": "1,000万〜1億円",
+    "damage_amount_reference": "マイカー通勤事故で企業管理責任を認めた判決（神戸地判2004年7月7日、神戸地判2010年5月11日）",
+    "source_type": "court_precedent",
+    "source_citation": "類似判例：神戸地判2004年7月7日、神戸地判2010年5月11日（マイカー通勤事故事件）",
+    "legal_basis": "民法第715条（使用者責任）、運行供用者責任",
+    "sales_angle": "地方企業はマイカー通勤率が高い。通勤届・任意保険確認の形骸化は会社の使用者責任に直結。"
+  },
+  {
+    "case_id": "AUTO-005",
+    "diagnostic_risk_id": "vehicle",
+    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_ids_secondary": [
+      "cargo",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "transport",
+      "construction"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "transport_freight"
+    ],
+    "diagnostic_impact_score": 3,
+    "sub_category": "自動車・積載物落下",
+    "industry_major": "運輸業",
+    "industry_minor": "トラック運送・建設業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "走行中の積載物落下による第三者損害",
+    "summary": "トラック・ダンプカー等の走行中に、固定不十分な積載物（鋼材、土砂、建設資材等）が落下し、後続車両・通行人・道路構造物に損害を発生させた事故。運転手の荷締め確認不備および会社の運行前点検指示の欠如が問題化する類型。",
+    "damage_amount_range": "500万〜数千万円",
+    "damage_amount_reference": "人身事故を伴う場合は数千万〜1億円規模",
+    "source_type": "public_agency",
+    "source_citation": "出典：国土交通省『積載物落下事故事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "道路交通法第71条4項（積載物転落防止義務）、民法第709条",
+    "sales_angle": "建設資材・産業廃棄物の運搬業者は積載物固定の記録管理が生命線。1件の落下事故で許可取消し・取引停止もあり得る。"
+  },
+  {
+    "case_id": "BI-001",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "fire"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "休業・自然災害",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "災害地域",
+    "incident_type": "地震・台風・豪雨による事業中断",
+    "summary": "大規模自然災害（地震・台風・豪雨・洪水・土砂災害等）により、事業所・工場・店舗が直接被災、または取引先・インフラが被災したことで数週間〜数ヶ月の事業中断が発生した。建物・設備・在庫の損害に加え、休業期間中の固定費支出・売上機会損失が発生。",
+    "damage_amount_range": "数百万〜数十億円",
+    "damage_amount_reference": "東日本大震災・能登半島地震・各地水害で中小企業の被害は平均数千万円、大企業では数十億円",
+    "source_type": "public_agency",
+    "source_citation": "出典：内閣府『防災情報』、中小企業庁『災害対応事例集』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第536条（危険負担）、賃貸借契約上の原状回復・賃料支払義務",
+    "sales_angle": "BCP（事業継続計画）未策定の中小企業は自然災害時の復旧が遅れ、取引先から見切られるリスク。四国は南海トラフ地震の直接被害想定地域。"
+  },
+  {
+    "case_id": "BI-002",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "cargo"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "休業・取引先倒産",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "主要取引先の破綻による売上激減・連鎖倒産",
+    "summary": "主要取引先（売上の30%以上を占める等）が倒産・事業縮小・契約解除等により、売掛金回収不能に加え、売上の大幅減少が発生した。事業規模縮小・従業員解雇・固定費削減の対応を迫られ、最悪の場合は連鎖倒産に至る類型。",
+    "damage_amount_range": "数千万〜数十億円",
+    "damage_amount_reference": "売掛金回収不能と売上逸失を合算",
+    "source_type": "public_agency",
+    "source_citation": "出典：中小企業庁『中小企業白書』連鎖倒産事例、帝国データバンク『倒産動向』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法（売買契約・請負契約）、破産法・民事再生法",
+    "sales_angle": "売上集中度の高い中小企業は取引先倒産時のダメージが壊滅的。与信管理・取引先分散が経営継続の生命線。"
+  },
+  {
+    "case_id": "BI-003",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "cargo"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "retail"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "休業・仕入先供給停止",
+    "industry_major": "製造業",
+    "industry_minor": "部品・原材料使用業",
+    "company_size": "中堅企業",
+    "region": "全国",
+    "incident_type": "仕入先の供給停止による生産停止",
+    "summary": "仕入先が工場火災・自然災害・サイバー攻撃・生産撤退等により供給停止となり、自社の生産ラインが停止。代替仕入先の確保まで数週間〜数ヶ月を要し、その間の売上損失・顧客への違約金・高値調達による利益圧迫が発生した。",
+    "damage_amount_range": "数千万〜数億円",
+    "damage_amount_reference": "半導体不足・自動車部品不足事例で業界全体の損害は数兆円規模",
+    "source_type": "public_agency",
+    "source_citation": "出典：経済産業省『サプライチェーン白書』、JETRO『サプライチェーン関連報告』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "取引基本契約（供給義務）、民法第415条",
+    "sales_angle": "仕入先を1社に依存する中小製造業は、仕入先の事故1件で生産停止リスク。複数調達体制の構築が経営課題。"
+  },
+  {
+    "case_id": "BI-004",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability",
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "food",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "medical",
+      "service"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "休業・風評被害",
+    "industry_major": "全業種",
+    "industry_minor": "飲食・宿泊・小売",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "SNS炎上・風評被害による売上激減",
+    "summary": "事業者の不祥事・事故・従業員の不適切言動等がSNSで拡散・炎上し、風評被害として売上が数週間〜数ヶ月にわたり激減した。事実無根の虚偽情報による風評被害、従業員の『バイトテロ』投稿、クレーマー顧客の悪評投稿等が典型パターン。",
+    "damage_amount_range": "数百万〜数億円",
+    "damage_amount_reference": "炎上後の売上回復には数ヶ月〜数年を要し、小売・飲食では廃業事例も",
+    "source_type": "news_report",
+    "source_citation": "類似事例：バイトテロ事件、SNS炎上による閉店・廃業事例",
+    "legal_basis": "民法第709条（名誉毀損）、不正競争防止法（業務妨害の営業損害）、プロバイダ責任制限法",
+    "sales_angle": "ホテル・旅館・飲食店はレビューサイト・SNSでの評判が売上の命運を握る。悪評投稿への法的対応スキームの整備が不可欠。"
+  },
+  {
+    "case_id": "BI-005",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "food_poisoning"
+    ],
+    "diagnostic_industry_primary": [
+      "food",
+      "service"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "休業・感染症",
+    "industry_major": "全業種",
+    "industry_minor": "飲食・宿泊・イベント業",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "新型感染症・食中毒による営業停止",
+    "summary": "新型感染症の流行、店舗内での集団感染発生、食中毒発生等により、保健所からの営業停止命令または自主休業を余儀なくされ、数日〜数週間の売上喪失が発生した。新型コロナウイルス感染拡大時には、多くの観光・飲食・イベント業者が長期休業で廃業に至った。",
+    "damage_amount_range": "数百万〜数億円",
+    "damage_amount_reference": "コロナ禍の飲食・宿泊業の休業損害は平均数千万円、観光地では10億円超の事例",
+    "source_type": "public_agency",
+    "source_citation": "出典：厚生労働省『感染症関連営業停止事例』、観光庁『観光産業の経営動向調査』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "食品衛生法、感染症法、民法第536条",
+    "sales_angle": "感染症・食中毒による休業は保険対象外になりやすい。近年は事業中断保険に感染症特約を付ける動きが加速。"
+  },
+  {
+    "case_id": "BI-006",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "cyber"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "休業・サイバー起因",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "サイバー攻撃による基幹システム停止・事業中断",
+    "summary": "ランサムウェア・DDoS攻撃・不正アクセス等によるシステム停止で、受発注・生産管理・顧客対応が数日〜数ヶ月停止。製造業では生産ライン停止、小売ではECサイト停止、サービス業では予約・会計システム停止により、直接的な売上喪失に加え取引先への違約金が発生。",
+    "damage_amount_range": "数百万〜数十億円",
+    "damage_amount_reference": "KADOKAWA事件（2024年）で営業利益47億円マイナス、製造業では1時間1億円の試算も",
+    "source_type": "news_report",
+    "source_citation": "類似事例：KADOKAWA ランサムウェア事件（2024年6月）、名古屋港ランサムウェア事件（2023年7月）",
+    "legal_basis": "個人情報保護法、取引基本契約上の債務不履行",
+    "sales_angle": "サイバー保険の事業中断補償は数千万〜数億円まで設定可能。サイバー攻撃を『天災』として備える時代。"
+  },
+  {
+    "case_id": "BI-007",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 2,
+    "sub_category": "休業・インフラ停止",
+    "industry_major": "全業種",
+    "industry_minor": "事業会社一般",
+    "company_size": "全規模",
+    "region": "全国",
+    "incident_type": "停電・断水・通信障害による事業停止",
+    "summary": "広域停電、断水、通信障害（インターネット・電話）により、数時間〜数日の業務停止が発生。冷凍冷蔵設備の停止による在庫廃棄、予約システム・決済システムの停止による売上喪失、オンライン診療・教育等の中断が発生した。",
+    "damage_amount_range": "数十万〜数千万円",
+    "damage_amount_reference": "冷凍冷蔵品廃棄・休業損害の合計",
+    "source_type": "public_agency",
+    "source_citation": "出典：経済産業省『停電発生時の影響調査』、総務省『通信障害の経済的影響』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "民法第536条、賃貸借契約上の原状回復義務",
+    "sales_angle": "飲食・宿泊業は停電・断水で即日休業。非常用発電機・自家水源の整備不備は直接的な売上損失に直結。"
+  },
+  {
+    "case_id": "BI-008",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "liability",
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "construction",
+      "other"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "環境・公害",
+    "industry_major": "製造業",
+    "industry_minor": "化学・金属加工",
+    "company_size": "中小〜大手",
+    "region": "全国",
+    "incident_type": "環境汚染・土壌汚染による賠償責任",
+    "summary": "製造業の工場から有害物質（重金属、VOC、PFAS等）が漏出・排出され、周辺土壌・地下水・河川を汚染した。近隣住民の健康被害、農業被害、土壌改良費用、行政からの改善命令、刑事罰が発生した。汚染発覚は数十年後となることもあり、時効経過後でも環境基本法等で責任追及される。",
+    "damage_amount_range": "数千万〜数百億円",
+    "damage_amount_reference": "PFAS汚染・有機水銀等の公害訴訟で累計数十億〜数百億円",
+    "source_type": "public_agency",
+    "source_citation": "出典：環境省『土壌汚染対策法事例集』、環境訴訟判例を基に株式会社サイバーコネクト作成",
+    "legal_basis": "土壌汚染対策法、水質汚濁防止法、環境基本法、民法第709条",
+    "sales_angle": "過去の工場跡地の土壌汚染は現在でも賠償対象。不動産売買・M&Aでのデューデリジェンス不備は致命的リスク。"
+  },
+  {
+    "case_id": "BI-009",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "cargo",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "retail"
+    ],
+    "diagnostic_industry_secondary": [
+      "it",
+      "food"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 3,
+    "sub_category": "海外事業・海外リスク",
+    "industry_major": "全業種",
+    "industry_minor": "海外展開企業",
+    "company_size": "中堅・大手",
+    "region": "海外拠点",
+    "incident_type": "海外拠点でのトラブル・訴訟",
+    "summary": "海外子会社・支店での現地従業員との労務トラブル、現地法令違反、政治情勢変化による事業停止、外国人顧客からの訴訟（懲罰的賠償を含む）等により、海外事業で多額の損失・賠償責任が発生した。米国PL訴訟では日本本社に対しても懲罰的損害賠償が認容される可能性。",
+    "damage_amount_range": "数千万〜数十億円",
+    "damage_amount_reference": "米国PL訴訟では懲罰的賠償で元の損害の数倍〜十数倍の判決例",
+    "source_type": "public_agency",
+    "source_citation": "出典：JETRO『海外進出企業の法務リスク』、経済産業省『海外事業展開のリスク管理』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "各国現地法、国際的な商事契約、租税条約",
+    "sales_angle": "海外展開する中堅製造業・食品業は現地法務対応の不備で巨額賠償リスク。インバウンド観光業でも外国人顧客対応は同リスク。"
+  },
+  {
+    "case_id": "BI-010",
+    "diagnostic_risk_id": "interruption",
+    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_ids_secondary": [
+      "directors"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "後継者不在・事業承継",
+    "industry_major": "全業種",
+    "industry_minor": "中小企業・老舗事業者",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "経営者の急病・死亡による事業承継危機",
+    "summary": "中小企業の経営者（社長・オーナー）が急病・死亡し、後継者不在・事業承継の準備不足により、事業継続困難・廃業危機が発生した。取引先からの信用不安、従業員の離職、金融機関からの融資引き上げ、相続税の支払い困難が同時に発生する類型。",
+    "damage_amount_range": "事業価値の30〜100%（廃業時）",
+    "damage_amount_reference": "中小企業の廃業要因で『後継者不在』が最多（中小企業庁調査で全廃業の約30%）",
+    "source_type": "public_agency",
+    "source_citation": "出典：中小企業庁『事業承継白書』、中小企業基盤整備機構『事業承継事例』を基に株式会社サイバーコネクト作成",
+    "legal_basis": "相続税法、会社法、事業承継税制",
+    "sales_angle": "四国・地方の老舗ホテル・旅館は後継者不在が深刻。経営者保険・事業承継対策の未整備は事業そのものの消滅リスク。"
+  }
+]
