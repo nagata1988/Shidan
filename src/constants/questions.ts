@@ -1,12 +1,12 @@
 export const QUESTIONS_DATA = {
   "version": "0.3",
   "questions": [
-    { "id": "industries", "type": "industry_multi_select", "text": "貴社の業種・事業内容をすべて選択してください", "hint": "複数事業を営む場合はすべて選択できます（例：ホテル＋レストラン＋宴会場）", "category": "core", "required": true, "options": [] },
+    { "id": "industries", "type": "industry_multi_select", "text": "貴社の業種・事業内容をすべて選択してください", "hint": "複数事業を営む場合はすべて選択できます。\n\n🤔 迷ったときの判断ルール：「売上3割の法則」\n付帯的な事業が売上の3割以上なら、別業種として追加選択してください。\n　✅ 3割以上 → 両方を選択（独立したリスクとして評価）\n　❌ 3割未満 → メイン業種のみでOK（付帯サービス扱い）\n\n📘 よくある例\n・ホテル ＋ レストラン（外来客の売上比率で判断）\n・製造業 ＋ 小売・EC（自社通販の売上比率）\n・飲食 ＋ ケータリング（外販・出張料理の比率）\n・小売 ＋ EC（ネット通販の売上比率）\n・IT ＋ コンサル（助言業務の売上比率）\n・建設 ＋ 設計（設計単独受注の比率）\n\n※ 売上比率が不明な場合は「スタッフ工数」や「取引先数」で代替判断してください。", "category": "core", "required": true, "options": [] },
     { "id": "company_name", "type": "text", "text": "貴社名（診断書に記載されます）", "category": "core", "required": true, "placeholder": "例: 株式会社〇〇" },
     { "id": "agent_name", "type": "text", "text": "担当者名 / 代理店名（診断書に記載されます）", "category": "core", "required": false, "placeholder": "例: 山田 太郎 / 〇〇保険事務所" },
     { "id": "employee_count", "type": "number", "text": "従業員数（パート・アルバイト含む）は何名ですか？", "category": "core", "required": true, "unit": "名", "min": 1, "max": 99999, "triggers_branch": ["harassment_measures"] },
     { "id": "annual_revenue", "type": "number", "text": "直近1年間の年間売上高（または売上見込み）はおよそいくらですか？", "category": "core", "required": true, "unit": "万円", "min": 0, "max": 9999999, "placeholder": "例: 5000（5,000万円）/ 10000（1億円）", "triggers_branch": ["branch_has_shareholders"] },
-    { "id": "has_factory", "type": "boolean", "text": "製造・加工を行う拠点（自社・賃借問わず）がありますか？", "category": "core", "required": true, "triggers_branch": ["branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_key_supplier_dependency", "branch_night_work"] },
+    { "id": "has_factory", "type": "boolean", "text": "製造・加工を行う拠点（自社・賃借問わず）がありますか？", "hint": "「店舗とは別の工場・加工場」の有無を聞いています。\n✅ 工場／セントラルキッチン／独立した工房 → はい\n❌ 飲食店の店舗内厨房／小売／オフィスのみ → いいえ", "category": "core", "required": true, "triggers_branch": ["branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_key_supplier_dependency", "branch_night_work"] },
     { "id": "has_store", "type": "boolean", "text": "店舗・営業所（自社所有・賃借問わず）はありますか？", "category": "core", "required": true, "triggers_branch": ["branch_store_count", "branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_has_delivery", "branch_night_work"] },
     {
       "id": "business_form",
@@ -26,7 +26,7 @@ export const QUESTIONS_DATA = {
     },
     { "id": "export_ratio", "type": "select", "text": "売上に占める輸出・海外取引・越境ECの割合は？", "category": "core", "required": true, "options": [{ "value": "0", "label": "なし（国内のみ）" }, { "value": "0.1", "label": "10%未満" }, { "value": "0.3", "label": "10〜30%程度" }, { "value": "0.6", "label": "30〜60%程度" }, { "value": "0.9", "label": "60%以上" }], "triggers_branch_on": { "neq": "0" }, "triggers_branch": ["branch_export_country", "branch_export_amount", "branch_overseas_trip"] },
     { "id": "has_vehicles", "type": "boolean", "text": "業務用車両（社用車・運搬車など）を保有していますか？", "category": "core", "required": true, "triggers_branch": ["branch_vehicle_count", "branch_vehicle_type", "branch_uses_employee_vehicles"] },
-    { "id": "handles_products", "type": "boolean", "text": "自社で製品・食品・商品の製造や販売をしていますか？（飲食店の料理提供も「はい」です）", "category": "core", "required": true, "triggers_branch": ["branch_product_recall_exp", "inventory_value"] },
+    { "id": "handles_products", "type": "boolean", "text": "自社で製品・食品・商品の製造や販売をしていますか？", "hint": "「お客様にモノ（料理・商品）を提供しているか」を聞いています。\n✅ 飲食店の料理提供／小売・EC／製造・卸売 → はい\n❌ コンサル／IT受託／士業／清掃などサービスのみ → いいえ", "category": "core", "required": true, "triggers_branch": ["branch_product_recall_exp", "inventory_value"] },
     { "id": "has_construction_work", "type": "boolean", "text": "建設・土木・設備工事など、工事作業（自社施工・外注問わず）が発生しますか？", "category": "core", "required": true, "triggers_branch": ["branch_construction_scale", "branch_sub_contract_ratio", "construction_position"] },
     { "id": "has_it_systems", "type": "boolean", "text": "顧客データ・予約システム・POSレジ・業務システムなど、ITやクラウドを業務に利用していますか？", "category": "core", "required": true, "triggers_branch": ["branch_data_sensitivity", "remote_work_ratio"] },
     { "id": "handles_cash_valuables", "type": "boolean", "text": "現金・貴重品・高価な在庫品の取り扱いはありますか？", "category": "core", "required": true, "triggers_branch": ["branch_cash_amount"] },
@@ -47,7 +47,7 @@ export const QUESTIONS_DATA = {
       ]
     },
     { "id": "business_interruption_sensitivity", "type": "select", "text": "火災・水害などで1ヶ月間営業できなくなった場合、経営への影響は？", "category": "core", "required": true, "options": [{ "value": "low", "label": "軽微（在宅・他拠点でなんとか継続できる）" }, { "value": "medium", "label": "中程度（売上は大幅に落ちるが、しばらくは持ちこたえられる）" }, { "value": "high", "label": "深刻（固定費・借入返済が続き、倒産リスクが生じる）" }], "triggers_branch": ["branch_fixed_cost_level"] },
-    { "id": "company_age_years", "type": "number", "text": "会社（または個人事業）の創業・設立は何年ですか？（西暦）", "category": "core", "required": true, "unit": "年（西暦）", "min": 1900, "max": 2025, "placeholder": "例: 2010" },
+    { "id": "company_age_years", "type": "number", "text": "会社（または個人事業）の創業・設立は何年ですか？（西暦）", "category": "core", "required": true, "unit": "年（西暦）", "min": 1900, "max": new Date().getFullYear(), "placeholder": "例: 2010" },
     { "id": "branch_factory_area", "type": "number", "text": "主な拠点（工場・店舗・事務所等）の延床面積はおよそ何㎡ですか？", "hint": "テナントの場合は、ご自身が使用されている「専有面積」を入力してください", "category": "branch", "unit": "㎡", "min": 0 },
     { "id": "branch_factory_structure", "type": "select", "text": "その拠点の建物構造を教えてください", "hint": "テナントの場合、ビル全体の構造（RC造、鉄骨造など）が不明であれば「わからない」を選択してください", "category": "branch", "options": [{ "value": "steel", "label": "鉄骨造" }, { "value": "rc", "label": "RC（鉄筋コンクリート）造" }, { "value": "wood", "label": "木造" }, { "value": "unknown", "label": "わからない" }] },
     { "id": "branch_fire_suppression", "type": "boolean", "text": "その拠点にスプリンクラーや自動消火設備はありますか？", "category": "branch" },
@@ -120,10 +120,131 @@ export const QUESTIONS_DATA = {
     { "id": "branch_night_work", "type": "boolean", "text": "深夜・早朝（22時〜翌5時）に作業や営業を行うことがありますか？", "category": "branch" },
     { "id": "branch_key_supplier_dependency", "type": "boolean", "text": "売上や仕入れの50%以上が特定の1〜2社の取引先・仕入先に集中していますか？", "category": "branch" },
     { "id": "branch_overseas_trip", "type": "boolean", "text": "従業員が海外出張・海外派遣をすることがありますか？", "category": "branch" },
-    { "id": "current_fire_known", "type": "select", "text": "現在、火災保険（店舗・工場・事業所向け）に加入していますか？", "category": "current_contract", "policy_unknown_flag": true, "related_category": "fire", "options": [{"value": true, "label": "加入済み・内容も把握している"}, {"value": "partial", "label": "加入しているが内容は不明"}, {"value": false, "label": "加入していない・わからない"}] },
-    { "id": "current_liability_known", "type": "select", "text": "現在、賠償責任保険（他者への損害を補償する保険）に加入していますか？", "category": "current_contract", "policy_unknown_flag": true, "related_category": "liability", "options": [{"value": true, "label": "加入済み・内容も把握している"}, {"value": "partial", "label": "加入しているが内容は不明"}, {"value": false, "label": "加入していない・わからない"}] },
-    { "id": "current_accident_known", "type": "select", "text": "従業員向けの傷害保険（法定労災に上乗せする補償）に加入していますか？", "category": "current_contract", "policy_unknown_flag": true, "related_category": "accident", "options": [{"value": true, "label": "加入済み・内容も把握している"}, {"value": "partial", "label": "加入しているが内容は不明"}, {"value": false, "label": "加入していない・わからない"}] },
-    { "id": "current_vehicle_known", "type": "select", "text": "現在、業務用車両の任意保険（自動車保険）に加入していますか？", "category": "current_contract", "policy_unknown_flag": true, "related_category": "vehicle", "options": [{"value": true, "label": "加入済み・内容も把握している"}, {"value": "partial", "label": "加入しているが内容は不明"}, {"value": false, "label": "加入していない・わからない"}] },
-    { "id": "current_cyber_known", "type": "select", "text": "現在、サイバー保険（情報漏洩・不正アクセス対応の保険）に加入していますか？", "category": "current_contract", "policy_unknown_flag": true, "related_category": "cyber", "options": [{"value": true, "label": "加入済み・内容も把握している"}, {"value": "partial", "label": "加入しているが内容は不明"}, {"value": false, "label": "加入していない・わからない"}] }
+    {
+      "id": "current_fire_known",
+      "type": "select",
+      "text": "現在、火災保険（店舗・工場・事業所向け）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "fire",
+      "condition": { "op": "or", "conditions": [ { "field": "has_factory", "op": "eq", "value": true }, { "field": "has_store", "op": "eq", "value": true }, { "field": "industry", "op": "in", "value": ["food", "manufacturing", "real_estate", "construction", "retail", "transport", "medical", "service", "agriculture"] } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_food_known",
+      "type": "select",
+      "text": "現在、食中毒や製品事故を補償する保険（PL保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "food_poisoning",
+      "condition": { "op": "or", "conditions": [ { "field": "industry", "op": "in", "value": ["food", "retail", "manufacturing", "agriculture", "medical"] }, { "field": "handles_products", "op": "eq", "value": true } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_liability_known",
+      "type": "select",
+      "text": "現在、賠償責任保険（他者への損害を補償する保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "liability",
+      "condition": { "op": "or", "conditions": [ { "field": "third_party_risk", "op": "in", "value": ["medium", "high"] }, { "field": "industry", "op": "in", "value": ["construction", "medical", "it", "finance", "manufacturing", "transport", "food", "retail", "real_estate", "service", "agriculture"] }, { "field": "handles_products", "op": "eq", "value": true }, { "field": "has_construction_work", "op": "eq", "value": true }, { "field": "harassment_measures", "op": "eq", "value": "none" } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_accident_known",
+      "type": "select",
+      "text": "現在、従業員のケガを補償する保険（労災上乗せ保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "accident",
+      "condition": { "field": "employee_count", "op": "gt", "value": 0 },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_vehicle_known",
+      "type": "select",
+      "text": "現在、業務用車両の自動車保険に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "vehicle",
+      "condition": { "op": "or", "conditions": [ { "field": "has_vehicles", "op": "eq", "value": true }, { "field": "branch_uses_employee_vehicles", "op": "eq", "value": true } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_cargo_known",
+      "type": "select",
+      "text": "現在、輸送中の荷物や商品の損害を補償する保険（貨物保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "cargo",
+      "condition": { "op": "or", "conditions": [ { "field": "export_ratio", "op": "neq", "value": "0" }, { "field": "industry", "op": "in", "value": ["transport", "manufacturing", "retail", "food", "agriculture"] }, { "field": "branch_has_delivery", "op": "eq", "value": true } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_cyber_known",
+      "type": "select",
+      "text": "現在、サイバー攻撃や情報漏洩を補償する保険（サイバー保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "cyber",
+      "condition": { "op": "or", "conditions": [ { "field": "has_it_systems", "op": "eq", "value": true }, { "field": "branch_data_sensitivity", "op": "in", "value": ["medium", "high"] }, { "field": "industry", "op": "in", "value": ["it", "medical", "retail", "finance", "food", "manufacturing", "real_estate", "service", "transport"] } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_dno_known",
+      "type": "select",
+      "text": "現在、役員個人の賠償責任を補償する保険（D&O保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "directors",
+      "condition": { "op": "or", "conditions": [ { "field": "branch_has_shareholders", "op": "eq", "value": true }, { "field": "annual_revenue", "op": "gte", "value": 10000 }, { "field": "employee_count", "op": "gte", "value": 50 } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    },
+    {
+      "id": "current_interruption_known",
+      "type": "select",
+      "text": "現在、災害や事故による休業損失を補償する保険（利益保険）に加入していますか？",
+      "category": "current_contract",
+      "policy_unknown_flag": true,
+      "related_category": "interruption",
+      "condition": { "op": "or", "conditions": [ { "field": "business_interruption_sensitivity", "op": "in", "value": ["medium", "high"] }, { "field": "branch_fixed_cost_level", "op": "in", "value": ["high", "very_high"] }, { "field": "has_factory", "op": "eq", "value": true }, { "field": "industry", "op": "in", "value": ["manufacturing", "food", "agriculture", "medical", "retail", "transport", "it"] } ] },
+      "options": [
+        { "value": true, "label": "加入しており、内容も把握している" },
+        { "value": "partial", "label": "加入しているが、内容は不明" },
+        { "value": false, "label": "加入していない / わからない" }
+      ]
+    }
   ]
 };

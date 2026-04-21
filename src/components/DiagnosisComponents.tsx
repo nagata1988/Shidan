@@ -23,6 +23,120 @@ export function ProgressBar({ current, total }: { current: number; total: number
   );
 }
 
+function IndustrySelectionGuide() {
+  const examples = [
+    { a: "🏨 ホテル", b: "🍽️ レストラン", criterion: "外来客の売上比率" },
+    { a: "🏭 製造業", b: "🛒 小売・EC", criterion: "自社通販の売上比率" },
+    { a: "🍽️ 飲食", b: "🎂 ケータリング", criterion: "外販・出張料理の比率" },
+    { a: "🛒 小売", b: "💻 EC", criterion: "ネット通販の売上比率" },
+    { a: "💻 IT", b: "📊 コンサル", criterion: "助言業務の売上比率" },
+    { a: "🏗️ 建設", b: "📐 設計", criterion: "設計単独受注の比率" },
+  ];
+  return (
+    <div className="mb-5 rounded-2xl overflow-hidden border-2 border-blue-100 bg-gradient-to-br from-blue-50/70 to-indigo-50/50">
+      {/* Header */}
+      <div className="px-4 py-3 bg-blue-600/90 text-white flex items-center gap-2">
+        <span className="text-lg">💡</span>
+        <div>
+          <div className="text-sm font-black">複数事業があるときの選び方</div>
+          <div className="text-[10px] text-blue-100 font-medium">迷ったら「売上3割の法則」</div>
+        </div>
+      </div>
+
+      {/* Text-based decision guide */}
+      <div className="p-4">
+        <div className="text-[11px] font-bold text-slate-600 mb-1 text-center">付帯事業の売上比率で判断</div>
+        <div className="text-[10px] text-slate-500 text-center mb-3 leading-relaxed">
+          「付帯事業の売上 ÷ 会社全体の売上」が何%かで判断します<br/>
+          <span className="text-slate-400">例：ホテルの全売上5億円のうち、レストラン売上が1.5億円なら30%</span>
+        </div>
+        <div className="space-y-2">
+          <div className="bg-white rounded-xl border-2 border-blue-200 p-3 flex items-center gap-3">
+            <div className="flex-shrink-0 flex flex-col items-center justify-center px-3 py-2 rounded-lg bg-blue-100 min-w-[76px]">
+              <span className="text-[9px] font-bold text-blue-500 leading-none mb-1">売上比率</span>
+              <span className="text-base font-black text-blue-700 leading-none whitespace-nowrap">30%以上</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-bold text-blue-700 mb-0.5">✅ 両方を選択</div>
+              <div className="text-[11px] text-slate-600 leading-relaxed">付帯事業が大きいため、独立したリスクとして別途評価が必要です</div>
+            </div>
+          </div>
+          <div className="bg-white rounded-xl border-2 border-slate-200 p-3 flex items-center gap-3">
+            <div className="flex-shrink-0 flex flex-col items-center justify-center px-3 py-2 rounded-lg bg-slate-100 min-w-[76px]">
+              <span className="text-[9px] font-bold text-slate-400 leading-none mb-1">売上比率</span>
+              <span className="text-base font-black text-slate-700 leading-none whitespace-nowrap">30%未満</span>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-bold text-slate-700 mb-0.5">❌ メイン業種のみでOK</div>
+              <div className="text-[11px] text-slate-500 leading-relaxed">付帯サービスは小さいため、主業種の補償でカバーできます</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Exception cases: must pick both regardless of ratio */}
+        <div className="mt-3 rounded-xl border-2 border-orange-200 bg-orange-50/60 p-3">
+          <div className="flex items-center gap-1.5 mb-2">
+            <span className="text-sm">⚠️</span>
+            <span className="text-[11px] font-black text-orange-700">例外：売上比率に関わらず両方選択するケース</span>
+          </div>
+          <div className="space-y-2">
+            <div className="bg-white rounded-lg p-2.5 border border-orange-100">
+              <div className="text-[11px] font-bold text-slate-800 mb-1 flex items-center gap-1">
+                <span>📍</span><span>事業を別々の拠点（建物）で運営している</span>
+              </div>
+              <div className="text-[10px] text-slate-600 leading-relaxed mb-1">
+                <span className="text-slate-500">例：</span>本社工場と別地域の直営小売店／東京オフィスと大阪支店の別業態／本店とセントラルキッチン／路面店と別棟倉庫 など
+              </div>
+              <div className="text-[10px] text-slate-500 leading-relaxed">
+                → <span className="font-bold text-orange-700">必ず両方選択</span>（別建物は火災・施設賠償・盗難などのリスクが独立）
+              </div>
+            </div>
+            <div className="bg-white rounded-lg p-2.5 border border-orange-100">
+              <div className="text-[11px] font-bold text-slate-800 mb-1 flex items-center gap-1">
+                <span>🏢</span><span>同じ建物内でも「独立した事業」として運営</span>
+              </div>
+              <div className="text-[10px] text-slate-600 leading-relaxed mb-1.5">
+                <span className="text-slate-500">例：</span>1F路面店＋上階は別業態／本社ビル内で別ブランドのサービスを提供／同一拠点でテナント的に別業態を運営
+              </div>
+              <div className="text-[10px] text-slate-600 leading-relaxed">
+                <span className="font-bold text-slate-700">以下2つ以上当てはまれば両方選択：</span><br/>
+                ・独立した入口・看板・屋号（別ブランドで展開）<br/>
+                ・営業許可・届出が別物件扱い（保健所／建設業／風営法 等）<br/>
+                ・スタッフ・管理者・会計（売上/経費）が独立
+              </div>
+            </div>
+            <div className="bg-amber-100/60 rounded-lg p-2 border border-amber-200 text-[10px] text-slate-700 leading-relaxed">
+              💡 <span className="font-bold">迷ったら両方選ぶのが安全です。</span>リスクの見落としを防ぎます。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Examples grid */}
+      <div className="px-4 pb-3">
+        <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">📘 よくある複合パターン</div>
+        <div className="grid grid-cols-2 gap-1.5">
+          {examples.map((ex, i) => (
+            <div key={i} className="bg-white rounded-lg border border-slate-200 p-2">
+              <div className="flex items-center gap-1 text-[11px] font-bold text-slate-700 mb-0.5">
+                <span>{ex.a}</span>
+                <span className="text-slate-400">＋</span>
+                <span>{ex.b}</span>
+              </div>
+              <div className="text-[9px] text-slate-500 leading-tight">{ex.criterion}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Fallback footer */}
+      <div className="px-4 py-2 bg-slate-50 border-t border-slate-100 text-[10px] text-slate-500 leading-relaxed">
+        💬 売上比率が分からない → <span className="font-bold text-slate-600">スタッフ工数</span> または <span className="font-bold text-slate-600">取引先数</span> で代替判断
+      </div>
+    </div>
+  );
+}
+
 export function IndustryMultiSelect({ values, onChange, hint }: { values: string[]; onChange: (vals: string[]) => void; hint?: string }) {
   const [expandedMajor, setExpandedMajor] = useState<string | null>(null);
 
@@ -42,11 +156,7 @@ export function IndustryMultiSelect({ values, onChange, hint }: { values: string
 
   return (
     <div>
-      {hint && (
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-3.5 mb-4 text-sm text-blue-700 flex gap-2.5">
-          <span className="flex-shrink-0">💡</span><span>{hint}</span>
-        </div>
-      )}
+      <IndustrySelectionGuide />
       {values.length > 0 && (
         <div className="mb-4">
           <div className="text-xs font-bold text-slate-500 mb-2 uppercase tracking-wider">選択中の業種</div>
@@ -115,7 +225,14 @@ export function QuestionCard({ question, value, onChange, index, total }: any) {
         {q.category === "core" ? "基本情報" : q.category === "branch" ? "詳細確認" : "現在の契約"}
         {total && <span className="ml-2 opacity-50">/ {index + 1} of {total}</span>}
       </div>
-      <div className="text-lg font-bold text-slate-800 mb-5 leading-relaxed">{q.text}</div>
+      <div className="text-lg font-bold text-slate-800 mb-3 leading-relaxed">{q.text}</div>
+
+      {q.hint && q.type !== "industry_multi_select" && (
+        <div className="mb-5 p-3 bg-blue-50/60 border border-blue-100 rounded-xl text-[12px] text-slate-700 leading-relaxed whitespace-pre-line flex gap-2">
+          <span className="flex-shrink-0 text-base leading-none">💡</span>
+          <span>{q.hint}</span>
+        </div>
+      )}
 
       {q.type === "industry_multi_select" && (
         <IndustryMultiSelect values={Array.isArray(value) ? value : []} onChange={(vals) => onChange(q.id, vals)} hint={q.hint} />
@@ -165,8 +282,11 @@ export function QuestionCard({ question, value, onChange, index, total }: any) {
 
       {q.type === "number" && (
         <div className="flex items-center gap-3">
-          <input type="number" value={value ?? ""} min={q.min} max={q.max}
-            onChange={e => onChange(q.id, e.target.value === "" ? undefined : Number(e.target.value))}
+          <input type="text" inputMode="numeric" value={value ?? ""}
+            onChange={e => {
+              const normalized = e.target.value.replace(/[０-９]/g, s => String.fromCharCode(s.charCodeAt(0) - 0xFEE0)).replace(/[^0-9]/g, "");
+              onChange(q.id, normalized === "" ? undefined : Number(normalized));
+            }}
             className="flex-1 p-3.5 rounded-xl border-2 border-slate-200 text-base outline-none text-slate-800 font-semibold focus:border-blue-500 transition-colors"
             placeholder={q.placeholder || "数値を入力"} />
           {q.unit && <span className="text-slate-500 font-bold text-sm">{q.unit}</span>}

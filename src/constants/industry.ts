@@ -44,14 +44,14 @@ export const INDUSTRY_TREE = [
     ]
   },
   {
-    value: "food", label: "飲食業", icon: "🍽️",
+    value: "food", label: "飲食・宿泊業", icon: "🍽️",
     sub: [
       { value: "food_restaurant", label: "レストラン・食堂" },
       { value: "food_izakaya", label: "居酒屋・バー" },
       { value: "food_fastfood", label: "ファストフード・テイクアウト" },
       { value: "food_cafe", label: "カフェ・喫茶店" },
       { value: "food_catering", label: "給食・ケータリング" },
-      { value: "food_hotel_banquet", label: "ホテル・宴会場" },
+      { value: "food_hotel_banquet", label: "ホテル・旅館・宴会場" },
       { value: "food_other", label: "その他飲食業" },
     ]
   },

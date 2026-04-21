@@ -34,9 +34,10 @@ export function evaluateCondition(condition: any, snapshot: any): boolean {
 
 export function runRuleEngine(snapshot: any) {
   const normalized = { ...snapshot };
-  ["current_fire_known", "current_liability_known", "current_accident_known", "current_vehicle_known", "current_cyber_known"].forEach(key => {
-    if (normalized[key] === "partial") normalized[key] = false;
-  });
+  // NOTE: current_*_known fields are 3-valued (true / "partial" / false).
+  // We intentionally do NOT collapse "partial" to false here — partial-specific
+  // rules (fp_r012, cargo_r014, do_r018, int_r023, cyber_r017, etc.) rely on
+  // the raw "partial" value being preserved.
   if (normalized.company_age_years && normalized.company_age_years >= 1900) {
     normalized.company_age_years = new Date().getFullYear() - normalized.company_age_years;
   }
@@ -50,12 +51,45 @@ export function runRuleEngine(snapshot: any) {
     normalized.industry = parent;
     normalized.industries = [parent];
   }
+  // Determine if a rule is a top-level industry rule (industry=eq/in).
+  // AND/OR composite rules that contain industry internally are NOT treated
+  // as industry rules because they represent combined conditions.
+  const isIndustryRule = (rule: any): boolean => {
+    const cond = rule.condition;
+    if (!cond) return false;
+    if (cond.conditions) return false; // AND/OR composite
+    return cond.field === "industry" && (cond.op === "eq" || cond.op === "in");
+  };
+
   return RULES_DATA.categories.map(category => {
     let totalScore = 0;
-    const firedRules = [];
-    const reasons = [];
+    const firedRules: string[] = [];
+    const reasons: string[] = [];
     let evaluableRules = 0;
-    for (const rule of category.scoring_rules) {
+
+    const industryRules = category.scoring_rules.filter(isIndustryRule);
+    const otherRules = category.scoring_rules.filter(r => !isIndustryRule(r));
+
+    // Industry rules: only the highest-scoring matching rule fires (多業種選択時の二重加算を抑制)
+    let bestIndustryRule: any = null;
+    for (const rule of industryRules) {
+      if (evaluateCondition(rule.condition, normalized)) {
+        if (!bestIndustryRule || rule.score > bestIndustryRule.score) {
+          bestIndustryRule = rule;
+        }
+      }
+    }
+    if (bestIndustryRule) {
+      totalScore += bestIndustryRule.score;
+      firedRules.push(bestIndustryRule.id);
+      reasons.push(bestIndustryRule.reason);
+    }
+    // industry ルールは data_completeness の分母には常に 1 として計上
+    // （どの業種でも industry フィールドは必ず入力されるため）
+    evaluableRules += industryRules.length > 0 ? 1 : 0;
+
+    // Other rules: evaluate normally
+    for (const rule of otherRules) {
       const field = (rule.condition as any).field;
       if (!(rule.condition as any).conditions && !(field in normalized)) { continue; }
       evaluableRules++;
@@ -65,17 +99,30 @@ export function runRuleEngine(snapshot: any) {
         reasons.push(rule.reason);
       }
     }
+
     const normalizedScore = Math.min(Math.round((totalScore / category.max_score) * 100), 100);
     const rank = normalizedScore >= category.rank_thresholds.A ? "A" : normalizedScore >= category.rank_thresholds.B ? "B" : "C";
-    const totalRules = category.scoring_rules.length;
+    const totalRules = otherRules.length + (industryRules.length > 0 ? 1 : 0);
     const completeness = totalRules > 0 ? (evaluableRules / totalRules) : 1.0;
     return { category_id: category.id, score: normalizedScore, rank, fired_rules: firedRules, reasons, data_completeness: completeness };
   });
 }
 
 export function selectTop3(results: any[]) {
+  const rankPriority: Record<string, number> = { "A": 0, "B": 1, "C": 2 };
   return [...results]
-    .sort((a, b) => b.score - a.score || a.category_id.localeCompare(b.category_id))
+    .sort((a, b) => {
+      // 1. スコア降順（主ソート）
+      if (b.score !== a.score) return b.score - a.score;
+      // 2. ランクA優先（同点時：A > B > C）
+      if (a.rank !== b.rank) return (rankPriority[a.rank] ?? 99) - (rankPriority[b.rank] ?? 99);
+      // 3. データ充足率降順（回答情報が多いリスクを優先）
+      if (a.data_completeness !== b.data_completeness) {
+        return (b.data_completeness ?? 0) - (a.data_completeness ?? 0);
+      }
+      // 4. 最終的に category_id 昇順（決定性確保）
+      return a.category_id.localeCompare(b.category_id);
+    })
     .slice(0, 3);
 }
 
