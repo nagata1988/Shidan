@@ -34,9 +34,10 @@ export function evaluateCondition(condition: any, snapshot: any): boolean {
 
 export function runRuleEngine(snapshot: any) {
   const normalized = { ...snapshot };
-  ["current_fire_known", "current_liability_known", "current_accident_known", "current_vehicle_known", "current_cyber_known"].forEach(key => {
-    if (normalized[key] === "partial") normalized[key] = false;
-  });
+  // NOTE: current_*_known fields are 3-valued (true / "partial" / false).
+  // We intentionally do NOT collapse "partial" to false here — partial-specific
+  // rules (fp_r012, cargo_r014, do_r018, int_r023, cyber_r017, etc.) rely on
+  // the raw "partial" value being preserved.
   if (normalized.company_age_years && normalized.company_age_years >= 1900) {
     normalized.company_age_years = new Date().getFullYear() - normalized.company_age_years;
   }
