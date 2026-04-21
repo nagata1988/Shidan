@@ -51,12 +51,45 @@ export function runRuleEngine(snapshot: any) {
     normalized.industry = parent;
     normalized.industries = [parent];
   }
+  // Determine if a rule is a top-level industry rule (industry=eq/in).
+  // AND/OR composite rules that contain industry internally are NOT treated
+  // as industry rules because they represent combined conditions.
+  const isIndustryRule = (rule: any): boolean => {
+    const cond = rule.condition;
+    if (!cond) return false;
+    if (cond.conditions) return false; // AND/OR composite
+    return cond.field === "industry" && (cond.op === "eq" || cond.op === "in");
+  };
+
   return RULES_DATA.categories.map(category => {
     let totalScore = 0;
-    const firedRules = [];
-    const reasons = [];
+    const firedRules: string[] = [];
+    const reasons: string[] = [];
     let evaluableRules = 0;
-    for (const rule of category.scoring_rules) {
+
+    const industryRules = category.scoring_rules.filter(isIndustryRule);
+    const otherRules = category.scoring_rules.filter(r => !isIndustryRule(r));
+
+    // Industry rules: only the highest-scoring matching rule fires (多業種選択時の二重加算を抑制)
+    let bestIndustryRule: any = null;
+    for (const rule of industryRules) {
+      if (evaluateCondition(rule.condition, normalized)) {
+        if (!bestIndustryRule || rule.score > bestIndustryRule.score) {
+          bestIndustryRule = rule;
+        }
+      }
+    }
+    if (bestIndustryRule) {
+      totalScore += bestIndustryRule.score;
+      firedRules.push(bestIndustryRule.id);
+      reasons.push(bestIndustryRule.reason);
+    }
+    // industry ルールは data_completeness の分母には常に 1 として計上
+    // （どの業種でも industry フィールドは必ず入力されるため）
+    evaluableRules += industryRules.length > 0 ? 1 : 0;
+
+    // Other rules: evaluate normally
+    for (const rule of otherRules) {
       const field = (rule.condition as any).field;
       if (!(rule.condition as any).conditions && !(field in normalized)) { continue; }
       evaluableRules++;
@@ -66,9 +99,10 @@ export function runRuleEngine(snapshot: any) {
         reasons.push(rule.reason);
       }
     }
+
     const normalizedScore = Math.min(Math.round((totalScore / category.max_score) * 100), 100);
     const rank = normalizedScore >= category.rank_thresholds.A ? "A" : normalizedScore >= category.rank_thresholds.B ? "B" : "C";
-    const totalRules = category.scoring_rules.length;
+    const totalRules = otherRules.length + (industryRules.length > 0 ? 1 : 0);
     const completeness = totalRules > 0 ? (evaluableRules / totalRules) : 1.0;
     return { category_id: category.id, score: normalizedScore, rank, fired_rules: firedRules, reasons, data_completeness: completeness };
   });
