@@ -68,7 +68,7 @@ export const QUESTIONS_DATA = {
     { "id": "branch_export_country", "type": "multi_select", "text": "主な輸出先・海外取引国・地域を選んでください", "category": "branch", "options": [{ "value": "US", "label": "米国" }, { "value": "CN", "label": "中国" }, { "value": "EU", "label": "EU" }, { "value": "ASEAN", "label": "東南アジア" }, { "value": "OTHER", "label": "その他" }] },
     { "id": "branch_export_amount", "type": "number", "text": "年間の輸出・海外売上高はおよそいくらですか？", "category": "branch", "unit": "万円", "min": 0 },
     { "id": "branch_vehicle_count", "type": "number", "text": "業務用車両は何台ですか？", "category": "branch", "unit": "台", "min": 1 },
-    { "id": "branch_vehicle_type", "type": "multi_select", "text": "業務用車両の種類を選んでください", "category": "branch", "options": [{ "value": "passenger", "label": "乗用車" }, { "value": "truck", "label": "トラック・貨物車" }, { "value": "special", "label": "特殊車両（フォークリフト等）" }] },
+    { "id": "branch_vehicle_type", "type": "multi_select", "text": "業務用車両の種類を選んでください", "category": "branch", "options": [{ "value": "passenger", "label": "乗用車" }, { "value": "truck", "label": "トラック・貨物車" }, { "value": "bus", "label": "バス・マイクロバス（送迎・観光用）" }, { "value": "special", "label": "特殊車両（フォークリフト等）" }] },
     { "id": "branch_product_recall_exp", "type": "boolean", "text": "過去に製品・食品のクレーム、リコール、食中毒等の対応経験はありますか？", "category": "branch" },
     { "id": "branch_construction_scale", "type": "select", "text": "工事1件あたりの規模はどのくらいですか？", "category": "branch", "options": [{ "value": "small", "label": "小規模（〜1,000万円）" }, { "value": "medium", "label": "中規模（1,000万〜1億円）" }, { "value": "large", "label": "大規模（1億円以上）" }] },
     {
