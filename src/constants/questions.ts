@@ -1,12 +1,12 @@
 export const QUESTIONS_DATA = {
   "version": "0.3",
   "questions": [
-    { "id": "industries", "type": "industry_multi_select", "text": "貴社の業種・事業内容をすべて選択してください", "hint": "複数事業を営む場合はすべて選択できます（例：ホテル＋レストラン＋宴会場）", "category": "core", "required": true, "options": [] },
+    { "id": "industries", "type": "industry_multi_select", "text": "貴社の業種・事業内容をすべて選択してください", "hint": "複数事業を営む場合はすべて選択できます。\n\n🤔 迷ったときの判断ルール：「売上3割の法則」\n付帯的な事業が売上の3割以上なら、別業種として追加選択してください。\n　✅ 3割以上 → 両方を選択（独立したリスクとして評価）\n　❌ 3割未満 → メイン業種のみでOK（付帯サービス扱い）\n\n📘 よくある例\n・ホテル ＋ レストラン（外来客の売上比率で判断）\n・製造業 ＋ 小売・EC（自社通販の売上比率）\n・飲食 ＋ ケータリング（外販・出張料理の比率）\n・小売 ＋ EC（ネット通販の売上比率）\n・IT ＋ コンサル（助言業務の売上比率）\n・建設 ＋ 設計（設計単独受注の比率）\n\n※ 売上比率が不明な場合は「スタッフ工数」や「取引先数」で代替判断してください。", "category": "core", "required": true, "options": [] },
     { "id": "company_name", "type": "text", "text": "貴社名（診断書に記載されます）", "category": "core", "required": true, "placeholder": "例: 株式会社〇〇" },
     { "id": "agent_name", "type": "text", "text": "担当者名 / 代理店名（診断書に記載されます）", "category": "core", "required": false, "placeholder": "例: 山田 太郎 / 〇〇保険事務所" },
     { "id": "employee_count", "type": "number", "text": "従業員数（パート・アルバイト含む）は何名ですか？", "category": "core", "required": true, "unit": "名", "min": 1, "max": 99999, "triggers_branch": ["harassment_measures"] },
     { "id": "annual_revenue", "type": "number", "text": "直近1年間の年間売上高（または売上見込み）はおよそいくらですか？", "category": "core", "required": true, "unit": "万円", "min": 0, "max": 9999999, "placeholder": "例: 5000（5,000万円）/ 10000（1億円）", "triggers_branch": ["branch_has_shareholders"] },
-    { "id": "has_factory", "type": "boolean", "text": "製造・加工を行う拠点（自社・賃借問わず）がありますか？", "category": "core", "required": true, "triggers_branch": ["branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_key_supplier_dependency", "branch_night_work"] },
+    { "id": "has_factory", "type": "boolean", "text": "製造・加工を行う拠点（自社・賃借問わず）がありますか？", "hint": "「店舗とは別の工場・加工場」の有無を聞いています。\n✅ 工場／セントラルキッチン／独立した工房 → はい\n❌ 飲食店の店舗内厨房／小売／オフィスのみ → いいえ", "category": "core", "required": true, "triggers_branch": ["branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_key_supplier_dependency", "branch_night_work"] },
     { "id": "has_store", "type": "boolean", "text": "店舗・営業所（自社所有・賃借問わず）はありますか？", "category": "core", "required": true, "triggers_branch": ["branch_store_count", "branch_factory_area", "branch_factory_structure", "branch_fire_suppression", "branch_has_delivery", "branch_night_work"] },
     {
       "id": "business_form",
@@ -26,7 +26,7 @@ export const QUESTIONS_DATA = {
     },
     { "id": "export_ratio", "type": "select", "text": "売上に占める輸出・海外取引・越境ECの割合は？", "category": "core", "required": true, "options": [{ "value": "0", "label": "なし（国内のみ）" }, { "value": "0.1", "label": "10%未満" }, { "value": "0.3", "label": "10〜30%程度" }, { "value": "0.6", "label": "30〜60%程度" }, { "value": "0.9", "label": "60%以上" }], "triggers_branch_on": { "neq": "0" }, "triggers_branch": ["branch_export_country", "branch_export_amount", "branch_overseas_trip"] },
     { "id": "has_vehicles", "type": "boolean", "text": "業務用車両（社用車・運搬車など）を保有していますか？", "category": "core", "required": true, "triggers_branch": ["branch_vehicle_count", "branch_vehicle_type", "branch_uses_employee_vehicles"] },
-    { "id": "handles_products", "type": "boolean", "text": "自社で製品・食品・商品の製造や販売をしていますか？（飲食店の料理提供も「はい」です）", "category": "core", "required": true, "triggers_branch": ["branch_product_recall_exp", "inventory_value"] },
+    { "id": "handles_products", "type": "boolean", "text": "自社で製品・食品・商品の製造や販売をしていますか？", "hint": "「お客様にモノ（料理・商品）を提供しているか」を聞いています。\n✅ 飲食店の料理提供／小売・EC／製造・卸売 → はい\n❌ コンサル／IT受託／士業／清掃などサービスのみ → いいえ", "category": "core", "required": true, "triggers_branch": ["branch_product_recall_exp", "inventory_value"] },
     { "id": "has_construction_work", "type": "boolean", "text": "建設・土木・設備工事など、工事作業（自社施工・外注問わず）が発生しますか？", "category": "core", "required": true, "triggers_branch": ["branch_construction_scale", "branch_sub_contract_ratio", "construction_position"] },
     { "id": "has_it_systems", "type": "boolean", "text": "顧客データ・予約システム・POSレジ・業務システムなど、ITやクラウドを業務に利用していますか？", "category": "core", "required": true, "triggers_branch": ["branch_data_sensitivity", "remote_work_ratio"] },
     { "id": "handles_cash_valuables", "type": "boolean", "text": "現金・貴重品・高価な在庫品の取り扱いはありますか？", "category": "core", "required": true, "triggers_branch": ["branch_cash_amount"] },

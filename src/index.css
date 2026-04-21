@@ -24,3 +24,63 @@
     opacity: 1;
   }
 }
+
+/* ============================================================
+   Print & PDF styles
+   ============================================================ */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-size: 11pt;
+  }
+  /* Hide navigation/controls that shouldn't be printed */
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  /* Force all elements to print exact colors (prevent light-gray fade) */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Avoid page-break inside cards */
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Force dark hero/header sections to render readable on paper */
+  .bg-slate-900,
+  [class*="from-slate-900"],
+  [class*="bg-gradient-to"][class*="slate-9"] {
+    background: #0f172a !important;
+    color: #ffffff !important;
+  }
+  /* Remove shadows (print as smudges on most printers) */
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    box-shadow: none !important;
+  }
+  /* Prevent Recharts from rendering as blank white on print */
+  .recharts-wrapper svg {
+    overflow: visible !important;
+  }
+  /* Ensure cards don't break awkwardly */
+  .rounded-2xl, .rounded-3xl {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Links should show URLs */
+  a[href]:not([href^="javascript:"])::after {
+    content: "";
+  }
+}

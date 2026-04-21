@@ -20,8 +20,9 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
 
   const industryChecklist = (RULES_META.INDUSTRY_CHECKLIST as any)[category.id] || {};
 
-  // TOP3カテゴリ（isTop=true）の場合のみ、関連事例を取得
-  const relatedCases = isTop
+  // TOP3カテゴリまたはGrade B/Cの場合に関連事例を取得
+  const showCases = isTop || grade === "B" || grade === "C";
+  const relatedCases = showCases
     ? getRelatedCases(ALL_CASES, answers, category.id, 3)
     : [];
 
@@ -121,7 +122,7 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
         </div>
       )}
 
-      {(isTop || grade === "A" || grade === "B") && (
+      {(isTop || grade === "A" || grade === "B" || grade === "C") && (
         <div className="space-y-4 mt-4">
           {result.reasons.length > 0 && (
             <div>
@@ -249,8 +250,8 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
             );
           })()}
 
-          {/* 関連事例カード表示（TOP3カテゴリのみ） */}
-          {isTop && relatedCases.length > 0 && (
+          {/* 関連事例カード表示（TOP3またはGrade B） */}
+          {showCases && relatedCases.length > 0 && (
             <div className="p-3.5 bg-rose-50/50 rounded-xl border border-rose-100">
               <div className="text-[10px] font-bold text-rose-700 uppercase tracking-widest mb-3">
                 📋 類似する実損事例（参考）
@@ -269,23 +270,24 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
                         {caseItem.industry_major}
                       </div>
                     </div>
-                    <div className="text-[10px] text-slate-600 leading-relaxed mb-2">
-                      {caseItem.summary.length > 120
-                        ? caseItem.summary.slice(0, 120) + "…"
-                        : caseItem.summary}
+                    <div className="text-[11px] text-slate-700 leading-relaxed mb-2 whitespace-pre-line">
+                      {caseItem.summary}
                     </div>
-                    <div className="flex items-center gap-2 flex-wrap">
+                    <div className="flex items-center gap-2 flex-wrap mb-1.5">
                       <div className="text-[10px] font-bold text-red-700 bg-red-50 border border-red-200 rounded px-2 py-0.5">
                         賠償額: {caseItem.damage_amount_range}
                       </div>
-                      {!clientMode && caseItem.source_citation && (
-                        <div className="text-[9px] text-slate-500 font-medium">
-                          {caseItem.source_citation.length > 40
-                            ? caseItem.source_citation.slice(0, 40) + "…"
-                            : caseItem.source_citation}
-                        </div>
-                      )}
                     </div>
+                    {caseItem.source_citation && (
+                      <div className="mt-1.5 pt-1.5 border-t border-rose-50/70 text-[10px] text-slate-500 leading-relaxed">
+                        <span className="mr-1">📖</span>{caseItem.source_citation}
+                      </div>
+                    )}
+                    {!clientMode && caseItem.legal_basis && (
+                      <div className="mt-1 text-[10px] text-slate-500 leading-relaxed">
+                        <span className="font-bold text-slate-600">法的根拠：</span>{caseItem.legal_basis}
+                      </div>
+                    )}
                     {!clientMode && caseItem.sales_angle && (
                       <div className="mt-2 pt-2 border-t border-rose-50 text-[10px] text-rose-800 italic leading-relaxed">
                         💡 {caseItem.sales_angle}

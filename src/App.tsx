@@ -18,44 +18,45 @@ import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer 
 } from 'recharts';
 
-import html2pdf from "html2pdf.js";
-
 export default function App() {
   const [phase, setPhase] = useState<"intro" | "form" | "iterating" | "result">("intro");
   const reportRef = React.useRef<HTMLDivElement>(null);
 
   const handleDownloadPDF = () => {
-    if (!reportRef.current) return;
-    
+    setShowExportMenu(false);
+
+    // Set dynamic filename via document.title so browser's "Save as PDF"
+    // auto-fills the company name in the file name field.
     const companyName = answers.company_name || "貴社";
     const dateStr = new Date().toLocaleDateString("ja-JP", { year: "numeric", month: "2-digit", day: "2-digit" }).replace(/\//g, "");
-    const filename = `${dateStr}_${companyName}_リスク診断レポート.pdf`;
+    const originalTitle = document.title;
+    document.title = `${dateStr}_${companyName}_リスク診断レポート`;
 
-    const element = reportRef.current;
-    const opt = {
-      margin: 0,
-      filename: filename,
-      image: { type: 'jpeg' as const, quality: 0.98 },
-      html2canvas: { 
-        scale: 2, 
-        useCORS: true,
-        logging: false,
-        letterRendering: true
-      },
-      jsPDF: { unit: 'mm' as const, format: 'a4' as const, orientation: 'portrait' as const }
-    };
-
-    // Temporarily hide elements with .no-print for the PDF generation
-    const noPrintElements = element.querySelectorAll('.no-print');
-    noPrintElements.forEach(el => (el as HTMLElement).style.display = 'none');
-
-    html2pdf().set(opt).from(element).save().then(() => {
-      // Restore the elements
-      noPrintElements.forEach(el => (el as HTMLElement).style.display = '');
-    });
+    // Use the browser's native "Save as PDF" from the print dialog.
+    // This reliably handles modern CSS (including Tailwind v4 oklch colors)
+    // that html2canvas/html2pdf cannot process.
+    setTimeout(() => {
+      try {
+        window.print();
+      } catch (err) {
+        console.error("PDF save error:", err);
+        setPrintError(true);
+        setTimeout(() => setPrintError(false), 5000);
+      } finally {
+        // Restore after a short delay so the print dialog has captured the title
+        setTimeout(() => { document.title = originalTitle; }, 1000);
+      }
+    }, 150);
   };
   const [answers, setAnswers] = useState<any>({});
   const [currentSection, setCurrentSection] = useState(0);
+
+  // Scroll to top when section or phase changes (prevents landing mid-page on transition)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    }
+  }, [currentSection, phase]);
   const [iterationStep, setIterationStep] = useState(0);
   const [askedIds, setAskedIds] = useState<string[]>([]);
   const [iterationQuestions, setIterationQuestions] = useState<any[]>([]);
@@ -76,16 +77,32 @@ export default function App() {
   });
   const [showAgencyForm, setShowAgencyForm] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [showExportMenu, setShowExportMenu] = useState(false);
 
   const handlePrint = () => {
     try {
-      window.print();
+      setShowExportMenu(false);
+      // Give the menu time to close before print preview opens
+      setTimeout(() => window.print(), 100);
     } catch (err) {
       console.error("Print error:", err);
       setPrintError(true);
       setTimeout(() => setPrintError(false), 5000);
     }
   };
+
+  // Close export menu when clicking outside
+  useEffect(() => {
+    if (!showExportMenu) return;
+    const handler = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-export-menu]')) {
+        setShowExportMenu(false);
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, [showExportMenu]);
 
   const CORE_IDS = QUESTIONS_DATA.questions.filter(q => q.category === "core").map(q => q.id);
   const CURRENT_IDS = QUESTIONS_DATA.questions.filter(q => q.category === "current_contract").map(q => q.id);
@@ -411,20 +428,46 @@ export default function App() {
                   </button>
                   <span className={`text-[10px] font-bold ml-2 ${clientMode ? "text-white" : "text-slate-400"}`}>顧客提示用</span>
                 </div>
-                <button onClick={handlePrint}
-                  className="bg-white/10 border border-white/20 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/20 transition-colors active:scale-95 no-print">
-                  🖨️ 印刷
-                </button>
-                <button onClick={handleDownloadPDF}
-                  className="bg-blue-600 border border-blue-500 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-blue-500 transition-colors active:scale-95 no-print">
-                  💾 PDF保存
-                </button>
+                <div className="relative no-print" data-export-menu>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowExportMenu(v => !v); }}
+                    className="bg-blue-600 border border-blue-500 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-blue-500 transition-colors active:scale-95 flex items-center gap-1.5">
+                    💾 保存・印刷
+                    <span className={`text-[10px] transition-transform ${showExportMenu ? 'rotate-180' : ''}`}>▼</span>
+                  </button>
+                  {showExportMenu && (
+                    <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-50 animate-[fadeSlideIn_0.15s_ease]">
+                      <button onClick={handleDownloadPDF}
+                        className="w-full px-4 py-3 text-left text-sm text-slate-800 font-semibold hover:bg-blue-50 flex items-center gap-3 border-b border-slate-100">
+                        <span className="text-lg">💾</span>
+                        <div>
+                          <div className="font-bold">PDF保存</div>
+                          <div className="text-[10px] text-slate-500 font-normal">保存先を「PDFに保存」にしてください</div>
+                        </div>
+                      </button>
+                      <button onClick={handlePrint}
+                        className="w-full px-4 py-3 text-left text-sm text-slate-800 font-semibold hover:bg-blue-50 flex items-center gap-3">
+                        <span className="text-lg">🖨️</span>
+                        <div>
+                          <div className="font-bold">印刷</div>
+                          <div className="text-[10px] text-slate-500 font-normal">プリンターで印刷</div>
+                        </div>
+                      </button>
+                    </div>
+                  )}
+                </div>
                 <button onClick={() => setShowAgencyForm(!showAgencyForm)}
                   className="bg-amber-600 border border-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-amber-500 transition-colors active:scale-95 no-print">
                   ✏️ レポート編集
                 </button>
+                <button
+                  onClick={() => { setPhase("form"); setCurrentSection(0); }}
+                  className="bg-white/10 border border-white/20 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/20 transition-colors active:scale-95 no-print"
+                  title="回答を保持したまま質問画面に戻ります">
+                  ↩️ 質問に戻る
+                </button>
                 <button onClick={() => { setPhase("intro"); setAnswers({}); setIterationStep(0); setTop3([]); setAllResults([]); setAskedIds([]); setAiSummary(""); }}
-                  className="bg-white/5 border border-white/10 text-slate-400 px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/10">
+                  className="bg-white/5 border border-white/10 text-slate-400 px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/10 no-print">
                   再診断
                 </button>
               </div>
@@ -595,6 +638,35 @@ export default function App() {
             </span>
           </div>
 
+          {/* Risk analysis overview — placed between confidence hint and TOP3 */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-8 print-avoid-break">
+            <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-5">📊 リスク分析一覧</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+              {RULES_DATA.categories.map(cat => {
+                const r = allScoreMap[cat.id];
+                if (!r) return null;
+                const isInTop3 = top3.some(t => t.category_id === cat.id);
+                const grade = r.rank;
+                const colors: any = { A: "bg-red-500", B: "bg-amber-500", C: "bg-slate-400" };
+                const textColors: any = { A: "text-red-600", B: "text-amber-600", C: "text-slate-400" };
+                return (
+                  <div key={cat.id} className="group">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg">{cat.icon}</span>
+                        <span className={`text-xs ${isInTop3 ? "font-black text-slate-800" : "font-medium text-slate-500"}`}>{cat.name}</span>
+                      </div>
+                      {!clientMode && <span className={`text-[10px] font-black ${textColors[grade]}`}>{r.score}点</span>}
+                    </div>
+                    <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div className={`h-full rounded-full transition-all duration-1000 ${colors[grade]}`} style={{ width: `${r.score}%` }} />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
             {/* Left Column: TOP3 Details */}
             <div className="xl:col-span-2 space-y-8">
@@ -620,36 +692,8 @@ export default function App() {
               })}
             </div>
 
-            {/* Right Column: All Scores & Others */}
+            {/* Right Column: Other Risk Items */}
             <div className="space-y-8">
-              <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
-                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-8">📊 リスク分析一覧</div>
-                <div className="space-y-5">
-                  {RULES_DATA.categories.map(cat => {
-                    const r = allScoreMap[cat.id];
-                    if (!r) return null;
-                    const isInTop3 = top3.some(t => t.category_id === cat.id);
-                    const grade = r.rank;
-                    const colors: any = { A: "bg-red-500", B: "bg-amber-500", C: "bg-slate-400" };
-                    const textColors: any = { A: "text-red-600", B: "text-amber-600", C: "text-slate-400" };
-                    return (
-                      <div key={cat.id} className="group">
-                        <div className="flex items-center justify-between mb-1.5">
-                          <div className="flex items-center gap-3">
-                            <span className="text-lg">{cat.icon}</span>
-                            <span className={`text-xs ${isInTop3 ? "font-black text-slate-800" : "font-medium text-slate-500"}`}>{cat.name}</span>
-                          </div>
-                          {!clientMode && <span className={`text-[10px] font-black ${textColors[grade]}`}>{r.score}点</span>}
-                        </div>
-                        <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div className={`h-full rounded-full transition-all duration-1000 ${colors[grade]}`} style={{ width: `${r.score}%` }} />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">— その他リスク項目 —</div>
               <div className="space-y-4">
                 {otherResults.map(result => {
@@ -672,33 +716,6 @@ export default function App() {
               <div className="text-right">
                 {agencyInfo.phone && <div className="text-sm font-bold text-slate-700">📞 {agencyInfo.phone}</div>}
                 {agencyInfo.email && <div className="text-sm font-bold text-slate-700">✉️ {agencyInfo.email}</div>}
-              </div>
-            </div>
-          )}
-
-          {!clientMode && (
-            <div className="mt-20 bg-emerald-50 rounded-[40px] p-12 border border-emerald-100 relative overflow-hidden no-print">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-200/20 rounded-full -mr-32 -mt-32 blur-3xl" />
-              <div className="relative">
-                <div className="text-sm font-black text-emerald-800 mb-10 flex items-center gap-3">
-                  <span className="text-2xl">🎯</span> 代理店様の次のアクション
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    { step: "1", icon: "🔴", label: "Grade A 項目を即アポに変換", desc: "「今すぐ提案」ラベルがついた保険は、この診断結果を持参して翌週以内にアポを取ることを推奨します" },
-                    { step: "2", icon: "🟡", label: "Grade B 項目を次回ヒアリングのアジェンダに設定", desc: "「次回確認推奨」の項目は、ヒアリングシートを持参して詳細確認してください" },
-                    { step: "3", icon: "📋", label: "必須特約チェックリストで補償ギャップを確認", desc: "各TOP3カードの業種別チェックリストで、現在未加入の特約を洗い出してください" },
-                    { step: "4", icon: "💬", label: "提案トークをそのまま説明に活用", desc: "各カードの「代理店向け提案トーク」に保険商品名・限度額目安・根拠が入っています" },
-                  ].map((action) => (
-                    <div key={action.step} className="flex gap-5 items-start bg-white/80 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100/50 shadow-sm hover:shadow-md transition-all">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-2xl bg-emerald-100 border-2 border-emerald-200 flex items-center justify-center text-base font-black text-emerald-700">{action.step}</div>
-                      <div>
-                        <div className="text-xs font-black text-emerald-900 mb-1.5">{action.icon} {action.label}</div>
-                        <div className="text-[11px] text-emerald-600 leading-relaxed font-medium">{action.desc}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           )}
