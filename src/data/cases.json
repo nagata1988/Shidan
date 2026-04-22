@@ -1762,298 +1762,6 @@
     "sales_angle": "中小製造業は『うちには盗まれるものはない』が典型的な誤認識。大手のサプライチェーン攻撃の踏み台として狙われ、取引先から切り捨てられるリスクが最大。"
   },
   {
-    "case_id": "DO-001",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [
-      "liability"
-    ],
-    "diagnostic_industry_primary": [
-      "finance"
-    ],
-    "diagnostic_industry_secondary": [
-      "ALL"
-    ],
-    "diagnostic_sub_industries": [
-      "finance_bank"
-    ],
-    "diagnostic_impact_score": 5,
-    "sub_category": "内部統制不備・管理責任",
-    "industry_major": "金融業",
-    "industry_minor": "銀行",
-    "company_size": "大手",
-    "region": "全国（海外支店含む）",
-    "incident_type": "従業員の巨額不正取引と内部統制システム構築義務違反",
-    "summary": "銀行の海外支店で行員が長期間にわたり簿外取引を行い、約11億ドルの巨額損失を発生させた。株主代表訴訟において、取締役は従業員の不正行為を防止するための内部統制システムを構築・運用する善管注意義務を負うとされ、元支店長取締役に約5.3億ドル、他の役員11名に総額約2.45億ドルの賠償が命じられた。",
-    "damage_amount_range": "数億ドル〜1,500億円規模",
-    "damage_amount_reference": "約7.7億ドル（元支店長のみ、利息含む）＋取締役11名連帯約2.45億ドル（大阪地判平成12年9月20日）",
-    "source_type": "court_precedent",
-    "source_citation": "判例：大阪地判平成12年9月20日（大和銀行ニューヨーク支店事件）",
-    "legal_basis": "会社法第423条（役員の任務懈怠責任）、善管注意義務、内部統制システム構築義務",
-    "sales_angle": "中小企業の役員も内部統制構築義務を負う。従業員1人の不正でも、防止体制の不備が役員個人の億単位の賠償責任に直結する画期的判例。"
-  },
-  {
-    "case_id": "DO-002",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "other"
-    ],
-    "diagnostic_industry_secondary": [
-      "ALL"
-    ],
-    "diagnostic_sub_industries": [],
-    "diagnostic_impact_score": 5,
-    "sub_category": "経営判断・安全配慮",
-    "industry_major": "電力・インフラ",
-    "industry_minor": "電力会社",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "原発事故における取締役の善管注意義務違反",
-    "summary": "原子力発電所事故について、当時の取締役4名に対し株主が22兆円の損害賠償を請求した株主代表訴訟で、東京地裁は取締役らに13兆3,210億円の賠償を命じた。津波の規模に関する知見から事故の発生可能性を認識し得たにもかかわらず、津波対策を怠った点が善管注意義務違反とされた。",
-    "damage_amount_range": "数兆円規模",
-    "damage_amount_reference": "13兆3,210億円の賠償命令（東京地判令和4年7月13日、東京電力原発事故事件）",
-    "source_type": "court_precedent",
-    "source_citation": "判例：東京地判令和4年7月13日（東京電力株主代表訴訟）",
-    "legal_basis": "会社法第423条、善管注意義務、経営判断原則",
-    "sales_angle": "自然災害・長期リスクの評価を怠った経営判断も『善管注意義務違反』と認定される。役員個人では到底賠償不能な金額が命じられる時代。"
-  },
-  {
-    "case_id": "DO-003",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [
-      "food_poisoning"
-    ],
-    "diagnostic_industry_primary": [
-      "manufacturing"
-    ],
-    "diagnostic_industry_secondary": [
-      "food",
-      "retail"
-    ],
-    "diagnostic_sub_industries": [
-      "manufacturing_food"
-    ],
-    "diagnostic_impact_score": 5,
-    "sub_category": "食品衛生・品質管理責任",
-    "industry_major": "食品業",
-    "industry_minor": "乳製品・加工食品",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "食中毒発生における経営陣の品質管理責任",
-    "summary": "大規模な食中毒事故（1万人超の被害）発生において、経営陣の品質管理体制の不備が善管注意義務違反とされた事案。被害者への賠償に加え、ブランド毀損・売上激減・取締役個人への株主代表訴訟が並行して提起された。",
-    "damage_amount_range": "数十億〜数百億円（会社の損害）",
-    "damage_amount_reference": "雪印乳業食中毒事件（2000年）等の事例で会社損害は数百億円規模、役員個人責任も追及",
-    "source_type": "news_report",
-    "source_citation": "類似事例：雪印乳業食中毒事件（2000年）、関連株主代表訴訟",
-    "legal_basis": "会社法第423条、食品衛生法、民法第715条",
-    "sales_angle": "食品製造業・飲食業の経営者は、現場の品質管理不備が経営者個人の役員賠償責任に直結。ホテル・旅館の食事提供事業も同リスク。"
-  },
-  {
-    "case_id": "DO-004",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [
-      "food_poisoning"
-    ],
-    "diagnostic_industry_primary": [
-      "food"
-    ],
-    "diagnostic_industry_secondary": [
-      "manufacturing",
-      "retail"
-    ],
-    "diagnostic_sub_industries": [
-      "food_restaurant"
-    ],
-    "diagnostic_impact_score": 4,
-    "sub_category": "不祥事隠蔽",
-    "industry_major": "食品業",
-    "industry_minor": "外食チェーン",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "食品問題の発覚後の隠蔽対応",
-    "summary": "外食チェーンで販売した商品に法令違反成分が含まれていた問題について、役員らが自ら積極的に公表しないという方針を採り、消費者やマスコミの反応を視野に入れた損害回避策の検討を怠った。積極的に関与しなかった役員にも善管注意義務違反が認定され、損害賠償責任が認められた。",
-    "damage_amount_range": "数億〜数十億円",
-    "damage_amount_reference": "ダスキン株主代表訴訟（大阪高判平成18年6月9日）で取締役らに約53億円超の賠償命令",
-    "source_type": "court_precedent",
-    "source_citation": "判例：大阪高判平成18年6月9日（ダスキン株主代表訴訟）",
-    "legal_basis": "会社法第423条、善管注意義務（適切な情報開示・損害回避措置）",
-    "sales_angle": "『隠蔽への不関与』では役員は免責されない。『積極的公表しない』という経営判断自体が善管注意義務違反とされる重要判例。"
-  },
-  {
-    "case_id": "DO-005",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "real_estate"
-    ],
-    "diagnostic_industry_secondary": [
-      "ALL"
-    ],
-    "diagnostic_sub_industries": [
-      "real_estate_brokerage"
-    ],
-    "diagnostic_impact_score": 3,
-    "sub_category": "M&A・経営判断ミス",
-    "industry_major": "不動産業",
-    "industry_minor": "不動産仲介",
-    "company_size": "中堅企業",
-    "region": "全国",
-    "incident_type": "子会社買収時の株式買取価格の不当性",
-    "summary": "親会社取締役が子会社を完全子会社とする決定で、株式買取・株式交換の対価を不当に高額に設定したとして、株主が善管注意義務違反による損害賠償を請求した事案。経営判断原則の適用範囲が争われた重要判例。",
-    "damage_amount_range": "数千万〜数十億円",
-    "damage_amount_reference": "アパマンショップHD株主代表訴訟（最判平成22年7月15日）で経営判断原則を明確化",
-    "source_type": "court_precedent",
-    "source_citation": "判例：最判平成22年7月15日（アパマンショップHD事件）",
-    "legal_basis": "会社法第423条、経営判断原則",
-    "sales_angle": "中小企業のM&A・事業承継時の株価評価ミスは、後の株主代表訴訟で善管注意義務違反とされうる。中小企業の経営者も他人事ではない。"
-  },
-  {
-    "case_id": "DO-006",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [
-      "food_poisoning"
-    ],
-    "diagnostic_industry_primary": [
-      "manufacturing"
-    ],
-    "diagnostic_industry_secondary": [
-      "retail"
-    ],
-    "diagnostic_sub_industries": [],
-    "diagnostic_impact_score": 5,
-    "sub_category": "品質管理・健康被害",
-    "industry_major": "医薬品・健康食品",
-    "industry_minor": "機能性表示食品",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "健康食品による健康被害と対応遅延",
-    "summary": "機能性表示食品に起因する健康被害（入院者240名超等）発生後の対応の遅れや品質管理体制の不備が問題化。株主・アクティビストから創業家経営陣・社外取締役を被告として約135億円の損害賠償を求める株主代表訴訟が提起された。",
-    "damage_amount_range": "数十億〜数百億円",
-    "damage_amount_reference": "小林製薬紅麹問題株主代表訴訟（2024年提起）で約135億円請求",
-    "source_type": "news_report",
-    "source_citation": "類似事例：小林製薬紅麹事件株主代表訴訟（2024年）、香港アクティビスト提訴",
-    "legal_basis": "会社法第423条、機能性表示食品制度、薬機法",
-    "sales_angle": "健康被害発覚時の初動の遅れは役員個人に数十億円単位の責任追及。機能性表示食品・サプリメント事業者は最重要リスク。"
-  },
-  {
-    "case_id": "DO-007",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "it"
-    ],
-    "diagnostic_industry_secondary": [],
-    "diagnostic_sub_industries": [
-      "it_other"
-    ],
-    "diagnostic_impact_score": 5,
-    "sub_category": "不祥事隠蔽・ハラスメント",
-    "industry_major": "情報通信業",
-    "industry_minor": "メディア・放送",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "出演者の性加害問題と経営陣の対応不備",
-    "summary": "メディア企業の出演者による性的加害問題について、経営陣が事実を把握しながら限られた役員にしか報告せず、番組も継続された。外部指摘で事態が公になった後、株主が現旧取締役15名を被告として約233億円の損害賠償を求める株主代表訴訟を提起。『重大な不祥事の取締役会への未共有』『内部統制機能不全』が争点。",
-    "damage_amount_range": "数十億〜数百億円",
-    "damage_amount_reference": "フジ・メディアHD株主代表訴訟（2025年提起）で約233億円請求",
-    "source_type": "news_report",
-    "source_citation": "類似事例：フジ・メディアHD株主代表訴訟（2025年提起）",
-    "legal_basis": "会社法第423条、善管注意義務（情報共有・内部統制）",
-    "sales_angle": "社内ハラスメント・不祥事の『限定共有』は役員個人への数百億円訴訟に直結。取締役会への適切な報告義務の重要性を示す最新事例。"
-  },
-  {
-    "case_id": "DO-008",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "ALL"
-    ],
-    "diagnostic_industry_secondary": [],
-    "diagnostic_sub_industries": [],
-    "diagnostic_impact_score": 4,
-    "sub_category": "粉飾決算・虚偽記載",
-    "industry_major": "全業種",
-    "industry_minor": "上場企業",
-    "company_size": "中堅・大手",
-    "region": "全国",
-    "incident_type": "有価証券報告書の虚偽記載・粉飾決算",
-    "summary": "取締役が関与・黙認した粉飾決算が発覚し、株価下落による株主損失、課徴金、上場廃止リスクが発生。取締役の第三者（株主）に対する責任（会社法第429条）として、投資家からの集団訴訟で損害賠償が命じられる類型。",
-    "damage_amount_range": "数億〜数百億円",
-    "damage_amount_reference": "ライブドア事件、オリンパス事件、東芝会計不祥事等で役員個人に巨額賠償",
-    "source_type": "court_precedent",
-    "source_citation": "類似判例：オリンパス株主代表訴訟、東芝会計不祥事関連訴訟",
-    "legal_basis": "会社法第423条・第429条、金融商品取引法第21条の2（虚偽記載による損害賠償責任）",
-    "sales_angle": "非上場の中小企業でも、金融機関からの融資審査資料への虚偽記載等は取締役個人の対第三者責任に発展。事業承継時にも重要。"
-  },
-  {
-    "case_id": "DO-009",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "finance"
-    ],
-    "diagnostic_industry_secondary": [
-      "real_estate",
-      "construction",
-      "service"
-    ],
-    "diagnostic_sub_industries": [
-      "finance_bank"
-    ],
-    "diagnostic_impact_score": 3,
-    "sub_category": "反社会的勢力との取引",
-    "industry_major": "金融業",
-    "industry_minor": "銀行・信販",
-    "company_size": "大手",
-    "region": "全国",
-    "incident_type": "反社会的勢力への融資・取引",
-    "summary": "子会社信販会社を通じた提携ローンで反社会的勢力に対する融資が行われていた問題について、親会社役員の善管注意義務違反を問う株主代表訴訟が提起された。反社チェック体制の整備が役員の重要義務として確認された類型。",
-    "damage_amount_range": "数億〜数十億円",
-    "damage_amount_reference": "みずほフィナンシャルグループ反社融資問題株主代表訴訟等",
-    "source_type": "news_report",
-    "source_citation": "類似事例：みずほFG反社融資問題（2013年）、関連株主代表訴訟",
-    "legal_basis": "会社法第423条、暴力団排除条例、各業法",
-    "sales_angle": "反社排除は取引先管理の基本。中小企業でも与信管理・契約時の反社チェック体制の不備は役員責任に直結。"
-  },
-  {
-    "case_id": "DO-010",
-    "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険（D&O）",
-    "diagnostic_risk_ids_secondary": [],
-    "diagnostic_industry_primary": [
-      "manufacturing",
-      "construction",
-      "transport"
-    ],
-    "diagnostic_industry_secondary": [
-      "retail"
-    ],
-    "diagnostic_sub_industries": [],
-    "diagnostic_impact_score": 3,
-    "sub_category": "コンプライアンス違反",
-    "industry_major": "全業種",
-    "industry_minor": "事業会社一般",
-    "company_size": "中堅企業",
-    "region": "全国",
-    "incident_type": "独占禁止法違反・カルテル・談合",
-    "summary": "企業が独占禁止法違反（価格カルテル、談合、再販売価格拘束等）に関与し、公正取引委員会から課徴金納付命令・刑事告発を受けた。取締役にコンプライアンス体制構築・運用義務違反が認定され、株主代表訴訟で賠償命令が下された類型。",
-    "damage_amount_range": "数億〜数十億円（課徴金＋役員賠償）",
-    "damage_amount_reference": "独禁法違反の課徴金は売上の10-20%。役員個人への賠償は別途",
-    "source_type": "public_agency",
-    "source_citation": "出典：公正取引委員会『独占禁止法違反事件処理状況』、日弁連『コンプライアンス関連判例集』を基に株式会社サイバーコネクト作成",
-    "legal_basis": "会社法第423条、独占禁止法、不正競争防止法",
-    "sales_angle": "業界慣行としての価格調整・入札調整は独禁法違反。中小製造業・建設業・運輸業で特に発生しやすく、役員個人責任に発展。"
-  },
-  {
     "case_id": "LIAB-001",
     "diagnostic_risk_id": "liability",
     "diagnostic_risk_label": "賠償責任保険",
@@ -2918,5 +2626,312 @@
     "source_citation": "出典：中小企業庁『事業承継白書』、中小企業基盤整備機構『事業承継事例』を基に株式会社サイバーコネクト作成",
     "legal_basis": "相続税法、会社法、事業承継税制",
     "sales_angle": "四国・地方の老舗ホテル・旅館は後継者不在が深刻。経営者保険・事業承継対策の未整備は事業そのものの消滅リスク。"
+  },
+  {
+    "case_id": "DO-001",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "同族経営・株主間紛争",
+    "industry_major": "中小企業全般",
+    "industry_minor": "同族経営法人",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "少数株主(親族)からの株主代表訴訟",
+    "summary": "家族経営の非公開会社で、代表取締役である長男が役員報酬を増額し、専用車購入など会社費用で私的な支出を行ったとして、次男(少数株主)から株主代表訴訟を提起された事例。裁判所は『会社財産の私的流用』と判断し、代表取締役個人に数千万円の賠償を命じた。非公開会社でも少数株主が1名いれば株主代表訴訟は成立する。",
+    "damage_amount_range": "数千万円〜1億円",
+    "damage_amount_reference": "類似判例で5,000万〜8,000万円の賠償命令が一般的",
+    "source_type": "trend_based",
+    "source_citation": "中小企業の同族経営における株主代表訴訟は年間数十件発生(非公表案件含む)",
+    "legal_basis": "会社法第423条(役員の任務懈怠責任)、第847条(株主代表訴訟)、善管注意義務違反",
+    "sales_angle": "『うちは家族経営だから関係ない』は大きな誤解。親族株主1名でも株主代表訴訟は可能で、同族経営の中小企業こそ発生率が高い。役員報酬・経費処理・親族への便宜供与が争点になりやすい。"
+  },
+  {
+    "case_id": "DO-002",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "事業承継・M&A時の経営判断",
+    "industry_major": "中小企業全般",
+    "industry_minor": "事業承継期の中小企業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "後継者による先代の経営判断責任追及",
+    "summary": "中小メーカーで息子に事業承継後、承継前に先代(会長)が実施した関連会社買収の株価評価が不当に高かったとして、新経営陣と株主から先代に対し善管注意義務違反で提訴された事例。M&A時のデューデリジェンス不十分、のれん評価の失当性が争点となり、数千万〜数億円の賠償が命じられた。",
+    "damage_amount_range": "数千万円〜3億円",
+    "damage_amount_reference": "中小M&Aにおける株価評価ミスは承継後5年以内に発覚するケースが多い",
+    "source_type": "trend_based",
+    "source_citation": "中小企業庁『事業承継ガイドライン』、中小企業の承継後訴訟は増加傾向",
+    "legal_basis": "会社法第423条、善管注意義務、M&A時のデューデリジェンス義務",
+    "sales_angle": "事業承継を迎える中小企業は要注意。承継前の経営判断(M&A、子会社設立、不動産購入等)が、承継後に後継者・新株主から問題視されるケースが増加。先代の経営判断を守るD&Oは承継前に加入するのが鉄則。"
+  },
+  {
+    "case_id": "DO-003",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "accident",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "service",
+      "construction",
+      "transport",
+      "food",
+      "medical",
+      "it",
+      "manufacturing"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "安全配慮義務違反・労務管理",
+    "industry_major": "労働集約型中小企業",
+    "industry_minor": "建設・運輸・介護・飲食・IT・製造",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "従業員の過労死・過労自殺における取締役個人の責任追及",
+    "summary": "中小建設会社で30代の若手社員が月120時間の長時間労働の末、自殺。遺族は会社だけでなく代表取締役個人を相手取り、安全配慮義務違反・使用者責任違反で1.5億円の損害賠償を請求。裁判所は『労働時間を把握しながら是正措置を講じなかったことは取締役個人の任務懈怠』と認定し、会社と取締役個人の連帯責任として数千万円の賠償を命じた。",
+    "damage_amount_range": "5,000万〜1.5億円",
+    "damage_amount_reference": "近年の過労死案件では取締役個人責任として5,000万〜1.5億円の賠償が命じられている",
+    "source_type": "trend_based",
+    "source_citation": "電通事件判例(東京地判平成13年等)の流れで取締役個人責任が認められる傾向",
+    "legal_basis": "会社法第423条、労働契約法第5条(安全配慮義務)、民法第709条(不法行為)",
+    "sales_angle": "過労死は会社ではなく『社長個人』が訴えられる。建設・運輸・介護・飲食業の経営者は、従業員の労働時間管理の不備が個人財産を失うリスクに直結。従業員10名以上の中小企業は全業種で要警戒。"
+  },
+  {
+    "case_id": "DO-004",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability",
+      "accident"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 5,
+    "sub_category": "ハラスメント・監督責任違反",
+    "industry_major": "中小企業全般",
+    "industry_minor": "従業員10名以上の全業種",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "ハラスメント放置による取締役監督責任違反",
+    "summary": "従業員30名の中小サービス業で、上司によるセクハラ・パワハラが繰り返されているにもかかわらず、社長が『社内のことは社内で解決』として対応を放置。被害者が精神疾患を発症し休職・退職。被害者が会社と社長個人を提訴し、社長個人に対し数百万〜数千万円の損害賠償が認定された。パワハラ防止法(2022年中小企業にも義務化)を受け、対応体制不備は明確な取締役責任とされる。",
+    "damage_amount_range": "300万〜3,000万円",
+    "damage_amount_reference": "ハラスメント事案の取締役個人責任は300〜3,000万円のレンジが一般的",
+    "source_type": "trend_based",
+    "source_citation": "パワハラ防止法(2022年4月中小企業にも義務化)以降、取締役責任認定が増加",
+    "legal_basis": "会社法第423条、労働施策総合推進法(パワハラ防止法)、労働契約法第5条、民法第715条",
+    "sales_angle": "パワハラ防止法は2022年4月から中小企業にも適用。相談窓口未整備・規程未整備は『取締役として監督義務を怠っている』明確な証拠になる。従業員10名以上の中小企業は全業種で対象。"
+  },
+  {
+    "case_id": "DO-005",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability",
+      "interruption"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "倒産時・債権者保護違反",
+    "industry_major": "中小企業全般",
+    "industry_minor": "資金繰り悪化の中小企業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "破産時の取締役による無謀な受注・放漫経営への責任追及",
+    "summary": "資金繰りが悪化した中小企業の代表取締役が、返済見込みのない状況で取引先から新規受注を続け、前払金を運転資金に流用。破産後、破産管財人・債権者が『破綻必至の状況下での受注継続は取締役の任務懈怠』として個人責任を追及。取締役個人に対し数千万円の賠償命令。個人の連帯保証とは別の責任。",
+    "damage_amount_range": "数千万〜1億円",
+    "damage_amount_reference": "破産管財人による取締役責任追及(会社法423条責任)は数千万〜1億円が一般的",
+    "source_type": "trend_based",
+    "source_citation": "倒産時の取締役責任追及は近年活発化(会社法第423条、第429条)",
+    "legal_basis": "会社法第423条(対会社責任)、第429条(対第三者責任)、破産法、民法第709条",
+    "sales_angle": "倒産時の取締役責任は『連帯保証』とは別の賠償責任。経営判断の失敗が取締役個人の破産後も追及される。業績が厳しくなってきた中小企業こそD&Oが必要。倒産時は保険加入ができないため、健全経営時に加入すべき。"
+  },
+  {
+    "case_id": "DO-006",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "粉飾決算・第三者責任",
+    "industry_major": "中小企業全般",
+    "industry_minor": "融資を受けている中小企業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "融資審査書類の虚偽記載に対する金融機関からの損害賠償",
+    "summary": "中小製造業の代表取締役が、銀行からの運転資金融資を受けるため、売上・在庫・売掛金を水増しした試算表を提出。その後会社が倒産し、金融機関が回収不能となった融資残高について代表取締役個人を提訴。虚偽書類提出について『重大な過失』と認定され、取締役個人に対し第三者責任(会社法429条)として数千万円の賠償が命じられた。",
+    "damage_amount_range": "数千万〜数億円",
+    "damage_amount_reference": "融資金額に応じて賠償額が決定。貸付金の全額が請求されるケースも",
+    "source_type": "trend_based",
+    "source_citation": "金融機関による取締役個人への賠償請求は、会社法第429条の代表的な適用場面",
+    "legal_basis": "会社法第429条(対第三者責任)、民法第709条、刑法第246条(詐欺罪)",
+    "sales_angle": "『決算書の数字合わせ』は多くの中小企業で慣行化しているが、倒産時に金融機関から取締役個人が提訴される。事業承継時にも過去の粉飾が発覚し、後継者から先代への責任追及に発展するリスク。"
+  },
+  {
+    "case_id": "DO-007",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "利益相反取引・不当な利益移転",
+    "industry_major": "中小企業全般",
+    "industry_minor": "親族・関連会社を持つ中小企業",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "関連会社への不当送金・利益移転に対する株主代表訴訟",
+    "summary": "代表取締役が、自身の妻が経営する別会社(関連会社)に対し、相場の2倍の価格で継続的に商品発注を行い、会社に損害を与えた事例。他の株主(取引銀行から派遣された役員含む)から株主代表訴訟を提起され、代表取締役に対し3,000万円の賠償命令。会社法356条(利益相反取引)の承認手続き不履行も認定された。",
+    "damage_amount_range": "数百万〜数千万円",
+    "damage_amount_reference": "利益相反取引の賠償は取引差額分+損害額で認定",
+    "source_type": "trend_based",
+    "source_citation": "利益相反取引規制違反は中小企業の紛争で頻出(会社法356条、365条)",
+    "legal_basis": "会社法第356条(利益相反取引)、第423条、第847条、民法第1条(信義則)",
+    "sales_angle": "家族経営の中小企業では『親族会社との取引』は日常的。しかし市場価格との乖離・取締役会承認なしの継続取引は、他の株主・相続人から利益相反取引として提訴される。特に事業承継・M&A前の整理で発覚しやすい。"
+  },
+  {
+    "case_id": "DO-008",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "food_poisoning",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "manufacturing",
+      "food"
+    ],
+    "diagnostic_industry_secondary": [
+      "retail"
+    ],
+    "diagnostic_sub_industries": [
+      "manufacturing_food",
+      "food_restaurant",
+      "food_hotel_banquet",
+      "food_catering"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "品質管理・リコール対応不備",
+    "industry_major": "食品・製品製造業",
+    "industry_minor": "中小食品メーカー・外食",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "製品の異物混入・品質問題発覚時の対応遅延による役員責任",
+    "summary": "従業員50名の中小食品メーカーで、異物混入の苦情が数件寄せられたが、社長が『大事にならない』と判断してリコール・公表を見送り。後に被害拡大して行政指導・集団訴訟に発展。消費者と株主から社長個人を提訴し、『初動対応遅延は取締役としての善管注意義務違反』と認定。取締役個人に対し数千万円の賠償命令。会社の信用失墜による事業継続困難も発生。",
+    "damage_amount_range": "数千万〜数億円",
+    "damage_amount_reference": "リコール費用+損害賠償+訴訟対応費用で数千万〜数億円規模",
+    "source_type": "trend_based",
+    "source_citation": "食品衛生法・製造物責任法違反時の取締役責任は認定が厳格化",
+    "legal_basis": "会社法第423条、食品衛生法、製造物責任法、消費者安全法",
+    "sales_angle": "『様子を見る』という判断が取締役個人の責任に直結。中小食品メーカー・外食(ホテル・旅館含む)・給食事業者は品質問題対応の初動遅れが致命的。リコール判断は早すぎるくらいでちょうどいい。"
+  },
+  {
+    "case_id": "DO-009",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "cyber",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "ALL"
+    ],
+    "diagnostic_industry_secondary": [],
+    "diagnostic_sub_industries": [
+      "food_hotel_banquet",
+      "medical_clinic",
+      "retail_ec",
+      "it_saas",
+      "it_software_dev",
+      "real_estate_brokerage",
+      "finance_insurance_agent"
+    ],
+    "diagnostic_impact_score": 4,
+    "sub_category": "サイバー対策・予算承認責任",
+    "industry_major": "顧客情報を扱う中小企業",
+    "industry_minor": "IT・小売EC・宿泊・医療・不動産",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "セキュリティ予算承認拒否後の情報漏洩による善管注意義務違反",
+    "summary": "中小ホテルで、IT担当が『セキュリティ強化のため500万円の予算を』と要請したが、社長が『コストがかかりすぎる』として拒否。半年後、ランサムウェア被害で宿泊客10,000件の個人情報が漏洩。株主から『予算承認時の善管注意義務違反』として提訴され、社長個人に対し数千万円の賠償が命じられた。セキュリティ対策への投資判断も取締役の経営判断として責任を問われる。",
+    "damage_amount_range": "数千万〜1億円",
+    "damage_amount_reference": "情報漏洩+対応費用+第三者賠償で数千万〜1億円規模",
+    "source_type": "trend_based",
+    "source_citation": "個人情報保護法改正(2022年)以降、取締役責任が明確化",
+    "legal_basis": "会社法第423条、個人情報保護法、民法第709条、GDPR等",
+    "sales_angle": "『セキュリティ予算は後回し』という判断が取締役個人の責任に直結する時代。ホテル・旅館(宿泊客情報)、クリニック(患者情報)、不動産(契約情報)、保険代理店(顧客情報)は特に要注意。"
+  },
+  {
+    "case_id": "DO-010",
+    "diagnostic_risk_id": "directors",
+    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_ids_secondary": [
+      "accident",
+      "liability"
+    ],
+    "diagnostic_industry_primary": [
+      "food",
+      "retail",
+      "service",
+      "transport",
+      "construction",
+      "medical"
+    ],
+    "diagnostic_industry_secondary": [
+      "ALL"
+    ],
+    "diagnostic_sub_industries": [],
+    "diagnostic_impact_score": 4,
+    "sub_category": "労基法違反・書類送検",
+    "industry_major": "労働集約型中小企業",
+    "industry_minor": "飲食・小売・サービス・運輸・建設",
+    "company_size": "中小企業",
+    "region": "全国",
+    "incident_type": "違法残業・残業代未払いの組織的放置による書類送検",
+    "summary": "中小飲食チェーン(7店舗)で、残業代未払い・36協定違反が常態化。従業員の内部告発で労基署が立入調査し、是正勧告。会社が十分な是正を行わなかったため、代表取締役個人が労働基準法違反で書類送検された。刑事罰(罰金)に加え、未払い残業代の一括清算で数千万円、さらに従業員・退職者からの損害賠償訴訟でさらに数百万円の賠償。社会的信用失墜による事業継続困難も発生。",
+    "damage_amount_range": "数百万〜数千万円+刑事罰",
+    "damage_amount_reference": "罰金+未払い残業代+遅延損害金+慰謝料で数百万〜数千万円",
+    "source_type": "trend_based",
+    "source_citation": "労基法違反での書類送検は近年増加、代表取締役個人が対象",
+    "legal_basis": "労働基準法第32条、第37条、第121条(両罰規定)、会社法第423条、第429条",
+    "sales_angle": "労基法違反は『会社』ではなく『代表取締役個人』が書類送検される。飲食・小売・運輸・建設業は労基署調査の対象になりやすい。書類送検されれば取引先の信用失墜で事業継続困難になることも。"
   }
 ]
