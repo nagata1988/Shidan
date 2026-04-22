@@ -366,9 +366,15 @@ export default function App() {
   }
 
   if (phase === "result") {
+    const rankPriorityForOthers: Record<string, number> = { "A": 0, "B": 1, "C": 2 };
     const otherResults = allResults
       .filter(r => !top3.find(t => t.category_id === r.category_id))
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => {
+        // 1. ランク優先（A > B > C）
+        if (a.rank !== b.rank) return (rankPriorityForOthers[a.rank] ?? 99) - (rankPriorityForOthers[b.rank] ?? 99);
+        // 2. スコア降順（同ランク内で高い順）
+        return b.score - a.score;
+      });
 
     const hasUrgent = top3.some(r => r.rank === "A");
     const diagDate = new Date().toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" });

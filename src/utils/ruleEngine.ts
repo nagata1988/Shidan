@@ -112,10 +112,10 @@ export function selectTop3(results: any[]) {
   const rankPriority: Record<string, number> = { "A": 0, "B": 1, "C": 2 };
   return [...results]
     .sort((a, b) => {
-      // 1. スコア降順（主ソート）
-      if (b.score !== a.score) return b.score - a.score;
-      // 2. ランクA優先（同点時：A > B > C）
+      // 1. ランク優先（主ソート：A > B > C）
       if (a.rank !== b.rank) return (rankPriority[a.rank] ?? 99) - (rankPriority[b.rank] ?? 99);
+      // 2. スコア降順（同ランク内で高い順）
+      if (b.score !== a.score) return b.score - a.score;
       // 3. データ充足率降順（回答情報が多いリスクを優先）
       if (a.data_completeness !== b.data_completeness) {
         return (b.data_completeness ?? 0) - (a.data_completeness ?? 0);
