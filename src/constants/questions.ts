@@ -117,8 +117,50 @@ export const QUESTIONS_DATA = {
         { "value": "none", "label": "未対応・わからない" }
       ]
     },
+    {
+      "id": "harassment_incident_experience",
+      "type": "select",
+      "text": "ハラスメントに関する相談・訴訟の経験は？",
+      "hint": "EPL保険（雇用慣行賠償責任保険）の必要性判定に使用（スコアには影響しません）",
+      "category": "core",
+      "required": false,
+      "condition": { "field": "employee_count", "op": "gte", "value": 10 },
+      "options": [
+        { "value": "none", "label": "なし" },
+        { "value": "consulted", "label": "相談あり（社内で対応）" },
+        { "value": "lawsuit", "label": "訴訟経験あり" }
+      ]
+    },
     { "id": "branch_night_work", "type": "boolean", "text": "深夜・早朝（22時〜翌5時）に作業や営業を行うことがありますか？", "category": "branch" },
+    {
+      "id": "branch_overtime_hours",
+      "type": "select",
+      "text": "月の残業時間は？",
+      "hint": "過労死特約・使用者賠償の提案判定に使用。給与計算ベースの時間外労働時間。",
+      "category": "branch",
+      "required": false,
+      "options": [
+        { "value": "none", "label": "40h未満" },
+        { "value": "medium", "label": "40〜80h" },
+        { "value": "high", "label": "80h超（過労死ライン）" },
+        { "value": "critical", "label": "100h超（重大リスク）" }
+      ]
+    },
     { "id": "branch_key_supplier_dependency", "type": "boolean", "text": "売上や仕入れの50%以上が特定の1〜2社の取引先・仕入先に集中していますか？", "category": "branch" },
+    {
+      "id": "branch_supplier_concentration_level",
+      "type": "select",
+      "text": "売上上位3社の依存度は？（より詳細な割合）",
+      "hint": "取引信用保険・事業中断保険の提案判定に使用",
+      "category": "branch",
+      "required": false,
+      "options": [
+        { "value": "low", "label": "20%未満" },
+        { "value": "medium", "label": "20-40%" },
+        { "value": "high", "label": "40-60%" },
+        { "value": "very_high", "label": "60%超" }
+      ]
+    },
     { "id": "branch_overseas_trip", "type": "boolean", "text": "従業員が海外出張・海外派遣をすることがありますか？", "category": "branch" },
     {
       "id": "current_fire_known",
