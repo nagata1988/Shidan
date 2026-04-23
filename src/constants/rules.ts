@@ -1,3 +1,34 @@
+// ============================================================
+// 型定義（add_on_products 機能用。既存 RULES_DATA には型注釈を
+// 付けず、使い側で必要に応じて import して利用する。）
+// ============================================================
+
+export interface AddOnProduct {
+  id: string;
+  condition: {
+    field: string;
+    op: "eq" | "neq" | "contains" | "gte" | "lte" | "gt" | "lt" | "in";
+    value: any;
+  };
+  product_name: string;
+  priority: "critical" | "high" | "medium" | "low";
+  reason: string;
+}
+
+export interface RiskCategory {
+  id: string;
+  name: string;
+  icon: string;
+  description: string;
+  related_questions: string[];
+  rank_thresholds: { A: number; B: number };
+  max_score: number;
+  suggestion_template: string;
+  scoring_rules: any[];
+  main_products?: string[];
+  add_on_products?: AddOnProduct[];
+}
+
 export const RULES_DATA = {
   "version": "0.3",
   "categories": [
@@ -33,7 +64,40 @@ export const RULES_DATA = {
           "reason": "在庫・商品500万〜1,000万円：保険金額の根拠として動産評価額の正確な把握が必要"
         },
         {"id":"fire_r025","condition":{"field":"industry","op":"eq","value":"it"},"score":5,"reason":"IT業もサーバールーム・オフィス火災によるデータ喪失リスクあり"},
-        {"id":"fire_r026","condition":{"field":"industry","op":"eq","value":"finance"},"score":10,"reason":"店舗型金融機関（地銀・信金・保険代理店）は営業所火災リスクあり"}] },
+        {"id":"fire_r026","condition":{"field":"industry","op":"eq","value":"finance"},"score":10,"reason":"店舗型金融機関（地銀・信金・保険代理店）は営業所火災リスクあり"}],
+      "main_products": [
+        "企業向け火災保険（建物・設備・商品）"
+      ],
+      "add_on_products": [
+        {
+          "id": "earthquake_high",
+          "condition": { "field": "earthquake_hazard_zone", "op": "eq", "value": "high" },
+          "product_name": "地震危険補償特約",
+          "priority": "critical",
+          "reason": "震度6強以上の想定区域。事業用物件は個人地震保険に加入できないため、火災保険への付帯が必須"
+        },
+        {
+          "id": "earthquake_tsunami",
+          "condition": { "field": "earthquake_hazard_zone", "op": "eq", "value": "tsunami" },
+          "product_name": "地震危険補償特約（津波対応）",
+          "priority": "critical",
+          "reason": "津波浸水想定区域。地震+水災の複合リスクで、事業継続に致命的な影響"
+        },
+        {
+          "id": "property_equipment",
+          "condition": { "field": "property_theft_risk", "op": "contains", "value": "high_value_equipment" },
+          "product_name": "動産総合保険",
+          "priority": "high",
+          "reason": "高額機械・設備保有。火災保険では運送中・展示中・使用中の事故が対象外"
+        },
+        {
+          "id": "property_exhibition",
+          "condition": { "field": "property_theft_risk", "op": "contains", "value": "exhibition_offsite" },
+          "product_name": "動産総合保険（運送中・展示中）",
+          "priority": "high",
+          "reason": "展示会・出張先での持ち出しあり。運送中・展示中の動産事故をカバー"
+        }
+      ] },
     { "id": "food_poisoning", "name": "食中毒・生産物賠償リスク", "icon": "🍱", "description": "食中毒・異物混入・アレルギー対応による損害賠償リスク", "related_questions": ["branch_product_recall_exp","current_liability_known","current_food_known"], "rank_thresholds": {"A":33,"B":16}, "max_score": 130, "suggestion_template": "飲食業特有の食中毒・異物混入リスクに対する専用保険が必要です。生産物賠償責任保険と休業損失補償のセット設計を推奨します。", "scoring_rules": [{"id":"fp_r001","condition":{"field":"industry","op":"eq","value":"food"},"score":20,"reason":"飲食業は食中毒・異物混入リスクが常時存在"},{"id":"fp_r002","condition":{"op":"and","conditions":[{"field":"handles_products","op":"eq","value":true},{"field":"industry","op":"in","value":["food","retail","manufacturing","agriculture"]}]},"score":20,"reason":"食品・生産物の製造・販売による生産物賠償リスク"},{"id":"fp_r003","condition":{"op":"and","conditions":[{"field":"employee_count","op":"gte","value":10},{"field":"industry","op":"in","value":["food","retail","agriculture","manufacturing"]}]},"score":10,"reason":"飲食・食品関係業種で従業員10名以上は衛生管理の難度が増す"},{"id":"fp_r004","condition":{"op":"and","conditions":[{"field":"has_store","op":"eq","value":true},{"field":"industry","op":"in","value":["food","retail"]}]},"score":15,"reason":"飲食・小売の複数店舗は食中毒発生時の連鎖的営業停止リスク"},{"id":"fp_r005","condition":{"op":"and","conditions":[{"field":"branch_product_recall_exp","op":"eq","value":true},{"field":"industry","op":"in","value":["food","manufacturing","retail","agriculture"]}]},"score":25,"reason":"食品・製造業での過去クレーム経験から食中毒再発リスクが高い"},{"id":"fp_r006","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"食品小売・総菜販売での食中毒リスク"},{"id":"fp_r007","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":20,"reason":"食品製造業での大規模リコールリスク"},{"id":"fp_r008","condition":{"field":"industry","op":"eq","value":"medical"},"score":15,"reason":"院内食・給食提供施設での集団食中毒リスク"},{"id":"fp_r009","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":12,"reason":"農産物・生鮮品の農薬残留・菌汚染による食中毒リスク"},{"id":"fp_r010","condition":{"field":"branch_has_delivery","op":"eq","value":true},"score":20,"reason":"宅配・デリバリーは食中毒発生から発覚まで時間差があり、被害拡大・賠償額増大リスクが高い"},{"id":"fp_r011","condition":{"field":"current_food_known","op":"eq","value":false},"score":15,"reason":"食中毒・PL保険未加入で生産物賠償リスクが完全に無防備"},{"id":"fp_r012","condition":{"field":"current_food_known","op":"eq","value":"partial"},"score":8,"reason":"食中毒・PL保険の補償範囲が不明確。見直し提案の余地あり"}] },
     { "id": "liability", "name": "賠償責任のリスク", "icon": "⚖️", "description": "第三者への身体・財物・経済損害の賠償リスク", "related_questions": ["branch_product_recall_exp","branch_construction_scale","branch_sub_contract_ratio","current_liability_known","construction_position","harassment_measures"], "rank_thresholds": {"A":46,"B":22}, "max_score": 185, "suggestion_template": "取引規模・業種特性から賠償責任リスクが顕在化しています。PL保険・請負業者賠償責任保険等の適切な商品選定が必要です。", "scoring_rules": [{"id":"liab_r001","condition":{"field":"third_party_risk","op":"eq","value":"high"},"score":25,"reason":"第三者への賠償リスクを高く自己評価"},{"id":"liab_r002","condition":{"field":"third_party_risk","op":"eq","value":"medium"},"score":15,"reason":"第三者への賠償リスクが中程度"},{"id":"liab_r003","condition":{"field":"handles_products","op":"eq","value":true},"score":20,"reason":"製品製造・販売によるPLリスク（製造物責任）"},{"id":"liab_r004","condition":{"field":"branch_product_recall_exp","op":"eq","value":true},"score":20,"reason":"過去のクレーム経験から再発リスクあり"},{"id":"liab_r005","condition":{"field":"has_construction_work","op":"eq","value":true},"score":20,"reason":"建設・工事作業による対人・対物賠償リスク"},{"id":"liab_r006","condition":{"field":"branch_construction_scale","op":"eq","value":"large"},"score":20,"reason":"大規模工事（1億円以上）は賠償額も高額化"},{"id":"liab_r007","condition":{"field":"annual_revenue","op":"gte","value":10000},"score":10,"reason":"年商1億円以上の規模では賠償額も相応に大きい"},{"id":"liab_r008","condition":{"field":"current_liability_known","op":"eq","value":false},"score":10,"reason":"現在の賠償責任保険内容が未確認"},{"id":"liab_r009","condition":{"field":"industry","op":"eq","value":"food"},"score":15,"reason":"飲食業は来客への対人・対物事故リスクが常時発生"},{"id":"liab_r010","condition":{"field":"industry","op":"eq","value":"medical"},"score":25,"reason":"医療過誤・施術ミスは高額賠償に直結"},{"id":"liab_r011","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"小売店舗での来客事故・商品事故リスク"},{"id":"liab_r012","condition":{"field":"industry","op":"eq","value":"real_estate"},"score":15,"reason":"管理物件での事故・施設賠償リスク"},{"id":"liab_r013","condition":{"field":"industry","op":"eq","value":"service"},"score":10,"reason":"サービス提供中の対人・財物損害リスク"},{"id":"liab_r014","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":20,"reason":"製造物の欠陥・品質問題による大規模PL賠償リスク"},{"id":"liab_r015","condition":{"field":"industry","op":"eq","value":"construction"},"score":25,"reason":"工事中の対人・対物事故・完成後の瑕疵担保責任"},{"id":"liab_r016","condition":{"field":"industry","op":"eq","value":"transport"},"score":20,"reason":"配送中の荷物破損・対人事故による賠償リスク"},{"id":"liab_r017","condition":{"field":"industry","op":"eq","value":"it"},"score":25,"reason":"システム障害・情報漏洩による顧客への経済損失賠償"},{"id":"liab_r018","condition":{"field":"industry","op":"eq","value":"finance"},"score":20,"reason":"投資助言・説明義務違反による顧客賠償リスク"},{"id":"liab_r019","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":15,"reason":"農薬の飛散・用水汚染・作業中事故による近隣賠償"},{"id":"liab_r020","condition":{"field":"branch_sub_contract_ratio","op":"eq","value":"high"},"score":20,"reason":"下請け比率70%超は再委託先の事故が元請けの賠償責任に直結する"},{"id":"liab_r021","condition":{"field":"branch_cash_amount","op":"eq","value":"high"},"score":10,"reason":"高額現金取扱いは盗難・詐欺リスクを伴う施設賠償につながる可能性"},
         {
@@ -66,9 +130,68 @@ export const RULES_DATA = {
           "score": 25,
           "reason": "専門的サービスが中核：E&Oリスク高（→ 専門職賠償保険も別途確認が必要）"
         },
-        {"id":"liab_r027","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":20,"reason":"バス・マイクロバス運行は旅客運送法上の第三者（乗客）への賠償責任が加重される"}] },
-    { "id": "accident", "name": "従業員のリスク", "icon": "🦺", "description": "従業員の業務中ケガ・死亡・後遺障害リスク", "related_questions": ["branch_night_work","branch_overseas_trip","current_accident_known","branch_agri_crop_type"], "rank_thresholds": {"A":70,"B":34}, "max_score": 280, "suggestion_template": "労災リスクに応じた上乗せ補償の設計が重要です。飲食業の厨房事故、建設業の高所作業など業種特有リスクに対応した傷害保険を検討してください。", "scoring_rules": [{"id":"acc_r001","condition":{"field":"has_employees_work_accident_risk","op":"eq","value":"high"},"score":40,"reason":"高リスク業務（重機・高所・危険物）による重大労災リスク"},{"id":"acc_r002","condition":{"field":"has_employees_work_accident_risk","op":"eq","value":"medium"},"score":20,"reason":"現場作業を含む中程度の労災リスク"},{"id":"acc_r003","condition":{"field":"has_construction_work","op":"eq","value":true},"score":25,"reason":"建設・工事作業は労災発生率が高い業種"},{"id":"acc_r004","condition":{"field":"has_factory","op":"eq","value":true},"score":15,"reason":"製造・加工現場での機械事故リスク"},{"id":"acc_r005","condition":{"field":"employee_count","op":"gte","value":20},"score":15,"reason":"従業員20名以上は労災発生確率・補償総額ともに増大"},{"id":"acc_r006","condition":{"field":"has_vehicles","op":"eq","value":true},"score":10,"reason":"業務用車両使用による交通事故リスク"},{"id":"acc_r007","condition":{"field":"current_accident_known","op":"eq","value":false},"score":10,"reason":"現在の傷害保険内容が未確認"},{"id":"acc_r008","condition":{"field":"industry","op":"eq","value":"food"},"score":20,"reason":"厨房業務は熱傷・切傷・転倒事故が多発する高リスク環境"},{"id":"acc_r009","condition":{"field":"industry","op":"eq","value":"construction"},"score":25,"reason":"建設業は高所・重機・倒壊リスクがあり労災発生率が高い"},{"id":"acc_r010","condition":{"field":"industry","op":"eq","value":"transport"},"score":20,"reason":"運送業は長時間運転・積卸し作業による事故リスク"},{"id":"acc_r011","condition":{"field":"industry","op":"eq","value":"medical"},"score":10,"reason":"医療・介護従事者は感染リスク・腰痛等の職業病リスクあり"},{"id":"acc_r012","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":20,"reason":"製造・加工現場は機械巻き込み・プレス・化学物質等の重大事故リスク"},{"id":"acc_r013","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"重量物の荷下ろし・転倒・カッター等の軽傷事故が多発"},{"id":"acc_r014","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":30,"reason":"農業は農機事故・熱中症・農薬中毒の労災発生率が高い"},{"id":"acc_r015","condition":{"field":"industry","op":"eq","value":"service"},"score":15,"reason":"清掃・警備・介護など現場作業での転倒・腰痛・事故リスク"},{"id":"acc_r016","condition":{"field":"branch_agri_crop_type","op":"eq","value":"livestock"},"score":15,"reason":"畜産・酪農は大型家畜による圧死・噛傷事故リスクがある"},{"id":"acc_r017","condition":{"field":"branch_vehicle_type","op":"contains","value":"special"},"score":10,"reason":"特殊車両(フォークリフト等)は転落・挟まれ事故の重大リスク"},{"id":"acc_r018","condition":{"field":"branch_night_work","op":"eq","value":true},"score":15,"reason":"深夜・早朝作業は疲労・視認性低下による事故リスクが高く労災発生率も上昇する"},{"id":"acc_r019","condition":{"field":"branch_overseas_trip","op":"eq","value":true},"score":15,"reason":"海外出張・派遣中の事故・疾病は国内労災の適用外になるケースがあり海外旅行傷害保険が必要"},{"id":"acc_r020","condition":{"field":"industry","op":"eq","value":"it"},"score":10,"reason":"IT業は長時間労働によるメンタル不調・過労死リスク（電通事件判例等）"},{"id":"acc_r021","condition":{"field":"industry","op":"eq","value":"finance"},"score":10,"reason":"金融業は営業ノルマ・顧客対応ストレスによるメンタル労災リスク"},{"id":"acc_r022","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":15,"reason":"バス運転手は長時間運転・深夜運行による過労事故リスク、大型免許事業従事者の労災発生率が高い"},{"id":"acc_r023","condition":{"field":"branch_overtime_hours","op":"eq","value":"high"},"score":25,"reason":"月80時間超：過労死ライン超過、使用者賠償責任条項が必須"},{"id":"acc_r024","condition":{"field":"branch_overtime_hours","op":"eq","value":"critical"},"score":35,"reason":"月100時間超：重大な過労死リスク、1億円以上の補償限度額が必要"}] },
-    { "id": "vehicle", "name": "社用車のリスク", "icon": "🚗", "description": "業務用車両の事故・賠償・車両損害リスク", "related_questions": ["branch_vehicle_count","branch_vehicle_type","branch_uses_employee_vehicles","current_vehicle_known"], "rank_thresholds": {"A":44,"B":21}, "max_score": 175, "suggestion_template": "業務用車両の台数・種類に応じたフリート契約の検討を推奨します。特殊車両や大型トラックは事故時の賠償額が高額化する傾向があります。", "scoring_rules": [{"id":"veh_r001","condition":{"field":"has_vehicles","op":"eq","value":true},"score":30,"reason":"業務用車両を保有しており自動車事故リスクあり"},{"id":"veh_r002","condition":{"op":"and","conditions":[{"field":"branch_vehicle_count","op":"gte","value":5},{"field":"branch_vehicle_count","op":"lt","value":20}]},"score":15,"reason":"5台以上の車両保有でフリート管理が必要"},{"id":"veh_r003","condition":{"field":"branch_vehicle_count","op":"gte","value":20},"score":25,"reason":"20台以上の大規模フリートで保険コスト最適化が重要"},{"id":"veh_r004","condition":{"field":"industry","op":"eq","value":"transport"},"score":30,"reason":"運輸・物流業は車両事故リスクが事業の根幹"},{"id":"veh_r005","condition":{"field":"current_vehicle_known","op":"eq","value":false},"score":10,"reason":"現在の自動車保険内容が未確認"},{"id":"veh_r006","condition":{"field":"industry","op":"eq","value":"food"},"score":10,"reason":"出前・配達・仕入れ運転での事故リスク"},{"id":"veh_r007","condition":{"field":"industry","op":"eq","value":"construction"},"score":15,"reason":"建設業は大型車・特殊車両の事故リスクが高い"},{"id":"veh_r008","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":10,"reason":"原材料仕入れ・製品配送の業務車両リスク"},{"id":"veh_r009","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"商品配送・集荷での業務車両事故リスク"},{"id":"veh_r010","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":20,"reason":"農機（トラクター・コンバイン）は公道走行や作業中の事故リスクが高い"},{"id":"veh_r011","condition":{"field":"industry","op":"eq","value":"medical"},"score":10,"reason":"訪問診療・介護送迎・往診車両の事故リスク"},{"id":"veh_r012","condition":{"field":"industry","op":"eq","value":"service"},"score":10,"reason":"清掃・警備・設備保守での業務車両使用リスク"},{"id":"veh_r013","condition":{"field":"branch_vehicle_type","op":"contains","value":"special"},"score":20,"reason":"フォークリフト等の特殊車両は構内・公道事故の賠償額が大きい"},{"id":"veh_r014","condition":{"field":"branch_vehicle_type","op":"contains","value":"truck"},"score":10,"reason":"大型トラックは事故時の対人賠償額が高額になりやすい"},{"id":"veh_r015","condition":{"field":"branch_uses_employee_vehicles","op":"eq","value":true},"score":20,"reason":"社員私用車の業務利用は任意保険の補償外になるケースがあり会社が賠償責任を負う"},{"id":"veh_r016","condition":{"field":"industry","op":"eq","value":"real_estate"},"score":10,"reason":"不動産業は物件案内・内見同行で車両利用が多く、顧客同乗中の事故リスクあり"},{"id":"veh_r017","condition":{"field":"industry","op":"eq","value":"finance"},"score":5,"reason":"金融業は外訪営業での車両利用あり"},{"id":"veh_r018","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":30,"reason":"バス・マイクロバスは乗客賠償リスクが極大（1事故で10〜29人の集団賠償）。乗員搭乗者傷害・対人賠償の補償設計が不可欠"}] },
+        {"id":"liab_r027","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":20,"reason":"バス・マイクロバス運行は旅客運送法上の第三者（乗客）への賠償責任が加重される"}],
+      "main_products": [
+        "施設賠償責任保険",
+        "生産物賠償責任保険(PL)"
+      ],
+      "add_on_products": [
+        {
+          "id": "harassment_lawsuit",
+          "condition": { "field": "harassment_incident_experience", "op": "eq", "value": "lawsuit" },
+          "product_name": "EPL保険（雇用慣行賠償責任保険）",
+          "priority": "critical",
+          "reason": "訴訟経験あり：再発防止と財務リスク対応が急務"
+        },
+        {
+          "id": "harassment_consulted",
+          "condition": { "field": "harassment_incident_experience", "op": "eq", "value": "consulted" },
+          "product_name": "EPL保険（雇用慣行賠償責任保険）",
+          "priority": "high",
+          "reason": "ハラスメント相談経験あり：未解決事案の訴訟化に備え推奨"
+        }
+      ] },
+    { "id": "accident", "name": "従業員のリスク", "icon": "🦺", "description": "従業員の業務中ケガ・死亡・後遺障害リスク", "related_questions": ["branch_night_work","branch_overseas_trip","current_accident_known","branch_agri_crop_type"], "rank_thresholds": {"A":70,"B":34}, "max_score": 280, "suggestion_template": "労災リスクに応じた上乗せ補償の設計が重要です。飲食業の厨房事故、建設業の高所作業など業種特有リスクに対応した傷害保険を検討してください。", "scoring_rules": [{"id":"acc_r001","condition":{"field":"has_employees_work_accident_risk","op":"eq","value":"high"},"score":40,"reason":"高リスク業務（重機・高所・危険物）による重大労災リスク"},{"id":"acc_r002","condition":{"field":"has_employees_work_accident_risk","op":"eq","value":"medium"},"score":20,"reason":"現場作業を含む中程度の労災リスク"},{"id":"acc_r003","condition":{"field":"has_construction_work","op":"eq","value":true},"score":25,"reason":"建設・工事作業は労災発生率が高い業種"},{"id":"acc_r004","condition":{"field":"has_factory","op":"eq","value":true},"score":15,"reason":"製造・加工現場での機械事故リスク"},{"id":"acc_r005","condition":{"field":"employee_count","op":"gte","value":20},"score":15,"reason":"従業員20名以上は労災発生確率・補償総額ともに増大"},{"id":"acc_r006","condition":{"field":"has_vehicles","op":"eq","value":true},"score":10,"reason":"業務用車両使用による交通事故リスク"},{"id":"acc_r007","condition":{"field":"current_accident_known","op":"eq","value":false},"score":10,"reason":"現在の傷害保険内容が未確認"},{"id":"acc_r008","condition":{"field":"industry","op":"eq","value":"food"},"score":20,"reason":"厨房業務は熱傷・切傷・転倒事故が多発する高リスク環境"},{"id":"acc_r009","condition":{"field":"industry","op":"eq","value":"construction"},"score":25,"reason":"建設業は高所・重機・倒壊リスクがあり労災発生率が高い"},{"id":"acc_r010","condition":{"field":"industry","op":"eq","value":"transport"},"score":20,"reason":"運送業は長時間運転・積卸し作業による事故リスク"},{"id":"acc_r011","condition":{"field":"industry","op":"eq","value":"medical"},"score":10,"reason":"医療・介護従事者は感染リスク・腰痛等の職業病リスクあり"},{"id":"acc_r012","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":20,"reason":"製造・加工現場は機械巻き込み・プレス・化学物質等の重大事故リスク"},{"id":"acc_r013","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"重量物の荷下ろし・転倒・カッター等の軽傷事故が多発"},{"id":"acc_r014","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":30,"reason":"農業は農機事故・熱中症・農薬中毒の労災発生率が高い"},{"id":"acc_r015","condition":{"field":"industry","op":"eq","value":"service"},"score":15,"reason":"清掃・警備・介護など現場作業での転倒・腰痛・事故リスク"},{"id":"acc_r016","condition":{"field":"branch_agri_crop_type","op":"eq","value":"livestock"},"score":15,"reason":"畜産・酪農は大型家畜による圧死・噛傷事故リスクがある"},{"id":"acc_r017","condition":{"field":"branch_vehicle_type","op":"contains","value":"special"},"score":10,"reason":"特殊車両(フォークリフト等)は転落・挟まれ事故の重大リスク"},{"id":"acc_r018","condition":{"field":"branch_night_work","op":"eq","value":true},"score":15,"reason":"深夜・早朝作業は疲労・視認性低下による事故リスクが高く労災発生率も上昇する"},{"id":"acc_r019","condition":{"field":"branch_overseas_trip","op":"eq","value":true},"score":15,"reason":"海外出張・派遣中の事故・疾病は国内労災の適用外になるケースがあり海外旅行傷害保険が必要"},{"id":"acc_r020","condition":{"field":"industry","op":"eq","value":"it"},"score":10,"reason":"IT業は長時間労働によるメンタル不調・過労死リスク（電通事件判例等）"},{"id":"acc_r021","condition":{"field":"industry","op":"eq","value":"finance"},"score":10,"reason":"金融業は営業ノルマ・顧客対応ストレスによるメンタル労災リスク"},{"id":"acc_r022","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":15,"reason":"バス運転手は長時間運転・深夜運行による過労事故リスク、大型免許事業従事者の労災発生率が高い"},{"id":"acc_r023","condition":{"field":"branch_overtime_hours","op":"eq","value":"high"},"score":25,"reason":"月80時間超：過労死ライン超過、使用者賠償責任条項が必須"},{"id":"acc_r024","condition":{"field":"branch_overtime_hours","op":"eq","value":"critical"},"score":35,"reason":"月100時間超：重大な過労死リスク、1億円以上の補償限度額が必要"}],
+      "main_products": [
+        "労働災害総合保険",
+        "使用者賠償責任条項"
+      ],
+      "add_on_products": [
+        {
+          "id": "mental_health_night_shift",
+          "condition": { "field": "branch_night_work", "op": "eq", "value": true },
+          "product_name": "メンタルヘルス特約",
+          "priority": "medium",
+          "reason": "夜勤業務あり。生活リズム障害・ストレスケアの観点で推奨"
+        }
+      ] },
+    { "id": "vehicle", "name": "社用車のリスク", "icon": "🚗", "description": "業務用車両の事故・賠償・車両損害リスク", "related_questions": ["branch_vehicle_count","branch_vehicle_type","branch_uses_employee_vehicles","current_vehicle_known"], "rank_thresholds": {"A":44,"B":21}, "max_score": 175, "suggestion_template": "業務用車両の台数・種類に応じたフリート契約の検討を推奨します。特殊車両や大型トラックは事故時の賠償額が高額化する傾向があります。", "scoring_rules": [{"id":"veh_r001","condition":{"field":"has_vehicles","op":"eq","value":true},"score":30,"reason":"業務用車両を保有しており自動車事故リスクあり"},{"id":"veh_r002","condition":{"op":"and","conditions":[{"field":"branch_vehicle_count","op":"gte","value":5},{"field":"branch_vehicle_count","op":"lt","value":20}]},"score":15,"reason":"5台以上の車両保有でフリート管理が必要"},{"id":"veh_r003","condition":{"field":"branch_vehicle_count","op":"gte","value":20},"score":25,"reason":"20台以上の大規模フリートで保険コスト最適化が重要"},{"id":"veh_r004","condition":{"field":"industry","op":"eq","value":"transport"},"score":30,"reason":"運輸・物流業は車両事故リスクが事業の根幹"},{"id":"veh_r005","condition":{"field":"current_vehicle_known","op":"eq","value":false},"score":10,"reason":"現在の自動車保険内容が未確認"},{"id":"veh_r006","condition":{"field":"industry","op":"eq","value":"food"},"score":10,"reason":"出前・配達・仕入れ運転での事故リスク"},{"id":"veh_r007","condition":{"field":"industry","op":"eq","value":"construction"},"score":15,"reason":"建設業は大型車・特殊車両の事故リスクが高い"},{"id":"veh_r008","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":10,"reason":"原材料仕入れ・製品配送の業務車両リスク"},{"id":"veh_r009","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"商品配送・集荷での業務車両事故リスク"},{"id":"veh_r010","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":20,"reason":"農機（トラクター・コンバイン）は公道走行や作業中の事故リスクが高い"},{"id":"veh_r011","condition":{"field":"industry","op":"eq","value":"medical"},"score":10,"reason":"訪問診療・介護送迎・往診車両の事故リスク"},{"id":"veh_r012","condition":{"field":"industry","op":"eq","value":"service"},"score":10,"reason":"清掃・警備・設備保守での業務車両使用リスク"},{"id":"veh_r013","condition":{"field":"branch_vehicle_type","op":"contains","value":"special"},"score":20,"reason":"フォークリフト等の特殊車両は構内・公道事故の賠償額が大きい"},{"id":"veh_r014","condition":{"field":"branch_vehicle_type","op":"contains","value":"truck"},"score":10,"reason":"大型トラックは事故時の対人賠償額が高額になりやすい"},{"id":"veh_r015","condition":{"field":"branch_uses_employee_vehicles","op":"eq","value":true},"score":20,"reason":"社員私用車の業務利用は任意保険の補償外になるケースがあり会社が賠償責任を負う"},{"id":"veh_r016","condition":{"field":"industry","op":"eq","value":"real_estate"},"score":10,"reason":"不動産業は物件案内・内見同行で車両利用が多く、顧客同乗中の事故リスクあり"},{"id":"veh_r017","condition":{"field":"industry","op":"eq","value":"finance"},"score":5,"reason":"金融業は外訪営業での車両利用あり"},{"id":"veh_r018","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":30,"reason":"バス・マイクロバスは乗客賠償リスクが極大（1事故で10〜29人の集団賠償）。乗員搭乗者傷害・対人賠償の補償設計が不可欠"}],
+      "main_products": [
+        "企業向け自動車保険（フリート契約）"
+      ],
+      "add_on_products": [
+        {
+          "id": "vehicle_outdoor_safe",
+          "condition": { "field": "vehicle_disaster_exposure", "op": "eq", "value": "outdoor_safe" },
+          "product_name": "車両保険（一般型）",
+          "priority": "medium",
+          "reason": "屋外駐車：飛来物・雹害リスクあり、車両保険で対応"
+        },
+        {
+          "id": "vehicle_flood",
+          "condition": { "field": "vehicle_disaster_exposure", "op": "eq", "value": "outdoor_flood" },
+          "product_name": "水災特約+車両保険(一般型)",
+          "priority": "high",
+          "reason": "浸水想定区域駐車：台風・豪雨時の水没リスク、水災特約必須"
+        },
+        {
+          "id": "vehicle_past_damage",
+          "condition": { "field": "vehicle_disaster_exposure", "op": "eq", "value": "past_damage" },
+          "product_name": "水災特約（必須）+車両保険(一般型)",
+          "priority": "critical",
+          "reason": "車両浸水の過去経験あり：再発確率が統計的に高い"
+        }
+      ] },
     { "id": "cargo", "name": "貨物・運送のリスク", "icon": "📦", "description": "輸送中の貨物損害・輸出入リスク", "related_questions": ["branch_export_country","branch_export_amount","branch_vehicle_type","branch_has_delivery","current_cargo_known"], "rank_thresholds": {"A":31,"B":15}, "max_score": 125, "suggestion_template": "輸出入・国内輸送の貨物リスクが確認されます。オープンカバーや包括付保による効率的な貨物保険の設計をご提案します。", "scoring_rules": [{"id":"cargo_r001","condition":{"field":"export_ratio","op":"neq","value":"0"},"score":30,"reason":"輸出・海外取引による国際貨物リスク"},{"id":"cargo_r002","condition":{"field":"export_ratio","op":"in","value":["0.6","0.9"]},"score":20,"reason":"輸出比率30%以上で貨物保険が必須"},{"id":"cargo_r003","condition":{"field":"branch_export_amount","op":"gte","value":5000},"score":20,"reason":"年間輸出金額5,000万円以上の高額貨物リスク"},{"id":"cargo_r004","condition":{"field":"industry","op":"eq","value":"transport"},"score":25,"reason":"運輸業は貨物損害賠償リスクが中核"},{"id":"cargo_r005","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":15,"reason":"製造業は完成品輸送での貨物リスクが高い"},{"id":"cargo_r006","condition":{"field":"branch_vehicle_type","op":"contains","value":"truck"},"score":20,"reason":"トラック輸送は積荷の破損・紛失リスクが高く貨物保険が必須"},{"id":"cargo_r007","condition":{"field":"industry","op":"eq","value":"retail"},"score":15,"reason":"小売業は仕入商品・EC配送品の輸送中損害リスク"},{"id":"cargo_r008","condition":{"field":"industry","op":"eq","value":"food"},"score":15,"reason":"食材・飲料・弁当の温度管理事故・配送中損害"},{"id":"cargo_r009","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":20,"reason":"農産物は鮮度・温度管理を伴う輸送でリスクが高い"},{"id":"cargo_r010","condition":{"field":"branch_export_country","op":"contains","value":"US"},"score":20,"reason":"米国向け輸出は製造物訴訟リスクが高く貨物保険の補償設計が重要"},{"id":"cargo_r011","condition":{"field":"branch_export_amount","op":"gte","value":1000},"score":15,"reason":"年間輸出額1,000万円以上で貨物損害の財務インパクトが大きい"},{"id":"cargo_r012","condition":{"field":"branch_has_delivery","op":"eq","value":true},"score":20,"reason":"商品配送・デリバリーを行う事業者は輸送中の破損・紛失リスクに備えた貨物保険が必要"},{"id":"cargo_r013","condition":{"field":"current_cargo_known","op":"eq","value":false},"score":10,"reason":"貨物保険未加入で輸送中損害が補償されない"},{"id":"cargo_r014","condition":{"field":"current_cargo_known","op":"eq","value":"partial"},"score":5,"reason":"貨物保険の補償内容が不明確。見直し提案の余地あり"}] },
     { "id": "cyber", "name": "サイバー保険", "icon": "🔒", "description": "情報漏洩・サイバー攻撃・システム障害リスク", "related_questions": ["branch_data_sensitivity","current_cyber_known","remote_work_ratio"], "rank_thresholds": {"A":31,"B":15}, "max_score": 125, "suggestion_template": "デジタル化に伴うサイバーリスクが高まっています。情報漏洩対応費用・業務停止損失・賠償責任をカバーするサイバー保険の検討を推奨します。", "scoring_rules": [{"id":"cyber_r001","condition":{"field":"has_it_systems","op":"eq","value":true},"score":10,"reason":"ITシステム・クラウド利用によるサイバーリスク"},{"id":"cyber_r002","condition":{"field":"branch_data_sensitivity","op":"eq","value":"high"},"score":35,"reason":"高感度情報（クレカ・医療情報等）の取り扱い"},{"id":"cyber_r003","condition":{"field":"branch_data_sensitivity","op":"eq","value":"medium"},"score":20,"reason":"顧客個人情報の取り扱いによる情報漏洩リスク"},{"id":"cyber_r004","condition":{"field":"industry","op":"eq","value":"it"},"score":25,"reason":"IT業界は標的型攻撃・サプライチェーン攻撃リスクが高い"},{"id":"cyber_r005","condition":{"field":"industry","op":"eq","value":"medical"},"score":20,"reason":"医療情報は高価値ターゲットとされる"},{"id":"cyber_r006","condition":{"field":"current_cyber_known","op":"eq","value":false},"score":10,"reason":"サイバー保険未加入または内容不明"},{"id":"cyber_r017","condition":{"field":"current_cyber_known","op":"eq","value":"partial"},"score":5,"reason":"サイバー保険の補償内容が不明確。見直し提案の余地あり"},{"id":"cyber_r007","condition":{"field":"annual_revenue","op":"gte","value":50000},"score":10,"reason":"年商5億円以上は攻撃者の標的になりやすい"},{"id":"cyber_r008","condition":{"field":"industry","op":"eq","value":"retail"},"score":15,"reason":"小売・ECはクレジットカード情報漏洩リスクが高い"},{"id":"cyber_r009","condition":{"field":"industry","op":"eq","value":"finance"},"score":25,"reason":"金融業は金銭的動機の攻撃対象となりやすい"},{"id":"cyber_r010","condition":{"field":"industry","op":"eq","value":"food"},"score":10,"reason":"POSシステム・予約データへの不正アクセスリスク"},{"id":"cyber_r011","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":25,"reason":"製造制御システム（OT/ICS）へのサイバー攻撃で生産停止リスク"},{"id":"cyber_r012","condition":{"field":"industry","op":"eq","value":"real_estate"},"score":10,"reason":"顧客の個人情報・契約情報の漏洩リスク"},{"id":"cyber_r013","condition":{"field":"industry","op":"eq","value":"service"},"score":10,"reason":"人材・広告・コンサル業は顧客機密情報の漏洩リスク"},{"id":"cyber_r014","condition":{"field":"industry","op":"eq","value":"transport"},"score":15,"reason":"運行管理・配送追跡システムへの攻撃で物流が麻痺するリスク"},
         {
@@ -105,6 +228,32 @@ export const RULES_DATA = {
         {"id":"int_r023","condition":{"field":"current_interruption_known","op":"eq","value":"partial"},"score":5,"reason":"利益保険の補償範囲が不明確。見直し提案の余地あり"},
         {"id":"int_r024","condition":{"field":"branch_vehicle_type","op":"contains","value":"bus"},"score":15,"reason":"バス事故時は国土交通省の処分対象となり運行停止命令・事業停止リスクがある"},
         {"id":"int_r028","condition":{"field":"branch_supplier_concentration_level","op":"eq","value":"high"},"score":20,"reason":"売上上位3社への依存40-60%：事業中断保険・取引信用保険の検討が必要"},
-        {"id":"int_r029","condition":{"field":"branch_supplier_concentration_level","op":"eq","value":"very_high"},"score":30,"reason":"売上上位3社への依存60%超：連鎖倒産リスク最大、取引信用保険必須"}] }
+        {"id":"int_r029","condition":{"field":"branch_supplier_concentration_level","op":"eq","value":"very_high"},"score":30,"reason":"売上上位3社への依存60%超：連鎖倒産リスク最大、取引信用保険必須"}],
+      "main_products": [
+        "企業費用・利益総合保険（休業補償）"
+      ],
+      "add_on_products": [
+        {
+          "id": "trade_credit_normal",
+          "condition": { "field": "trade_credit_payment_terms", "op": "eq", "value": "normal" },
+          "product_name": "取引信用保険（基本検討）",
+          "priority": "low",
+          "reason": "支払サイト30-60日：標準的だが取引信用保険の基本検討の余地あり"
+        },
+        {
+          "id": "trade_credit_long",
+          "condition": { "field": "trade_credit_payment_terms", "op": "eq", "value": "long" },
+          "product_name": "取引信用保険",
+          "priority": "high",
+          "reason": "支払サイト60-90日：貸倒リスク顕在化、取引信用保険を強く推奨"
+        },
+        {
+          "id": "trade_credit_very_long",
+          "condition": { "field": "trade_credit_payment_terms", "op": "eq", "value": "very_long" },
+          "product_name": "取引信用保険（必須）",
+          "priority": "critical",
+          "reason": "支払サイト90日超：重大な貸倒リスク、取引信用保険が必須"
+        }
+      ] }
   ]
 };
