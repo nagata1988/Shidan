@@ -3,6 +3,20 @@ import { GRADE_COLORS, GRADE_BG, GRADE_LABEL } from "./DiagnosisComponents";
 import { RULES_META } from "../constants/rules_meta";
 import { getRelatedCases } from "../utils/caseMatcher";
 import { ALL_CASES } from "../data/cases";
+import { evaluateCondition } from "../utils/ruleEngine";
+
+// 特約の優先度別スタイル定義（add_on_products 用）
+// 既存の index.css は @media print / @keyframes のみのため、
+// Tailwind のユーティリティクラスで完結させる。
+const PRIORITY_META: Record<
+  string,
+  { label: string; bg: string; border: string; text: string; badgeBg: string }
+> = {
+  critical: { label: "最優先", bg: "bg-red-50/70",     border: "border-red-400",     text: "text-red-800",     badgeBg: "bg-red-600" },
+  high:     { label: "高優先", bg: "bg-amber-50/70",   border: "border-amber-400",   text: "text-amber-800",   badgeBg: "bg-amber-600" },
+  medium:   { label: "中優先", bg: "bg-emerald-50/70", border: "border-emerald-400", text: "text-emerald-800", badgeBg: "bg-emerald-600" },
+  low:      { label: "参考",   bg: "bg-slate-50/70",   border: "border-slate-300",   text: "text-slate-700",   badgeBg: "bg-slate-500" },
+};
 
 export function CategoryCard({ result, category, isTop, answers, clientMode }: any) {
   const grade = result.rank;
@@ -151,6 +165,74 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
               {customerComment}
             </div>
           )}
+
+          {/* 推奨する保険・特約（主契約 + 条件合致した特約の階層表示） */}
+          {(() => {
+            const mainProducts: string[] = category.main_products || [];
+            const allAddOns: any[] = category.add_on_products || [];
+            const matchedAddOns = allAddOns.filter((addon: any) =>
+              evaluateCondition(addon.condition, answers)
+            );
+            // main も addon も無い場合はセクション全体を非表示
+            if (mainProducts.length === 0 && matchedAddOns.length === 0) return null;
+            return (
+              <div className="p-3.5 bg-amber-50/50 rounded-xl border border-amber-100">
+                <div className="text-[10px] font-bold text-amber-700 uppercase tracking-widest mb-3">
+                  🛡️ 推奨する保険・特約
+                </div>
+
+                {/* 主契約 */}
+                {mainProducts.length > 0 && (
+                  <div className="space-y-1.5 mb-2.5">
+                    {mainProducts.map((product, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-amber-200 shadow-sm"
+                      >
+                        <span className="text-emerald-600 font-black text-sm flex-shrink-0">✓</span>
+                        <span className="text-xs font-bold text-slate-800">{product}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* 特約（条件合致したもののみ） */}
+                {matchedAddOns.length > 0 && (
+                  <div className="space-y-2 sm:pl-4">
+                    {matchedAddOns.map((addon: any) => {
+                      const meta = PRIORITY_META[addon.priority] || PRIORITY_META.low;
+                      return (
+                        <div
+                          key={addon.id}
+                          className={`rounded-lg border-l-4 p-2.5 ${meta.bg} ${meta.border}`}
+                        >
+                          <div className="flex items-start justify-between gap-2 mb-1.5">
+                            <div className="flex items-start gap-1.5 flex-1 min-w-0">
+                              <span className={`text-xs font-bold ${meta.text} flex-shrink-0 mt-0.5`}>
+                                └▶
+                              </span>
+                              <span className={`text-xs font-bold ${meta.text} break-words`}>
+                                {addon.product_name}
+                              </span>
+                            </div>
+                            <span
+                              className={`flex-shrink-0 text-[9px] font-black uppercase tracking-tighter px-2 py-0.5 rounded text-white ${meta.badgeBg}`}
+                            >
+                              {meta.label}
+                            </span>
+                          </div>
+                          <div className="text-[10px] text-slate-600 leading-relaxed pl-4">
+                            <span className="font-bold text-slate-700">判断根拠：</span>
+                            {addon.reason}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
 
           {!clientMode && agentMemo && (
             <div
