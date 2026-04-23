@@ -2,7 +2,7 @@
   {
     "case_id": "ROUSAI-001",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "food"
@@ -33,7 +33,7 @@
   {
     "case_id": "ROUSAI-002",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "fire"
     ],
@@ -65,7 +65,7 @@
   {
     "case_id": "ROUSAI-003",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "fire"
     ],
@@ -96,7 +96,7 @@
   {
     "case_id": "ROUSAI-004",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "medical"
@@ -124,7 +124,7 @@
   {
     "case_id": "ROUSAI-005",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "medical"
@@ -151,7 +151,7 @@
   {
     "case_id": "ROUSAI-006",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "medical"
@@ -176,7 +176,7 @@
   {
     "case_id": "ROUSAI-007",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -201,7 +201,7 @@
   {
     "case_id": "ROUSAI-008",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing",
@@ -229,7 +229,7 @@
   {
     "case_id": "ROUSAI-009",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -256,7 +256,7 @@
   {
     "case_id": "ROUSAI-010",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -284,7 +284,7 @@
   {
     "case_id": "ROUSAI-011",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "construction"
@@ -311,7 +311,7 @@
   {
     "case_id": "ROUSAI-012",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "construction"
@@ -339,7 +339,7 @@
   {
     "case_id": "ROUSAI-013",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "directors"
     ],
@@ -369,7 +369,7 @@
   {
     "case_id": "ROUSAI-014",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "food"
@@ -398,7 +398,7 @@
   {
     "case_id": "ROUSAI-015",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -431,7 +431,7 @@
   {
     "case_id": "ROUSAI-016",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "transport"
@@ -461,7 +461,7 @@
   {
     "case_id": "ROUSAI-017",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "vehicle"
     ],
@@ -488,7 +488,7 @@
   {
     "case_id": "ROUSAI-018",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "service",
@@ -516,7 +516,7 @@
   {
     "case_id": "ROUSAI-019",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "directors"
     ],
@@ -547,7 +547,7 @@
   {
     "case_id": "ROUSAI-020",
     "diagnostic_risk_id": "accident",
-    "diagnostic_risk_label": "労働災害・傷害保険",
+    "diagnostic_risk_label": "従業員のリスク",
     "diagnostic_risk_ids_secondary": [
       "vehicle"
     ],
@@ -574,7 +574,7 @@
   {
     "case_id": "PL-001",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -604,7 +604,7 @@
   {
     "case_id": "PL-002",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [
       "interruption"
     ],
@@ -635,7 +635,7 @@
   {
     "case_id": "PL-003",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -664,7 +664,7 @@
   {
     "case_id": "PL-004",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing",
@@ -695,7 +695,7 @@
   {
     "case_id": "PL-005",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -725,7 +725,7 @@
   {
     "case_id": "PL-006",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "fire"
     ],
@@ -759,7 +759,7 @@
   {
     "case_id": "PL-007",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "fire"
     ],
@@ -792,7 +792,7 @@
   {
     "case_id": "PL-008",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -821,7 +821,7 @@
   {
     "case_id": "PL-009",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -850,7 +850,7 @@
   {
     "case_id": "PL-010",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [
       "accident"
     ],
@@ -882,7 +882,7 @@
   {
     "case_id": "PL-011",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [
       "vehicle"
     ],
@@ -913,7 +913,7 @@
   {
     "case_id": "PL-012",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing",
@@ -941,7 +941,7 @@
   {
     "case_id": "PL-013",
     "diagnostic_risk_id": "food_poisoning",
-    "diagnostic_risk_label": "食中毒・生産物賠償保険",
+    "diagnostic_risk_label": "食中毒・生産物賠償リスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing"
@@ -970,7 +970,7 @@
   {
     "case_id": "PL-014",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "manufacturing",
@@ -1000,7 +1000,7 @@
   {
     "case_id": "PL-015",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [
       "cyber"
     ],
@@ -1764,7 +1764,7 @@
   {
     "case_id": "LIAB-001",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "food"
@@ -1793,7 +1793,7 @@
   {
     "case_id": "LIAB-002",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [
       "accident"
     ],
@@ -1822,7 +1822,7 @@
   {
     "case_id": "LIAB-003",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "food"
@@ -1849,7 +1849,7 @@
   {
     "case_id": "LIAB-004",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "retail"
@@ -1876,7 +1876,7 @@
   {
     "case_id": "LIAB-005",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "food"
@@ -1903,7 +1903,7 @@
   {
     "case_id": "LIAB-006",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "medical"
@@ -1930,7 +1930,7 @@
   {
     "case_id": "LIAB-007",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "medical"
@@ -1957,7 +1957,7 @@
   {
     "case_id": "LIAB-008",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "real_estate"
@@ -1987,7 +1987,7 @@
   {
     "case_id": "LIAB-009",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "construction"
@@ -2016,7 +2016,7 @@
   {
     "case_id": "LIAB-010",
     "diagnostic_risk_id": "liability",
-    "diagnostic_risk_label": "賠償責任保険",
+    "diagnostic_risk_label": "賠償責任のリスク",
     "diagnostic_risk_ids_secondary": [
       "interruption"
     ],
@@ -2048,7 +2048,7 @@
   {
     "case_id": "FIRE-001",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "interruption"
     ],
@@ -2079,7 +2079,7 @@
   {
     "case_id": "FIRE-002",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "interruption",
       "liability"
@@ -2109,7 +2109,7 @@
   {
     "case_id": "FIRE-003",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "interruption",
       "liability"
@@ -2139,7 +2139,7 @@
   {
     "case_id": "FIRE-004",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo",
       "interruption"
@@ -2170,7 +2170,7 @@
   {
     "case_id": "FIRE-005",
     "diagnostic_risk_id": "fire",
-    "diagnostic_risk_label": "火災保険",
+    "diagnostic_risk_label": "企業財産のリスク",
     "diagnostic_risk_ids_secondary": [
       "interruption"
     ],
@@ -2197,7 +2197,7 @@
   {
     "case_id": "AUTO-001",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2224,7 +2224,7 @@
   {
     "case_id": "AUTO-002",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2255,7 +2255,7 @@
   {
     "case_id": "AUTO-003",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo"
     ],
@@ -2286,7 +2286,7 @@
   {
     "case_id": "AUTO-004",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "ALL"
@@ -2311,7 +2311,7 @@
   {
     "case_id": "AUTO-005",
     "diagnostic_risk_id": "vehicle",
-    "diagnostic_risk_label": "自動車保険（フリート）",
+    "diagnostic_risk_label": "社用車のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo",
       "liability"
@@ -2342,7 +2342,7 @@
   {
     "case_id": "BI-001",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "fire"
     ],
@@ -2369,7 +2369,7 @@
   {
     "case_id": "BI-002",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo"
     ],
@@ -2396,7 +2396,7 @@
   {
     "case_id": "BI-003",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo"
     ],
@@ -2426,7 +2426,7 @@
   {
     "case_id": "BI-004",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability",
       "directors"
@@ -2458,7 +2458,7 @@
   {
     "case_id": "BI-005",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "food_poisoning"
     ],
@@ -2488,7 +2488,7 @@
   {
     "case_id": "BI-006",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "cyber"
     ],
@@ -2515,7 +2515,7 @@
   {
     "case_id": "BI-007",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [],
     "diagnostic_industry_primary": [
       "ALL"
@@ -2540,7 +2540,7 @@
   {
     "case_id": "BI-008",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability",
       "directors"
@@ -2571,7 +2571,7 @@
   {
     "case_id": "BI-009",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "cargo",
       "liability"
@@ -2603,7 +2603,7 @@
   {
     "case_id": "BI-010",
     "diagnostic_risk_id": "interruption",
-    "diagnostic_risk_label": "利益保険・事業中断保険",
+    "diagnostic_risk_label": "事業中断・利益減少のリスク",
     "diagnostic_risk_ids_secondary": [
       "directors"
     ],
@@ -2630,7 +2630,7 @@
   {
     "case_id": "DO-001",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2657,7 +2657,7 @@
   {
     "case_id": "DO-002",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2684,7 +2684,7 @@
   {
     "case_id": "DO-003",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "accident",
       "liability"
@@ -2720,7 +2720,7 @@
   {
     "case_id": "DO-004",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability",
       "accident"
@@ -2748,7 +2748,7 @@
   {
     "case_id": "DO-005",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability",
       "interruption"
@@ -2776,7 +2776,7 @@
   {
     "case_id": "DO-006",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2803,7 +2803,7 @@
   {
     "case_id": "DO-007",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "liability"
     ],
@@ -2830,7 +2830,7 @@
   {
     "case_id": "DO-008",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "food_poisoning",
       "liability"
@@ -2866,7 +2866,7 @@
   {
     "case_id": "DO-009",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "cyber",
       "liability"
@@ -2902,7 +2902,7 @@
   {
     "case_id": "DO-010",
     "diagnostic_risk_id": "directors",
-    "diagnostic_risk_label": "役員賠償責任保険(D&O)",
+    "diagnostic_risk_label": "経営者・役員のリスク",
     "diagnostic_risk_ids_secondary": [
       "accident",
       "liability"
