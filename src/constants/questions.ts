@@ -131,6 +131,51 @@ export const QUESTIONS_DATA = {
         { "value": "lawsuit", "label": "訴訟経験あり" }
       ]
     },
+    {
+      "id": "trade_credit_payment_terms",
+      "type": "select",
+      "text": "入金サイトは？",
+      "hint": "取引信用保険の提案判定（スコアには影響しません）",
+      "category": "core",
+      "required": false,
+      "options": [
+        { "value": "immediate", "label": "30日以内" },
+        { "value": "normal", "label": "30-60日" },
+        { "value": "long", "label": "60-90日" },
+        { "value": "very_long", "label": "90日超" },
+        { "value": "unknown", "label": "不明" }
+      ]
+    },
+    {
+      "id": "earthquake_hazard_zone",
+      "type": "select",
+      "text": "地震リスクは？",
+      "hint": "地震危険補償特約の提案判定（スコアには影響しません）。事業用物件は個人地震保険不可のため必須検討。",
+      "category": "core",
+      "required": false,
+      "options": [
+        { "value": "low", "label": "震度5強未満" },
+        { "value": "medium", "label": "震度6弱" },
+        { "value": "high", "label": "震度6強以上" },
+        { "value": "tsunami", "label": "津波想定" },
+        { "value": "unknown", "label": "不明" }
+      ]
+    },
+    {
+      "id": "property_theft_risk",
+      "type": "multi_select",
+      "text": "動産リスクの該当項目は？（複数選択可）",
+      "hint": "動産総合保険の提案判定（スコアには影響しません）",
+      "category": "core",
+      "required": false,
+      "options": [
+        { "value": "high_value_equipment", "label": "高額機械・設備" },
+        { "value": "valuable_inventory", "label": "貴重品・商品保管" },
+        { "value": "exhibition_offsite", "label": "展示会・出張持出" },
+        { "value": "product_transport", "label": "製品配送" },
+        { "value": "none", "label": "なし" }
+      ]
+    },
     { "id": "branch_night_work", "type": "boolean", "text": "深夜・早朝（22時〜翌5時）に作業や営業を行うことがありますか？", "category": "branch" },
     {
       "id": "branch_overtime_hours",
@@ -159,6 +204,21 @@ export const QUESTIONS_DATA = {
         { "value": "medium", "label": "20-40%" },
         { "value": "high", "label": "40-60%" },
         { "value": "very_high", "label": "60%超" }
+      ]
+    },
+    {
+      "id": "vehicle_disaster_exposure",
+      "type": "select",
+      "text": "社用車の駐車場所は？",
+      "hint": "車両保険・水災特約の提案判定（スコアには影響しません）",
+      "category": "branch",
+      "required": false,
+      "condition": { "field": "has_vehicles", "op": "eq", "value": true },
+      "options": [
+        { "value": "indoor", "label": "屋内" },
+        { "value": "outdoor_safe", "label": "屋外（安全）" },
+        { "value": "outdoor_flood", "label": "屋外（浸水想定）" },
+        { "value": "past_damage", "label": "浸水経験あり" }
       ]
     },
     { "id": "branch_overseas_trip", "type": "boolean", "text": "従業員が海外出張・海外派遣をすることがありますか？", "category": "branch" },
