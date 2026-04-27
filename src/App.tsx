@@ -127,7 +127,12 @@ export default function App() {
     });
     CURRENT_IDS.forEach(id => {
       const q = QUESTIONS_DATA.questions.find(q => q.id === id);
-      if (q) list.push(q);
+      if (!q) return;
+      // condition が設定されている場合は評価し、満たすものだけを表示対象に追加
+      if ((q as any).condition && !evaluateCondition((q as any).condition, normalizedAnswers)) {
+        return;
+      }
+      list.push(q);
     });
     return list;
   }, [answers]);
