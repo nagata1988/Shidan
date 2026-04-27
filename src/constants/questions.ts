@@ -164,16 +164,15 @@ export const QUESTIONS_DATA = {
     {
       "id": "property_theft_risk",
       "type": "multi_select",
-      "text": "動産リスクの該当項目は？（複数選択可）",
-      "hint": "動産総合保険の提案判定（スコアには影響しません）",
+      "text": "以下の動産リスクに該当するものをすべて選んでください（複数選択可）",
+      "hint": "動産総合保険の提案判定に使用します（スコアには影響しません）。\n火災保険では「敷地外の損害」や「個別の高額機器」「現金・有価証券」が補償対象外または上限ありです。\n1つでも該当すれば動産総合保険の検討価値があります。",
       "category": "core",
       "required": false,
       "options": [
-        { "value": "high_value_equipment", "label": "高額機械・設備" },
-        { "value": "valuable_inventory", "label": "貴重品・商品保管" },
-        { "value": "exhibition_offsite", "label": "展示会・出張持出" },
-        { "value": "product_transport", "label": "製品配送" },
-        { "value": "none", "label": "なし" }
+        { "value": "high_value_equipment", "label": "1台100万円以上の機械・設備・専門機器がある" },
+        { "value": "offsite_movable", "label": "機材・商品・PCを社外に持ち出す（展示会・配送・出張など）" },
+        { "value": "cash_valuables", "label": "多額の現金や有価証券を店舗・事務所に保管している" },
+        { "value": "none", "label": "いずれも該当しない" }
       ]
     },
     { "id": "branch_night_work", "type": "boolean", "text": "深夜・早朝（22時〜翌5時）に作業や営業を行うことがありますか？", "category": "branch" },

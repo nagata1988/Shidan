@@ -88,14 +88,21 @@ export const RULES_DATA = {
           "condition": { "field": "property_theft_risk", "op": "contains", "value": "high_value_equipment" },
           "product_name": "動産総合保険",
           "priority": "high",
-          "reason": "高額機械・設備保有。火災保険では運送中・展示中・使用中の事故が対象外"
+          "reason": "1台100万円以上の高額動産あり。火災保険の包括契約では保険金額に上限があり補償不足の可能性"
         },
         {
-          "id": "property_exhibition",
-          "condition": { "field": "property_theft_risk", "op": "contains", "value": "exhibition_offsite" },
-          "product_name": "動産総合保険（運送中・展示中）",
+          "id": "property_offsite",
+          "condition": { "field": "property_theft_risk", "op": "contains", "value": "offsite_movable" },
+          "product_name": "動産総合保険（運送中・展示中・携行品）",
           "priority": "high",
-          "reason": "展示会・出張先での持ち出しあり。運送中・展示中の動産事故をカバー"
+          "reason": "機材・商品・PCの社外持ち出しあり。火災保険は敷地外の損害が補償対象外（運送中の事故・展示中の盗難・PCの落下破損など）"
+        },
+        {
+          "id": "property_cash",
+          "condition": { "field": "property_theft_risk", "op": "contains", "value": "cash_valuables" },
+          "product_name": "動産総合保険（現金・有価証券特約）",
+          "priority": "high",
+          "reason": "多額の現金・有価証券を保管。火災保険の基本補償では対象外のため動産総合保険での特約付帯が必要"
         }
       ] },
     { "id": "food_poisoning", "name": "食中毒・生産物賠償リスク", "icon": "🍱", "description": "食中毒・異物混入・アレルギー対応による損害賠償リスク", "related_questions": ["branch_product_recall_exp","current_liability_known","current_food_known"], "rank_thresholds": {"A":33,"B":16}, "max_score": 130, "suggestion_template": "飲食業特有の食中毒・異物混入リスクに対する専用保険が必要です。生産物賠償責任保険と休業損失補償のセット設計を推奨します。", "scoring_rules": [{"id":"fp_r001","condition":{"field":"industry","op":"eq","value":"food"},"score":20,"reason":"飲食業は食中毒・異物混入リスクが常時存在"},{"id":"fp_r002","condition":{"op":"and","conditions":[{"field":"handles_products","op":"eq","value":true},{"field":"industry","op":"in","value":["food","retail","manufacturing","agriculture"]}]},"score":20,"reason":"食品・生産物の製造・販売による生産物賠償リスク"},{"id":"fp_r003","condition":{"op":"and","conditions":[{"field":"employee_count","op":"gte","value":10},{"field":"industry","op":"in","value":["food","retail","agriculture","manufacturing"]}]},"score":10,"reason":"飲食・食品関係業種で従業員10名以上は衛生管理の難度が増す"},{"id":"fp_r004","condition":{"op":"and","conditions":[{"field":"has_store","op":"eq","value":true},{"field":"industry","op":"in","value":["food","retail"]}]},"score":15,"reason":"飲食・小売の複数店舗は食中毒発生時の連鎖的営業停止リスク"},{"id":"fp_r005","condition":{"op":"and","conditions":[{"field":"branch_product_recall_exp","op":"eq","value":true},{"field":"industry","op":"in","value":["food","manufacturing","retail","agriculture"]}]},"score":25,"reason":"食品・製造業での過去クレーム経験から食中毒再発リスクが高い"},{"id":"fp_r006","condition":{"field":"industry","op":"eq","value":"retail"},"score":10,"reason":"食品小売・総菜販売での食中毒リスク"},{"id":"fp_r007","condition":{"field":"industry","op":"eq","value":"manufacturing"},"score":20,"reason":"食品製造業での大規模リコールリスク"},{"id":"fp_r008","condition":{"field":"industry","op":"eq","value":"medical"},"score":15,"reason":"院内食・給食提供施設での集団食中毒リスク"},{"id":"fp_r009","condition":{"field":"industry","op":"eq","value":"agriculture"},"score":12,"reason":"農産物・生鮮品の農薬残留・菌汚染による食中毒リスク"},{"id":"fp_r010","condition":{"field":"branch_has_delivery","op":"eq","value":true},"score":20,"reason":"宅配・デリバリーは食中毒発生から発覚まで時間差があり、被害拡大・賠償額増大リスクが高い"},{"id":"fp_r011","condition":{"field":"current_food_known","op":"eq","value":false},"score":15,"reason":"食中毒・PL保険未加入で生産物賠償リスクが完全に無防備"},{"id":"fp_r012","condition":{"field":"current_food_known","op":"eq","value":"partial"},"score":8,"reason":"食中毒・PL保険の補償範囲が不明確。見直し提案の余地あり"}] },
