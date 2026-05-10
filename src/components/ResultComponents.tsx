@@ -34,8 +34,8 @@ export function CategoryCard({ result, category, isTop, answers, clientMode }: a
 
   const industryChecklist = (RULES_META.INDUSTRY_CHECKLIST as any)[category.id] || {};
 
-  // TOP3カテゴリまたはGrade B/Cの場合に関連事例を取得
-  const showCases = isTop || grade === "B" || grade === "C";
+  // 全カテゴリ・全グレードで関連事例を表示（TOP3外のGrade A漏れ対策）
+  const showCases = true;
   const relatedCases = showCases
     ? getRelatedCases(ALL_CASES, answers, category.id, 3)
     : [];
